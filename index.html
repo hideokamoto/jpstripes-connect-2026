@@ -376,6 +376,9 @@ section.s { padding: var(--pad-section) 0; border-bottom: 1px solid var(--line);
   box-shadow: 0 -1px 0 var(--line-2);
 }
 .sp-portrait .badge { position: absolute; top: 12px; left: 12px; z-index: 1; font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; padding: 4px 8px; background: var(--bg); color: var(--fg-2); border-radius: 4px; text-transform: uppercase; }
+.sp-portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; z-index: 0; }
+.sp-portrait.has-photo::before { background: repeating-linear-gradient(180deg, transparent 0, transparent 4px, color-mix(in oklch, var(--fg) 3%, transparent) 4px, color-mix(in oklch, var(--fg) 3%, transparent) 5px); z-index: 1; }
+.sp-portrait.has-photo::after { display: none; }
 .sp-name { font-family: var(--serif); font-size: 26px; letter-spacing: -0.01em; margin: 0 0 4px; }
 .sp-name em { font-style: italic; color: var(--accent); }
 .sp-org { font-family: var(--mono); font-size: 11px; color: var(--fg-3); letter-spacing: 0.05em; text-transform: uppercase; }
@@ -700,22 +703,52 @@ footer.bot { padding: 100px 0 40px; }
     <div class="section-mast">
       <div>
         <div class="num">№ 03 — Speakers</div>
-        <h2>Speakers,<br/><em>announced soon.</em></h2>
+        <h2>Speakers,<br/><em>announced.</em></h2>
       </div>
-      <p class="deck">スピーカーは順次公開。CFP（登壇募集）の開始もお楽しみに。</p>
+      <p class="deck">2025年に続き登壇いただくスピーカーを公開。CFP（登壇募集）の開始もお楽しみに。</p>
     </div>
 
     <div class="sp-grid">
-      <div class="sp-card"><div class="sp-portrait"><div class="badge">Keynote</div></div><div class="sp-name">— TBA</div><div class="sp-org">Opening Keynote</div></div>
-      <div class="sp-card"><div class="sp-portrait"><div class="badge">Track A</div></div><div class="sp-name">— TBA</div><div class="sp-org">実装トラック</div></div>
-      <div class="sp-card"><div class="sp-portrait"><div class="badge">Track B</div></div><div class="sp-name">— TBA</div><div class="sp-org">ビジネストラック</div></div>
-      <div class="sp-card"><div class="sp-portrait"><div class="badge">Track A</div></div><div class="sp-name">— TBA</div><div class="sp-org">実装トラック</div></div>
+      <div class="sp-card">
+        <div class="sp-portrait has-photo">
+          <img src="https://connect2025.jpstripes.com/speakers/1516767400750.jpg" alt="Daniel Heffernan" loading="lazy" />
+        </div>
+        <div class="sp-name">Daniel <em>Heffernan</em></div>
+        <div class="sp-org">Stripe</div>
+      </div>
+      <div class="sp-card">
+        <div class="sp-portrait has-photo">
+          <img src="https://connect2025.jpstripes.com/speakers/ojima.jpg" alt="小島 英揮" loading="lazy" />
+        </div>
+        <div class="sp-name">小島 <em>英揮</em>さん</div>
+        <div class="sp-org">株式会社Still Day One</div>
+      </div>
+      <div class="sp-card">
+        <div class="sp-portrait has-photo">
+          <img src="https://connect2025.jpstripes.com/speakers/b5f641fdf20fc10651b5c8797b6e6461.png" alt="秋山さん" loading="lazy" />
+        </div>
+        <div class="sp-name"><em>秋山</em>さん</div>
+        <div class="sp-org">株式会社Helpfeel</div>
+      </div>
+      <div class="sp-card">
+        <div class="sp-portrait has-photo">
+          <img src="https://connect2025.jpstripes.com/speakers/12a26cb6aa9617aed86cbb8ea40e5f2b.jpg" alt="中野 恭兵" loading="lazy" />
+        </div>
+        <div class="sp-name">中野 <em>恭兵</em>さん</div>
+        <div class="sp-org">アトモフ株式会社</div>
+      </div>
       <div class="cfp-card">
         <div class="small">CFP — Opens Soon</div>
         <div class="h">登壇者を、<br/><em>募集します。</em></div>
         <p>現場の知恵を持ち寄ってください。失敗も、成功も、まだ整理できていない悩みも、誰かの地図になります。</p>
       </div>
-      <div class="sp-card"><div class="sp-portrait"><div class="badge">Track B</div></div><div class="sp-name">— TBA</div><div class="sp-org">ビジネストラック</div></div>
+      <div class="sp-card">
+        <div class="sp-portrait has-photo">
+          <img src="https://connect2025.jpstripes.com/speakers/DSC_5282.JPG" alt="岡本 秀高" loading="lazy" />
+        </div>
+        <div class="sp-name">岡本 <em>秀高</em></div>
+        <div class="sp-org">Revtrona</div>
+      </div>
     </div>
   </div>
 </section>

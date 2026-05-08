@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import speakers from '@/data/speakers.json';
 
 type Speaker = {
@@ -5,6 +6,7 @@ type Speaker = {
   name: string;
   badge: string;
   org: string;
+  image?: string;
 };
 
 export function Speakers() {
@@ -58,6 +60,15 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
   return (
     <div className="sp-card">
       <div className="sp-portrait">
+        {speaker.image && (
+          <Image
+            src={speaker.image}
+            alt={speaker.name}
+            fill
+            style={{ objectFit: 'cover' }}
+            sizes="(max-width: 768px) 50vw, 200px"
+          />
+        )}
         <div className="badge">{speaker.badge}</div>
       </div>
       <div className="sp-name">{speaker.name}</div>

@@ -7,87 +7,136 @@
     "title": "開場・受付"
   },
   {
-    "time": "12:30",
-    "duration": "30 min",
+    "time": "12:45",
+    "duration": "10 min",
     "track": "—",
     "isBreak": true,
     "title": "開会挨拶"
   },
   {
     "time": "13:00",
-    "duration": "50 min",
+    "duration": "35 min",
     "track": "A",
-    "title": "Opening Keynote",
-    "description": "2026年の決済とAI、地殻変動の現在地。Stripe 周辺で何が起きているのか、現場の視点から。",
-    "tags": ["Keynote", "AI", "Industry"],
-    "speaker": "// SPEAKER TBA"
+    "title": "オープニングキーノート",
+    "tags": ["Keynote"],
+    "speaker": "Stripe ダニエル"
   },
   {
-    "time": "13:50",
-    "duration": "40 min",
+    "time": "13:40",
+    "duration": "30 min",
+    "track": "A",
+    "title": "Stripeから事例紹介",
+    "tags": ["Case Study"],
+    "speaker": "// TBA"
+  },
+  {
+    "time": "13:40",
+    "duration": "30 min",
     "track": "B",
-    "title": "チャーンを\"運用\"する",
-    "description": "解約理由の分類、CSとの責任分界、定量と定性の組み合わせ方。",
-    "tags": ["Subscriptions", "Retention", "Ops"],
-    "speaker": "// SPEAKER TBA"
+    "title": "Stripe入門",
+    "tags": ["Beginner"],
+    "speaker": "けんけんさん"
+  },
+  {
+    "time": "14:15",
+    "duration": "5 min",
+    "track": "A",
+    "title": "スポンサーLT",
+    "tags": ["Sponsor"],
+    "speaker": "Gold スポンサー"
+  },
+  {
+    "time": "14:15",
+    "duration": "5 min",
+    "track": "B",
+    "title": "スポンサーLT",
+    "tags": ["Sponsor"],
+    "speaker": "Silver スポンサー"
+  },
+  {
+    "time": "14:20",
+    "duration": "10 min",
+    "track": "—",
+    "isBreak": true,
+    "title": "休憩"
   },
   {
     "time": "14:30",
-    "duration": "50 min",
+    "duration": "35 min",
     "track": "A",
-    "title": "Connect 設計の落とし穴",
-    "description": "手数料・KYC・払い戻し責任の現場。プラットフォームを運用してわかった設計の勘所。",
-    "tags": ["Connect", "Marketplace", "KYC"],
-    "speaker": "// SPEAKER TBA"
+    "title": "スタートアップ CTOトーク",
+    "tags": ["CTO", "Startup"],
+    "speaker": "recustomer 真鍋さん・Helpfeel 秋山さん"
+  },
+  {
+    "time": "14:30",
+    "duration": "35 min",
+    "track": "B",
+    "title": "意外と知られていないStripeの刺さるユースケース",
+    "tags": ["Use Case"],
+    "speaker": "Stripe 北爪さん"
+  },
+  {
+    "time": "15:10",
+    "duration": "40 min",
+    "track": "A",
+    "title": "Stripe社員に聞く、決済請求管理のハマりどころ",
+    "tags": ["Billing", "TAM"],
+    "speaker": "Stripe TAMメンバー"
   },
   {
     "time": "15:10",
     "duration": "40 min",
     "track": "B",
-    "title": "価格改定の進め方",
-    "description": "既存顧客への通知・移行・税額計算。本番一発勝負を、いかに段階的に進めるか。",
-    "tags": ["Pricing", "Migration", "Tax"],
-    "speaker": "// SPEAKER TBA"
+    "title": "Stripe Connectな話（PayPay / terminalなども）",
+    "tags": ["Connect", "Terminal"],
+    "speaker": "INFLU / favy（仮）"
   },
   {
     "time": "15:50",
-    "duration": "40 min",
+    "duration": "10 min",
     "track": "A",
-    "title": "Stripe Tax / Invoice 運用",
-    "description": "電子帳簿保存法とインボイス制度の実装。日本独自の請求要件、どこまで Stripe で完結するか。",
-    "tags": ["Invoice", "JP-Tax"],
-    "speaker": "// SPEAKER TBA"
+    "title": "スポンサーLT",
+    "tags": ["Sponsor"],
+    "speaker": "Stripe"
   },
   {
-    "time": "16:30",
-    "duration": "20 min",
+    "time": "15:50",
+    "duration": "10 min",
+    "track": "B",
+    "title": "スポンサーLT",
+    "tags": ["Sponsor"],
+    "speaker": "Silver スポンサー"
+  },
+  {
+    "time": "16:00",
+    "duration": "10 min",
     "track": "—",
     "isBreak": true,
-    "title": "休憩・スポンサーブース"
+    "title": "休憩"
+  },
+  {
+    "time": "16:10",
+    "duration": "35 min",
+    "track": "A",
+    "title": "CTO Talk: AI SaaSのマネタイズ",
+    "tags": ["CTO", "AI", "SaaS"],
+    "speaker": "ABEJA 村主さん・Route06 重岡さん"
   },
   {
     "time": "16:50",
-    "duration": "40 min",
-    "track": "LT",
-    "title": "Lightning Talks × 5",
-    "description": "5分で語る、現場の知恵。失敗・気づき・小さなハック。",
-    "tags": ["Community", "5min×5"],
-    "speaker": "// CFP募集予定"
+    "duration": "35 min",
+    "track": "A",
+    "title": "価格の話",
+    "tags": ["Pricing"],
+    "speaker": "アンチパターン 小笠さんほか"
   },
   {
-    "time": "17:30",
-    "duration": "30 min",
-    "track": "—",
-    "isBreak": true,
-    "title": "クロージング・パネル",
-    "description": "運営とコミュニティで振り返る1日。",
-    "speaker": "// PANEL TBA"
-  },
-  {
-    "time": "18:00",
-    "duration": "→",
-    "track": "—",
-    "isBreak": true,
-    "title": "本編終了 → Networking Party"
+    "time": "16:50",
+    "duration": "35 min",
+    "track": "B",
+    "title": "Stripe Terminalワークショップ",
+    "tags": ["Terminal", "Hands-on"],
+    "speaker": "榊原さん"
   }
 ]

@@ -5,7 +5,7 @@ export function Hero() {
     <section className="hero" id="top">
       <div className="container">
         <div className="issue">
-          <span>Issue 2026 · vol.07</span>
+          <span>Issue 2026 · vol.03</span>
           <span>Yokohama, Japan</span>
           <span className="ln"></span>
           <span className="e">2026.08.01 Sat</span>
@@ -42,11 +42,11 @@ export function Hero() {
               </dd>
               <dt>Place</dt>
               <dd>
-                Yokohama<span className="small">みなとみらい・会場詳細は近日</span>
+                Yokohama<span className="small">岩崎学園情報科学専門学校・相鉄岩崎学園ビル5F</span>
               </dd>
               <dt>Edition</dt>
               <dd>
-                vol. 07<span className="small">JP_Stripes 年次カンファレンス</span>
+                vol. 03<span className="small">JP_Stripes 年次カンファレンス</span>
               </dd>
             </dl>
           </div>

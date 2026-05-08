@@ -18,8 +18,8 @@ type TrackKey = 'all' | 'A' | 'B' | 'LT';
 
 const TABS: { key: TrackKey; label: string }[] = [
   { key: 'all', label: 'All' },
-  { key: 'A', label: 'A · 実装' },
-  { key: 'B', label: 'B · ビジネス' },
+  { key: 'A', label: 'A · Main' },
+  { key: 'B', label: 'B · Tech' },
   { key: 'LT', label: 'LT' },
 ];
 
@@ -46,28 +46,28 @@ export function Timetable() {
             </h2>
           </div>
           <p className="deck">
-            8月1日(土) 12:30 — 18:00。実装トラックとビジネストラック、そしてLT。詳細は順次公開。
+            8月1日(土) 12:30 — 18:00。MainトラックとTechトラック、そしてLT。詳細は順次公開。
           </p>
         </div>
 
         <div className="tt-summary">
           <div className="tt-sum-card" data-t="A">
             <div className="h">
-              <i></i>Track A · 実装
+              <i></i>Track A · Main
             </div>
             <div className="ttl">
-              Implementation,
+              Keynotes &amp; talks,
               <br />
-              at the seams.
+              front and center.
             </div>
             <div className="meta">3 sessions · 50min each</div>
           </div>
           <div className="tt-sum-card" data-t="B">
             <div className="h">
-              <i></i>Track B · ビジネス
+              <i></i>Track B · Tech
             </div>
             <div className="ttl">
-              Business,
+              Deep dives &amp; hands-on,
               <br />
               in the trenches.
             </div>

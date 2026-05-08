@@ -1,0 +1,151 @@
+'use client';
+
+import { useState } from 'react';
+import sessions from '@/data/sessions.json';
+
+type Session = {
+  time: string;
+  duration: string;
+  track: string;
+  title: string;
+  description?: string;
+  tags?: string[];
+  speaker?: string;
+  isBreak?: boolean;
+};
+
+type TrackKey = 'all' | 'A' | 'B' | 'LT';
+
+const TABS: { key: TrackKey; label: string }[] = [
+  { key: 'all', label: 'All' },
+  { key: 'A', label: 'A · 実装' },
+  { key: 'B', label: 'B · ビジネス' },
+  { key: 'LT', label: 'LT' },
+];
+
+export function Timetable() {
+  const [active, setActive] = useState<TrackKey>('all');
+  const list = sessions as Session[];
+
+  function isMuted(track: string): boolean {
+    if (active === 'all') return false;
+    if (track === '—') return false;
+    return track !== active;
+  }
+
+  return (
+    <section className="s" id="timetable">
+      <div className="container">
+        <div className="section-mast">
+          <div>
+            <div className="num">№ 02 — Timetable</div>
+            <h2>
+              <em>One day,</em>
+              <br />
+              two tracks.
+            </h2>
+          </div>
+          <p className="deck">
+            8月1日(土) 12:30 — 18:00。実装トラックとビジネストラック、そしてLT。詳細は順次公開。
+          </p>
+        </div>
+
+        <div className="tt-summary">
+          <div className="tt-sum-card" data-t="A">
+            <div className="h">
+              <i></i>Track A · 実装
+            </div>
+            <div className="ttl">
+              Implementation,
+              <br />
+              at the seams.
+            </div>
+            <div className="meta">3 sessions · 50min each</div>
+          </div>
+          <div className="tt-sum-card" data-t="B">
+            <div className="h">
+              <i></i>Track B · ビジネス
+            </div>
+            <div className="ttl">
+              Business,
+              <br />
+              in the trenches.
+            </div>
+            <div className="meta">2 sessions · 40min each</div>
+          </div>
+          <div className="tt-sum-card" data-t="LT">
+            <div className="h">
+              <i></i>LT · 5分の知恵
+            </div>
+            <div className="ttl">
+              5 lightning talks,
+              <br />
+              community-fed.
+            </div>
+            <div className="meta">CFP募集予定 · 5min each</div>
+          </div>
+        </div>
+
+        <div className="tt-controls">
+          <div className="tt-tabs" role="tablist">
+            {TABS.map((t) => (
+              <button
+                key={t.key}
+                className="tt-tab"
+                data-track={t.key}
+                aria-selected={active === t.key}
+                onClick={() => setActive(t.key)}
+              >
+                <span className="swatch"></span>
+                {t.label}
+              </button>
+            ))}
+          </div>
+          <div className="tt-legend">
+            <span className="a">
+              <i></i>Track A
+            </span>
+            <span className="b">
+              <i></i>Track B
+            </span>
+            <span className="lt">
+              <i></i>LT
+            </span>
+            <span>— Break / Common</span>
+          </div>
+        </div>
+
+        <div className="tt-list">
+          {list.map((s, i) => {
+            const muted = isMuted(s.track);
+            const className = ['tt-row', muted ? 'muted' : ''].filter(Boolean).join(' ');
+            const breakProps = s.isBreak ? { 'data-break': '' } : {};
+            return (
+              <div key={i} className={className} data-track={s.track} {...breakProps}>
+                <div className="tt-time">
+                  {s.time}
+                  <span className="dur">{s.duration}</span>
+                </div>
+                <div className="tt-pill" data-t={s.track}>
+                  {s.track === '—' ? '—' : s.track}
+                </div>
+                <div>
+                  <div className="tt-title">{s.title}</div>
+                  {s.description ? <div className="tt-desc">{s.description}</div> : null}
+                  {s.tags && s.tags.length > 0 ? (
+                    <div className="tt-tags">
+                      {s.tags.map((t) => (
+                        <span key={t}>{t}</span>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
+                <div className="tt-by">{s.speaker ?? ''}</div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}

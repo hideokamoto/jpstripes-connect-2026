@@ -1,0 +1,93 @@
+[
+  {
+    "time": "12:00",
+    "duration": "30 min",
+    "track": "—",
+    "isBreak": true,
+    "title": "開場・受付"
+  },
+  {
+    "time": "12:30",
+    "duration": "30 min",
+    "track": "—",
+    "isBreak": true,
+    "title": "開会挨拶"
+  },
+  {
+    "time": "13:00",
+    "duration": "50 min",
+    "track": "A",
+    "title": "Opening Keynote",
+    "description": "2026年の決済とAI、地殻変動の現在地。Stripe 周辺で何が起きているのか、現場の視点から。",
+    "tags": ["Keynote", "AI", "Industry"],
+    "speaker": "// SPEAKER TBA"
+  },
+  {
+    "time": "13:50",
+    "duration": "40 min",
+    "track": "B",
+    "title": "チャーンを\"運用\"する",
+    "description": "解約理由の分類、CSとの責任分界、定量と定性の組み合わせ方。",
+    "tags": ["Subscriptions", "Retention", "Ops"],
+    "speaker": "// SPEAKER TBA"
+  },
+  {
+    "time": "14:30",
+    "duration": "50 min",
+    "track": "A",
+    "title": "Connect 設計の落とし穴",
+    "description": "手数料・KYC・払い戻し責任の現場。プラットフォームを運用してわかった設計の勘所。",
+    "tags": ["Connect", "Marketplace", "KYC"],
+    "speaker": "// SPEAKER TBA"
+  },
+  {
+    "time": "15:10",
+    "duration": "40 min",
+    "track": "B",
+    "title": "価格改定の進め方",
+    "description": "既存顧客への通知・移行・税額計算。本番一発勝負を、いかに段階的に進めるか。",
+    "tags": ["Pricing", "Migration", "Tax"],
+    "speaker": "// SPEAKER TBA"
+  },
+  {
+    "time": "15:50",
+    "duration": "40 min",
+    "track": "A",
+    "title": "Stripe Tax / Invoice 運用",
+    "description": "電子帳簿保存法とインボイス制度の実装。日本独自の請求要件、どこまで Stripe で完結するか。",
+    "tags": ["Invoice", "JP-Tax"],
+    "speaker": "// SPEAKER TBA"
+  },
+  {
+    "time": "16:30",
+    "duration": "20 min",
+    "track": "—",
+    "isBreak": true,
+    "title": "休憩・スポンサーブース"
+  },
+  {
+    "time": "16:50",
+    "duration": "40 min",
+    "track": "LT",
+    "title": "Lightning Talks × 5",
+    "description": "5分で語る、現場の知恵。失敗・気づき・小さなハック。",
+    "tags": ["Community", "5min×5"],
+    "speaker": "// CFP募集予定"
+  },
+  {
+    "time": "17:30",
+    "duration": "30 min",
+    "track": "—",
+    "isBreak": true,
+    "title": "クロージング・パネル",
+    "description": "運営とコミュニティで振り返る1日。",
+    "speaker": "// PANEL TBA"
+  },
+  {
+    "time": "18:00",
+    "duration": "→",
+    "track": "—",
+    "isBreak": true,
+    "title": "本編終了 → Networking Party"
+  }
+]

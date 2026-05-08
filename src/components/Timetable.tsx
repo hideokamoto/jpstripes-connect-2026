@@ -87,13 +87,18 @@ export function Timetable() {
         </div>
 
         <div className="tt-controls">
-          <div className="tt-tabs" role="tablist">
+          <div className="tt-tabs" role="tablist" aria-label="Timetable track filter">
             {TABS.map((t) => (
               <button
                 key={t.key}
+                type="button"
+                role="tab"
+                id={`tt-tab-${t.key}`}
                 className="tt-tab"
                 data-track={t.key}
+                aria-controls="tt-list"
                 aria-selected={active === t.key}
+                tabIndex={active === t.key ? 0 : -1}
                 onClick={() => setActive(t.key)}
               >
                 <span className="swatch"></span>
@@ -115,7 +120,12 @@ export function Timetable() {
           </div>
         </div>
 
-        <div className="tt-list">
+        <div
+          id="tt-list"
+          className="tt-list"
+          role="tabpanel"
+          aria-labelledby={`tt-tab-${active}`}
+        >
           {list.map((s) => {
             const muted = isMuted(s.track);
             const className = ['tt-row', muted ? 'muted' : ''].filter(Boolean).join(' ');

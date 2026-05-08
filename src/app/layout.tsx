@@ -10,7 +10,9 @@ export const metadata: Metadata = {
 const themeInitScript = `
 try {
   var saved = localStorage.getItem('jp26-theme');
-  if (saved) document.documentElement.dataset.theme = saved;
+  if (saved === 'dark' || saved === 'light') {
+    document.documentElement.dataset.theme = saved;
+  }
 } catch (e) {}
 `;
 

@@ -16,7 +16,7 @@ export function Venue() {
 
         <div className="venue-block">
           <div className="venue-figure">
-            <svg viewBox="0 0 500 400" preserveAspectRatio="none">
+            <svg viewBox="0 0 500 400" preserveAspectRatio="none" aria-hidden="true" focusable="false">
               <defs>
                 <pattern id="gridB" width="25" height="25" patternUnits="userSpaceOnUse">
                   <path

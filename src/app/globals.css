@@ -12,8 +12,8 @@
   --accent-ink: #050b1d;
   --accent-2: #c9a1ff;
   --accent-3: #6ee7c8;
-  --serif: 'Instrument Serif', Georgia, serif;
-  --serif-text: 'Newsreader', Georgia, serif;
+  --serif: 'Instrument Serif', georgia, serif;
+  --serif-text: 'Newsreader', georgia, serif;
   --sans: 'Geist', system-ui, sans-serif;
   --mono: 'Geist Mono', ui-monospace, monospace;
   --pad-section: 96px;
@@ -386,8 +386,8 @@ section.s { padding: var(--pad-section) 0; border-bottom: 1px solid var(--line);
 .venue-figure .stamp { position: absolute; top: 24px; left: 24px; font-family: var(--serif); font-style: italic; font-size: 24px; line-height: 1; letter-spacing: -0.02em; }
 .venue-figure .stamp .small { font-family: var(--mono); font-style: normal; font-size: 11px; display: block; color: var(--fg-3); margin-top: 6px; letter-spacing: 0.1em; }
 .venue-figure .pin { position: absolute; left: 56%; top: 44%; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px color-mix(in oklch, var(--accent) 30%, transparent); }
-.venue-figure .pin::after { content: ""; position: absolute; inset: -16px; border: 1px solid var(--accent); border-radius: 50%; animation: pingB 2.4s infinite; }
-@keyframes pingB { 0% { transform: scale(.5); opacity: 1; } 100% { transform: scale(2.6); opacity: 0; } }
+.venue-figure .pin::after { content: ""; position: absolute; inset: -16px; border: 1px solid var(--accent); border-radius: 50%; animation: ping-b 2.4s infinite; }
+@keyframes ping-b { 0% { transform: scale(.5); opacity: 1; } 100% { transform: scale(2.6); opacity: 0; } }
 .venue-text h3 { font-family: var(--serif); font-weight: 400; font-size: 48px; line-height: 1; letter-spacing: -0.02em; margin: 0 0 16px; }
 .venue-text h3 em { color: var(--accent); font-style: italic; }
 .venue-text .place { font-family: var(--serif-text); font-size: 18px; color: var(--fg); margin-bottom: 28px; }

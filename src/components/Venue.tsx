@@ -11,7 +11,7 @@ export function Venue() {
               <em>once again.</em>
             </h2>
           </div>
-          <p className="deck">2025に続き、横浜での開催。会場の詳細はまもなく。</p>
+          <p className="deck">2025に続き、横浜での開催。岩崎学園情報科学専門学校にて。</p>
         </div>
 
         <div className="venue-block">
@@ -59,31 +59,38 @@ export function Venue() {
               />
             </svg>
             <div className="stamp">
-              横浜・みなとみらい
-              <span className="small">35.4628° N · 139.6253° E</span>
+              横浜・横浜駅西口
+              <span className="small">35.4660° N · 139.6197° E</span>
             </div>
             <div className="pin"></div>
           </div>
           <div className="venue-text">
             <h3>
-              Venue
-              <br />
-              <em>— TBA</em>
+              <a
+                href="https://isc.iwasaki.ac.jp/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                岩崎学園
+                <br />
+                <em>情報科学専門学校</em>
+              </a>
             </h3>
             <div className="place">
-              神奈川県横浜市・みなとみらい地区。桜木町／みなとみらい駅から徒歩5分圏内の会場を予定しています。
+              相鉄岩崎学園ビル 5F<br />
+              神奈川県横浜市西区南幸2-1-1
             </div>
             <div className="access">
               <h4>Access</h4>
               <ul>
                 <li>
-                  <span className="k">JR / 横浜市営</span>桜木町駅 徒歩5分圏内
+                  <span className="k">JR各線 / 相鉄線 / 東急線 / 横浜市営地下鉄</span>横浜駅 西口 徒歩5分
                 </li>
                 <li>
-                  <span className="k">みなとみらい線</span>みなとみらい駅 徒歩3分圏内
+                  <span className="k">京急線</span>横浜駅 徒歩5分
                 </li>
                 <li>
-                  <span className="k">羽田空港から</span>京急で約30分
+                  <span className="k">羽田空港から</span>京急で約25分
                 </li>
               </ul>
             </div>

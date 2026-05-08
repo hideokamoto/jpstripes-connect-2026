@@ -116,18 +116,22 @@ export function Timetable() {
         </div>
 
         <div className="tt-list">
-          {list.map((s, i) => {
+          {list.map((s) => {
             const muted = isMuted(s.track);
             const className = ['tt-row', muted ? 'muted' : ''].filter(Boolean).join(' ');
-            const breakProps = s.isBreak ? { 'data-break': '' } : {};
             return (
-              <div key={i} className={className} data-track={s.track} {...breakProps}>
+              <div
+                key={s.time + s.track + s.title}
+                className={className}
+                data-track={s.track}
+                data-break={s.isBreak ? '' : undefined}
+              >
                 <div className="tt-time">
                   {s.time}
                   <span className="dur">{s.duration}</span>
                 </div>
                 <div className="tt-pill" data-t={s.track}>
-                  {s.track === '—' ? '—' : s.track}
+                  {s.track}
                 </div>
                 <div>
                   <div className="tt-title">{s.title}</div>

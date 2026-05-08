@@ -13,10 +13,11 @@ export function ChapterNav() {
   const [active, setActive] = useState(0);
 
   useEffect(() => {
+    const elements = CHAPTERS.map((c) => document.querySelector(c.href));
     function onScroll() {
       let i = 0;
-      for (let n = 0; n < CHAPTERS.length; n++) {
-        const el = document.querySelector(CHAPTERS[n].href);
+      for (let n = 0; n < elements.length; n++) {
+        const el = elements[n];
         if (el && el.getBoundingClientRect().top < window.innerHeight * 0.5) {
           i = n;
         }

@@ -21,10 +21,6 @@ function compute(): Parts {
 }
 
 function Cell({ value, len, label, code }: { value: string; len: number; label: string; code: string }) {
-  const prevRef = useRef(value);
-  useEffect(() => {
-    prevRef.current = value;
-  }, [value]);
   const digits = value.padStart(len, '0').split('');
   return (
     <div className="cd-cell">

@@ -19,39 +19,39 @@
     "track": "A",
     "title": "オープニングキーノート",
     "tags": ["Keynote"],
-    "speaker": "Stripe ダニエル"
+    "speaker": "Stripe Daniel Heffernan"
   },
   {
     "time": "13:40",
     "duration": "30 min",
     "track": "A",
-    "title": "Stripeから事例紹介",
+    "title": "調整中",
     "tags": ["Case Study"],
-    "speaker": "// TBA"
+    "speaker": "調整中"
   },
   {
     "time": "13:40",
     "duration": "30 min",
     "track": "B",
-    "title": "Stripe入門",
+    "title": "調整中",
     "tags": ["Beginner"],
-    "speaker": "けんけんさん"
+    "speaker": "調整中"
   },
   {
     "time": "14:15",
     "duration": "5 min",
     "track": "A",
-    "title": "スポンサーLT",
+    "title": "調整中",
     "tags": ["Sponsor"],
-    "speaker": "Gold スポンサー"
+    "speaker": "調整中"
   },
   {
     "time": "14:15",
     "duration": "5 min",
     "track": "B",
-    "title": "スポンサーLT",
+    "title": "調整中",
     "tags": ["Sponsor"],
-    "speaker": "Silver スポンサー"
+    "speaker": "調整中"
   },
   {
     "time": "14:20",
@@ -64,49 +64,49 @@
     "time": "14:30",
     "duration": "35 min",
     "track": "A",
-    "title": "スタートアップ CTOトーク",
+    "title": "調整中",
     "tags": ["CTO", "Startup"],
-    "speaker": "recustomer 真鍋さん・Helpfeel 秋山さん"
+    "speaker": "調整中"
   },
   {
     "time": "14:30",
     "duration": "35 min",
     "track": "B",
-    "title": "意外と知られていないStripeの刺さるユースケース",
+    "title": "調整中",
     "tags": ["Use Case"],
-    "speaker": "Stripe 北爪さん"
+    "speaker": "調整中"
   },
   {
     "time": "15:10",
     "duration": "40 min",
     "track": "A",
-    "title": "Stripe社員に聞く、決済請求管理のハマりどころ",
+    "title": "調整中",
     "tags": ["Billing", "TAM"],
-    "speaker": "Stripe TAMメンバー"
+    "speaker": "調整中"
   },
   {
     "time": "15:10",
     "duration": "40 min",
     "track": "B",
-    "title": "Stripe Connectな話（PayPay / terminalなども）",
+    "title": "調整中",
     "tags": ["Connect", "Terminal"],
-    "speaker": "INFLU / favy（仮）"
+    "speaker": "調整中"
   },
   {
     "time": "15:50",
     "duration": "10 min",
     "track": "A",
-    "title": "スポンサーLT",
+    "title": "調整中",
     "tags": ["Sponsor"],
-    "speaker": "Stripe"
+    "speaker": "調整中"
   },
   {
     "time": "15:50",
     "duration": "10 min",
     "track": "B",
-    "title": "スポンサーLT",
+    "title": "調整中",
     "tags": ["Sponsor"],
-    "speaker": "Silver スポンサー"
+    "speaker": "調整中"
   },
   {
     "time": "16:00",
@@ -119,24 +119,24 @@
     "time": "16:10",
     "duration": "35 min",
     "track": "A",
-    "title": "CTO Talk: AI SaaSのマネタイズ",
+    "title": "調整中",
     "tags": ["CTO", "AI", "SaaS"],
-    "speaker": "ABEJA 村主さん・Route06 重岡さん"
+    "speaker": "調整中"
   },
   {
     "time": "16:50",
     "duration": "35 min",
     "track": "A",
-    "title": "価格の話",
+    "title": "調整中",
     "tags": ["Pricing"],
-    "speaker": "アンチパターン 小笠さんほか"
+    "speaker": "調整中"
   },
   {
     "time": "16:50",
     "duration": "35 min",
     "track": "B",
-    "title": "Stripe Terminalワークショップ",
+    "title": "調整中",
     "tags": ["Terminal", "Hands-on"],
-    "speaker": "榊原さん"
+    "speaker": "調整中"
   }
 ]

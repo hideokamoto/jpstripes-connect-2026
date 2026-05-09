@@ -1,0 +1,32 @@
+[
+  {
+    "id": "tba-keynote",
+    "name": "— TBA",
+    "badge": "Keynote",
+    "org": "Opening Keynote"
+  },
+  {
+    "id": "tba-a-1",
+    "name": "— TBA",
+    "badge": "Track A",
+    "org": "実装トラック"
+  },
+  {
+    "id": "tba-b-1",
+    "name": "— TBA",
+    "badge": "Track B",
+    "org": "ビジネストラック"
+  },
+  {
+    "id": "tba-a-2",
+    "name": "— TBA",
+    "badge": "Track A",
+    "org": "実装トラック"
+  },
+  {
+    "id": "tba-b-2",
+    "name": "— TBA",
+    "badge": "Track B",
+    "org": "ビジネストラック"
+  }
+]

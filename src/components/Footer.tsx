@@ -35,6 +35,9 @@ export function Footer() {
             <a href="https://connect2025.jpstripes.com" target="_blank" rel="noopener">
               Connect 2025 ↗
             </a>
+            <a href="https://www.youtube.com/playlist?list=PLr8gucIRpGCH9HRuWLCAgIjiNyWUQBpO0" target="_blank" rel="noopener">
+              2025 アーカイブ動画 ↗
+            </a>
             <a href="https://jpstripes.com/sessions" target="_blank" rel="noopener">
               Sessions ↗
             </a>

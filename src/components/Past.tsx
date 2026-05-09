@@ -17,16 +17,10 @@ type Session = {
   desc: string;
   by: string;
   org: string;
-  videoId?: string;
+  videoId: string;
 };
 
 const SESSIONS: Session[] = [
-  {
-    time: "12:45", duration: "15 min", track: "—", label: "Opening",
-    title: "オープニング／ご挨拶",
-    desc: "6年ぶりの Connect 開催。実行委員より、当日の流れと2つのトラックの楽しみ方をご案内。",
-    by: "岡本 秀高 ほか実行委員", org: "JP_Stripes 実行委員会",
-  },
   {
     time: "13:00", duration: "40 min", track: "K", label: "Keynote",
     title: "Stripeの今とこれから — 決済とAIがもたらすビジネスの可能性",
@@ -50,13 +44,6 @@ const SESSIONS: Session[] = [
     videoId: "Z2HuxUtMrjY",
   },
   {
-    time: "15:10", duration: "40 min", track: "A", label: "Update",
-    title: "浦島太郎にならないための、Stripe最新動向キャッチアップ",
-    desc: "API バージョン、flexible billing_mode、Checkout Session の新要素、Connect Embedded Components — 直近アップデートを高速で把握する1本。",
-    by: "齊藤 光正", org: "Stripe Professional Services Team",
-    // TODO: replace with direct video ID once confirmed
-  },
-  {
     time: "15:50", duration: "10 min", track: "LT", label: "Sponsor LT",
     title: "スポンサーLT — Stripe導入戦略とビジネスモデル設計",
     desc: "Stripe を活用した導入戦略とビジネスモデル設計の知見をスポンサー枠で共有。",
@@ -78,38 +65,16 @@ const SESSIONS: Session[] = [
     by: "森 / 真崎 克宏", org: "株式会社favy / 株式会社DIGITALJET",
     videoId: "pfau5P1NW3c",
   },
-  {
-    time: "17:30", duration: "5 min", track: "LT", label: "LT",
-    title: "Stripeで3Dセキュアを実装する",
-    desc: "日本の 3DS2 義務化を踏まえた、Stripe での 3D Secure 実装方法のライトニングトーク。",
-    by: "KenKen (@KenKen127_)", org: "個人登壇",
-    // TODO: replace with direct video ID once confirmed
-  },
-  {
-    time: "17:50", duration: "10 min", track: "—", label: "Closing",
-    title: "クロージング",
-    desc: "1日の振り返り、懇親会の案内。次回 Connect 2026 への橋渡し。",
-    by: "実行委員会", org: "JP_Stripes 実行委員会",
-    // TODO: replace with direct video ID once confirmed
-  },
 ];
 
 function ArchiveRow({ s }: { s: Session }) {
-  const href = s.videoId ? videoUrl(s.videoId) : PLAYLIST_URL;
-  const ariaLabel = s.videoId
-    ? `${s.title} を YouTube で視聴`
-    : `${s.title} — プレイリストで視聴`;
-
+  const href = videoUrl(s.videoId);
   return (
     <li className="ar-row" data-track={s.track}>
-      {s.videoId ? (
-        <a className="ar-thumb" href={href} target="_blank" rel="noopener" aria-label={ariaLabel}>
-          <img loading="lazy" src={thumbUrl(s.videoId)} alt="" width={320} height={180} />
-          <span className="ar-play" aria-hidden="true">▶</span>
-        </a>
-      ) : (
-        <a className="ar-thumb is-empty" href={PLAYLIST_URL} target="_blank" rel="noopener" aria-label={ariaLabel} />
-      )}
+      <a className="ar-thumb" href={href} target="_blank" rel="noopener" aria-label={`${s.title} を YouTube で視聴`}>
+        <img loading="lazy" src={thumbUrl(s.videoId)} alt="" width={320} height={180} />
+        <span className="ar-play" aria-hidden="true">▶</span>
+      </a>
       <div className="ar-meta">
         <div className="ar-time">{s.time}<span className="dur">{s.duration}</span></div>
         <div className="ar-pill" data-t={s.track}>{s.label}</div>
@@ -122,9 +87,7 @@ function ArchiveRow({ s }: { s: Session }) {
         <div className="ar-desc">{s.desc}</div>
         <div className="ar-by">{s.by} <span className="org">— {s.org}</span></div>
       </div>
-      <a className="ar-watch" href={href} target="_blank" rel="noopener">
-        {s.videoId ? "Watch ↗" : "Playlist ↗"}
-      </a>
+      <a className="ar-watch" href={href} target="_blank" rel="noopener">Watch ↗</a>
     </li>
   );
 }

@@ -1,32 +1,37 @@
 [
   {
-    "id": "tba-keynote",
-    "name": "— TBA",
+    "id": "daniel-heffernan",
+    "name": "Daniel Heffernan",
     "badge": "Keynote",
-    "org": "Opening Keynote"
+    "org": "Stripe",
+    "image": "/speakers/1516767400750.jpg"
   },
   {
-    "id": "tba-a-1",
-    "name": "— TBA",
+    "id": "kojima-hideki",
+    "name": "小島 英揮",
     "badge": "Track A",
-    "org": "実装トラック"
+    "org": "株式会社Still Day One",
+    "image": "/speakers/ojima.jpg"
   },
   {
-    "id": "tba-b-1",
-    "name": "— TBA",
-    "badge": "Track B",
-    "org": "ビジネストラック"
-  },
-  {
-    "id": "tba-a-2",
-    "name": "— TBA",
+    "id": "akiyama",
+    "name": "秋山さん",
     "badge": "Track A",
-    "org": "実装トラック"
+    "org": "株式会社Helpfeel",
+    "image": "/speakers/b5f641fdf20fc10651b5c8797b6e6461.png"
   },
   {
-    "id": "tba-b-2",
-    "name": "— TBA",
+    "id": "nakano-kyohei",
+    "name": "中野 恭兵",
     "badge": "Track B",
-    "org": "ビジネストラック"
+    "org": "アトモフ株式会社",
+    "image": "/speakers/12a26cb6aa9617aed86cbb8ea40e5f2b.jpg"
+  },
+  {
+    "id": "okamoto-hidetaka",
+    "name": "岡本 秀高",
+    "badge": "Track B",
+    "org": "Revtrona",
+    "image": "/speakers/DSC_5282.JPG"
   }
 ]

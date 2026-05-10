@@ -82,7 +82,7 @@ export function Timetable() {
               <br />
               community-fed.
             </div>
-            <div className="meta">CFP募集予定 · 5min each</div>
+            <div className="meta">5min each</div>
           </div>
         </div>
 

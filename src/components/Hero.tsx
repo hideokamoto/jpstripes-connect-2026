@@ -17,7 +17,8 @@ export function Hero() {
         </div>
 
         <h1 className="hero-mast">
-          AI時代のマネタイズ方法を探そう
+          AI時代の<br />
+          <em>マネタイズ</em>方法を探そう
         </h1>
 
         <div className="hero-grid">

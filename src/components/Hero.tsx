@@ -17,8 +17,7 @@ export function Hero() {
         </div>
 
         <h1 className="hero-mast">
-          決済の判断を、<br />
-          <em>一人で</em>抱え<span className="quiet">ない。</span>
+          AI時代のマネタイズ方法を探そう
         </h1>
 
         <div className="hero-grid">

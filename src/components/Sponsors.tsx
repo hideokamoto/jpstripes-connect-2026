@@ -11,7 +11,7 @@ export function Sponsors() {
               <em>the community.</em>
             </h2>
           </div>
-          <p className="deck">スポンサー募集中。コミュニティと共に決済の知恵を広げてください。</p>
+          <p className="deck">スポンサー募集中。コミュニティと共に、AI時代のマネタイズの未来を広げてください。</p>
         </div>
 
         <div className="sp-tier" data-tier="special">

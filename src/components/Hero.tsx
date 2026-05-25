@@ -24,8 +24,8 @@ export function Hero() {
         <div className="hero-grid">
           <div>
             <p className="hero-lead">
-              <span className="drop">運</span>
-              用にはステージング環境がない。価格改定は本番でしか試せない。チャーン対策の結果は、解約数でしか分からない。— ぶっつけ本番の決済を、コミュニティの経験で支え合う、年に一度の1日。
+              <span className="drop">人</span>
+              が買う時代から、エージェントが買う時代へ。月額課金から、使った分だけ支払うトークンベースへ。決済は、単なる機能から、プロダクトそのものへ。いま、ビジネスモデルは静かに書き換わっています。Stripe を軸に、SaaS、Commerce、Platform の未来を、セッションとハンズオンで探るカンファレンス。
             </p>
             <div className="hero-cta">
               <button className="btn btn-primary" type="button" disabled aria-disabled="true">

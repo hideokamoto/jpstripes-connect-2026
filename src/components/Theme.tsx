@@ -8,22 +8,22 @@ export function Theme() {
           <div>
             <div className="num">№ 01 — Theme</div>
             <h2>
-              <em>Don&apos;t carry</em>
+              <em>The business model,</em>
               <br />
-              payment decisions
+              quietly
               <br />
-              alone.
+              rewritten.
             </h2>
           </div>
           <p className="deck">
-            JP_Stripes Connect 2026 のテーマ。決済・サブスク・請求管理の判断を、コミュニティで分け合う。
+            JP_Stripes Connect 2026 のテーマ。人が買う時代から、エージェントが買う時代へ。Stripe を軸に、マネタイズの次の形を探る。
           </p>
         </div>
 
         <p className="pull-quote">
-          <span className="mark">「</span>うちの状況でどう判断すべきか<span className="mark">」</span>は、
+          <span className="mark">「</span>AI時代のマネタイズに、
           <br />
-          誰も教えて<em>くれない。</em>
+          確立された正解は<em>まだない。</em><span className="mark">」</span>
         </p>
 
         <div className="theme-read">
@@ -31,56 +31,52 @@ export function Theme() {
 
           <div className="theme-body">
             <h3 id="th-1">
-              本番<em>でしか</em>試せない
+              SaaS — <em>課金モデルの</em>再発明
             </h3>
             <p>
-              運用にはステージング環境がない。価格改定は本番でしか試せない。チャーン対策の結果は、実際の解約数でしか分からない。Connect
-              の手数料設計を間違えたら、既存加盟店との再交渉が待っている。
-              <strong>ほとんどの人が、ぶっつけ本番の一発勝負を強いられている。</strong>
+              月額固定のサブスクリプションが当たり前だった。けれど推論のたびにコストが動くAIプロダクトでは、使った分だけ支払うトークンベース・従量課金・ハイブリッドが現実的な選択肢になる。
+              <strong>「いくら、どう請求するか」そのものが、プロダクトの競争力になりはじめている。</strong>
             </p>
 
             <h3 id="th-2">
-              ドキュメントが<em>教えてくれない</em>こと
+              Commerce — <em>エージェントが</em>買う
             </h3>
             <p>
-              公式ドキュメントは「何ができるか」を教えてくれる。サポートは「技術的に正しいか」を教えてくれる。けれど、自分の事業のフェーズ、自分のチームの体制、自分の顧客の文脈を踏まえた判断は、結局のところ自分でするしかない。
-            </p>
-            <p>
-              判断を支えるのは、似た状況で似た選択をしてきた人の話。失敗談、その後どうしたか、いま振り返ってどう思うか。— それは、Stack Overflow にも GitHub にも、まだ書かれていない。
+              これまで、カートに入れてボタンを押すのは人間だった。これからは、AIエージェントが比較し、選び、決済する。Agentic
+              Commerce。「誰が買うのか」という前提が変わるとき、チェックアウトも、与信も、不正対策も設計し直しになる。
             </p>
 
             <h3 id="th-3">
-              経験を、<em>分け合う場</em>
+              Platform — <em>決済そのものが</em>プロダクト
             </h3>
             <p>
-              JP_Stripes Connect は、Stripe をキーワードに決済・サブスク・請求管理の経験を共有する、年に一度の場。
-              <strong>誰かの失敗談が、自分の落とし穴を避ける地図になる。</strong>
-              誰かの成功事例が、自分の判断の根拠になる。誰かの悩みが、「自分だけじゃない」という安心になる。
+              決済は長らく「最後に付け足す機能」だった。けれどプラットフォーム型ビジネスでは、入金設計・手数料分配・コンプライアンスこそが事業の中核になる。
+              <strong>Stripe Connect が示すように、決済は単なる機能から、プロダクトそのものへ姿を変えている。</strong>
             </p>
 
             <h3 id="th-4">
               2026年8月、<em>横浜で。</em>
             </h3>
             <p>
-              ビジネスの最も困難で面白い領域を、コミュニティの力でより乗り越えよう。— 2026年8月1日、横浜でお会いしましょう。
+              ビジネスモデルが静かに書き換わるいま、その最前線をセッションとハンズオンで確かめにいく。Stripe を軸に、SaaS・Commerce・Platform の次の形を探る1日。— 2026年8月1日、横浜でお会いしましょう。
             </p>
           </div>
 
           <aside className="sidenotes">
             <div className="sidenote">
               <div className="k">01 — Field note</div>
-              <em>&quot;うちの場合は…&quot;</em>
-              サポートに投げて返ってくるのは「仕様」。ほしいのは「同じ業種で同じ規模の人がどう運用しているか」。
+              <em>&quot;サブスクのままでいいのか&quot;</em>
+              価格表を作り直すたびに思う。AI時代の最適な課金モデルは、まだ手探りだ。
             </div>
             <div className="sidenote">
               <div className="k">02 — Field note</div>
-              <em>&quot;前職ではこうだった&quot;</em>
-              が一番効く判断材料になる、ということが、年に一度この場で確認できる。
+              <em>&quot;顧客がAIになる&quot;</em>
+              SDKのドキュメントには載っていない、ビジネス設計そのものの話を聞きたい。
             </div>
             <div className="sidenote">
               <div className="k">03 — Theme</div>
-              <em>Don&apos;t carry alone.</em>
-              一人で抱えない、ということ。それが2026年のテーマです。
+              <em>Find your model.</em>
+              AI時代のマネタイズ方法を、ここで一緒に探そう。それが2026年のテーマです。
             </div>
           </aside>
         </div>
@@ -89,23 +85,23 @@ export function Theme() {
           <div className="it">
             <div className="num">01</div>
             <h4>
-              失敗談を、<em>地図に</em>
+              SaaS、<em>課金を再発明</em>
             </h4>
-            <p>落とし穴を踏み抜く前に。誰かが踏んだ穴は、もう踏まなくていい。</p>
+            <p>月額から従量・トークンベースへ。最適な値付けが、そのまま競争力になる。</p>
           </div>
           <div className="it">
             <div className="num">02</div>
             <h4>
-              成功事例を、<em>根拠に</em>
+              Commerce、<em>顧客はAIに</em>
             </h4>
-            <p>「やってみた」の経験は、上司や経営層への提案を支える説得材料になる。</p>
+            <p>人が買う前提が崩れる。エージェント時代のチェックアウトを考える。</p>
           </div>
           <div className="it">
             <div className="num">03</div>
             <h4>
-              悩みを、<em>安心に</em>
+              Platform、<em>決済を主役に</em>
             </h4>
-            <p>同じ問題に取り組む人と話すこと。それだけで、孤独な意思決定は少し軽くなる。</p>
+            <p>付け足す機能から、事業の中核へ。Connect が拓くプラットフォーム決済。</p>
           </div>
         </div>
       </div>

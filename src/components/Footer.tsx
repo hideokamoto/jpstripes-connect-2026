@@ -9,7 +9,7 @@ export function Footer() {
         </div>
         <div className="foot-grid">
           <div className="foot-tag">
-            &quot;うちの状況でどう判断すべきか&quot; を、コミュニティで分け合う1日。
+            人が買う時代から、エージェントが買う時代へ。— マネタイズの次の形を探す1日。
           </div>
           <div>
             <h4>Event</h4>

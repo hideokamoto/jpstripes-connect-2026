@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'JP_Stripes Connect 2026 — 決済の判断を、一人で抱えない。',
+  title: 'JP_Stripes Connect 2026 — AI時代のマネタイズ方法を探そう',
   description:
-    'JP_Stripes Connect 2026 — 決済・サブスク・請求管理の経験をコミュニティで共有する年に一度の場。2026年8月1日（土）横浜。',
+    'JP_Stripes Connect 2026 — 人が買う時代から、エージェントが買う時代へ。月額課金からトークンベースへ。Stripe を軸に SaaS・Commerce・Platform の未来を、セッションとハンズオンで探るカンファレンス。2026年8月1日（土）横浜。',
 };
 
 const themeInitScript = `

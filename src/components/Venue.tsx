@@ -59,7 +59,7 @@ export function Venue() {
               />
             </svg>
             <div className="stamp">
-              横浜・横浜駅西口
+              横浜・横浜駅きた西口
               <span className="small">35.4660° N · 139.6197° E</span>
             </div>
             <div className="pin"></div>
@@ -77,14 +77,14 @@ export function Venue() {
               </a>
             </h3>
             <div className="place">
-              相鉄岩崎学園ビル 5F<br />
-              神奈川県横浜市西区南幸2-1-1
+              相鉄岩崎学園ビル<br />
+              〒221-0835 神奈川県横浜市神奈川区鶴屋町2丁目17
             </div>
             <div className="access">
               <h4>Access</h4>
               <ul>
                 <li>
-                  <span className="k">JR各線 / 相鉄線 / 東急線 / 横浜市営地下鉄</span>横浜駅 西口 徒歩5分
+                  <span className="k">JR各線 / 相鉄線 / 東急線 / 横浜市営地下鉄</span>横浜駅 きた西口 徒歩1分
                 </li>
                 <li>
                   <span className="k">京急線</span>横浜駅 徒歩5分

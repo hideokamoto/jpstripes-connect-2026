@@ -42,6 +42,13 @@ export function Footer() {
               Sessions ↗
             </a>
           </div>
+          <div>
+            <h4>Legal</h4>
+            <a href="/legal/tokushoho/">特定商取引法に基づく表記</a>
+            <a href="/legal/privacy/">プライバシーポリシー</a>
+            <a href="/legal/cancellation/">キャンセル・返金ポリシー</a>
+            <a href="/legal/terms/">利用規約</a>
+          </div>
         </div>
         <div className="foot-bot">
           <div>© 2026 JP_Stripes — Stripe Users Group Japan</div>

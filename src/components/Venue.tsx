@@ -18,11 +18,10 @@ export function Venue() {
           <div className="venue-figure">
             <div
               className="geolonia"
-              data-lat="35.4660"
-              data-lng="139.6197"
+              data-lat="35.469008"
+              data-lng="139.621716"
               data-zoom="16"
-              data-marker="on"
-              style={{ width: '100%', height: '400px' }}
+              data-style="geolonia/basic"
             />
           </div>
           <div className="venue-text">

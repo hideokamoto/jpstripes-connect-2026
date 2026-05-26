@@ -375,13 +375,8 @@ section.s { padding: var(--pad-section) 0; border-bottom: 1px solid var(--line);
 
 /* VENUE */
 .venue-block { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: stretch; }
-.venue-figure { background: var(--bg-1); border: 1px solid var(--line); border-radius: 4px; aspect-ratio: 5 / 4; position: relative; overflow: hidden; }
-.venue-figure svg { position: absolute; inset: 0; width: 100%; height: 100%; color: var(--fg-2); }
-.venue-figure .stamp { position: absolute; top: 24px; left: 24px; font-family: var(--serif); font-style: italic; font-size: 24px; line-height: 1; letter-spacing: -0.02em; }
-.venue-figure .stamp .small { font-family: var(--mono); font-style: normal; font-size: 11px; display: block; color: var(--fg-3); margin-top: 6px; letter-spacing: 0.1em; }
-.venue-figure .pin { position: absolute; left: 56%; top: 44%; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px color-mix(in oklch, var(--accent) 30%, transparent); }
-.venue-figure .pin::after { content: ""; position: absolute; inset: -16px; border: 1px solid var(--accent); border-radius: 50%; animation: ping-b 2.4s infinite; }
-@keyframes ping-b { 0% { transform: scale(.5); opacity: 1; } 100% { transform: scale(2.6); opacity: 0; } }
+.venue-figure { border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+.geolonia { width: 100%; height: 400px; }
 .venue-text h3 { font-family: var(--serif); font-weight: 400; font-size: 48px; line-height: 1; letter-spacing: -0.02em; margin: 0 0 16px; }
 .venue-text h3 em { color: var(--accent); font-style: italic; }
 .venue-text .place { font-family: var(--serif-text); font-size: 18px; color: var(--fg); margin-bottom: 28px; }

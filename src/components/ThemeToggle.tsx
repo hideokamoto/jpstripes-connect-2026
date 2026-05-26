@@ -1,6 +1,24 @@
 'use client';
 
+import { useEffect } from 'react';
+
 export function ThemeToggle() {
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-color-scheme: light)');
+    function onChange(e: MediaQueryListEvent) {
+      let saved: string | null = null;
+      try {
+        saved = localStorage.getItem('jp26-theme');
+      } catch {}
+      // Follow the OS only while the user hasn't picked a theme manually.
+      if (saved !== 'dark' && saved !== 'light') {
+        document.documentElement.dataset.theme = e.matches ? 'light' : 'dark';
+      }
+    }
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, []);
+
   function onClick() {
     const root = document.documentElement;
     const next = root.dataset.theme === 'dark' ? 'light' : 'dark';

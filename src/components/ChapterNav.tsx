@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 const CHAPTERS = [
@@ -33,9 +32,9 @@ export function ChapterNav() {
   return (
     <nav className="chapters">
       {CHAPTERS.map((c, i) => (
-        <Link key={c.href} href={c.href} className={i === active ? 'on' : ''}>
+        <a key={c.href} href={c.href} className={i === active ? 'on' : ''}>
           {c.label}
-        </Link>
+        </a>
       ))}
     </nav>
   );

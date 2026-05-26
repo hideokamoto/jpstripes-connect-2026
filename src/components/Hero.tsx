@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { Countdown } from './Countdown';
 
 export function Hero() {
@@ -32,7 +31,7 @@ export function Hero() {
               <button className="btn btn-primary" type="button" disabled aria-disabled="true">
                 Connpass登録 — 準備中
               </button>
-              <Link className="btn btn-ghost" href="#theme">Read the Theme →</Link>
+              <a className="btn btn-ghost" href="#theme">Read the Theme →</a>
             </div>
           </div>
           <div className="hero-meta">

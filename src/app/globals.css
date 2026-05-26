@@ -58,11 +58,11 @@ body {
 }
 
 /* No italics — weight-based emphasis throughout */
-body, body * { font-style: normal; }
+body { font-style: normal; }
 em, i, .em { font-style: normal; font-weight: var(--emph-weight); letter-spacing: -0.005em; }
 
 /* English portions use Manrope */
-:lang(en), .en { font-family: var(--en); }
+:lang(en), .en { font-family: var(--en); line-height: var(--line-en); }
 h1 .en, h2 .en { font-family: var(--en); font-weight: 700; letter-spacing: -0.025em; }
 
 h1, h2, h3, h4 { font-family: var(--jp); }
@@ -210,7 +210,6 @@ nav.top .row { display: flex; align-items: center; justify-content: space-betwee
 .cd-num {
   font-family: var(--en); font-size: clamp(64px, 9vw, 128px); line-height: 0.86;
   letter-spacing: -0.045em; font-variant-numeric: tabular-nums;
-  font-feature-settings: "tnum" 1;
   font-weight: 700;
   color: var(--fg);
   display: flex; gap: 0;
@@ -341,7 +340,7 @@ section.s { padding: var(--pad-section) 0; border-bottom: 1px solid var(--line);
 .tt-row:hover:not(.muted) { background: color-mix(in oklch, var(--accent) 4%, transparent); }
 .tt-time {
   font-family: var(--mono); font-size: 14px; color: var(--fg-2);
-  font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; line-height: 1.5;
+  font-variant-numeric: tabular-nums; line-height: 1.5;
 }
 .tt-time .dur { display: block; font-size: 10px; color: var(--fg-3); letter-spacing: 0.1em; margin-top: 2px; }
 .tt-pill {
@@ -462,7 +461,7 @@ section.s { padding: var(--pad-section) 0; border-bottom: 1px solid var(--line);
 .past-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; align-self: center; }
 .past-stat { padding: 24px 16px; border-left: 1px solid var(--line); }
 .past-stat:first-child { border-left: 0; }
-.past-stat .n { font-family: var(--en); font-size: clamp(44px, 4vw, 64px); font-weight: 700; line-height: 0.9; color: var(--accent); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+.past-stat .n { font-family: var(--en); font-size: clamp(44px, 4vw, 64px); font-weight: 700; line-height: 0.9; color: var(--accent); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
 .past-stat .l { font-family: var(--mono); font-size: 11px; color: var(--fg-3); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 8px; }
 .past-stat .l a { color: inherit; border-bottom: 1px dotted var(--line-2); padding-bottom: 1px; transition: color .15s, border-color .15s; }
 .past-stat .l a:hover { color: var(--accent); border-color: var(--accent); }
@@ -484,7 +483,7 @@ section.s { padding: var(--pad-section) 0; border-bottom: 1px solid var(--line);
 .ar-thumb .ar-play { position: absolute; inset: 0; display: grid; place-items: center; color: var(--paper); font-size: 22px; text-shadow: 0 1px 8px rgba(0,0,0,.7); background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,.35)); opacity: .9; transition: opacity .2s; }
 .ar-thumb:hover .ar-play { opacity: 1; }
 .ar-meta { display: flex; flex-direction: column; gap: 8px; }
-.ar-time { font-family: var(--mono); font-size: 14px; color: var(--fg-2); font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; line-height: 1.3; }
+.ar-time { font-family: var(--mono); font-size: 14px; color: var(--fg-2); font-variant-numeric: tabular-nums; line-height: 1.3; }
 .ar-time .dur { display: block; font-size: 10px; color: var(--fg-3); letter-spacing: .1em; text-transform: uppercase; margin-top: 3px; }
 .ar-pill { font-family: var(--mono); font-size: 10px; color: var(--fg-3); border: 1px solid var(--line-2); padding: 3px 8px; border-radius: 4px; width: fit-content; letter-spacing: .08em; text-transform: uppercase; }
 .ar-pill[data-t="K"]    { color: var(--accent);   border-color: color-mix(in oklch, var(--accent) 50%, var(--line-2)); }

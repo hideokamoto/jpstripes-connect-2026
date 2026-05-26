@@ -16,53 +16,14 @@ export function Venue() {
 
         <div className="venue-block">
           <div className="venue-figure">
-            <svg viewBox="0 0 500 400" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-              <defs>
-                <pattern id="gridB" width="25" height="25" patternUnits="userSpaceOnUse">
-                  <path
-                    d="M 25 0 L 0 0 0 25"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="0.4"
-                    opacity="0.25"
-                  />
-                </pattern>
-              </defs>
-              <rect width="500" height="400" fill="url(#gridB)" />
-              <path
-                d="M 0 240 Q 120 215 220 230 T 500 270 L 500 400 L 0 400 Z"
-                fill="currentColor"
-                opacity="0.06"
-              />
-              <path
-                d="M 130 130 L 380 130 L 410 290 L 100 290 Z"
-                fill="currentColor"
-                opacity="0.04"
-              />
-              <circle
-                cx="280"
-                cy="175"
-                r="48"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="0.5"
-                opacity="0.4"
-              />
-              <circle
-                cx="280"
-                cy="175"
-                r="80"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="0.5"
-                opacity="0.25"
-              />
-            </svg>
-            <div className="stamp">
-              横浜・横浜駅きた西口
-              <span className="small">35.4660° N · 139.6197° E</span>
-            </div>
-            <div className="pin"></div>
+            <div
+              className="geolonia"
+              data-lat="35.4660"
+              data-lng="139.6197"
+              data-zoom="16"
+              data-marker="on"
+              style={{ width: '100%', height: '400px' }}
+            />
           </div>
           <div className="venue-text">
             <h3>

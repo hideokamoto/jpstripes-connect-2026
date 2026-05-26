@@ -35,6 +35,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <script
+          type="text/javascript"
+          src="https://cdn.geolonia.com/v1/embed?geolonia-api-key=b5feef31faaa43c08836b4beee951fbc"
+        />
       </head>
       <body>{children}</body>
     </html>

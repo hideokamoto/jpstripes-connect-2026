@@ -1,13 +1,7 @@
-import Image from 'next/image';
+import Link from 'next/link';
 import speakers from '@/data/speakers.json';
-
-type Speaker = {
-  id: string;
-  name: string;
-  badge: string;
-  org: string;
-  image?: string;
-};
+import { SpeakerCard } from '@/components/SpeakerCard';
+import type { Speaker } from '@/types/speaker';
 
 export function Speakers() {
   const list = speakers as Speaker[];
@@ -21,10 +15,15 @@ export function Speakers() {
             <h2>
               Speakers,
               <br />
-              <em>announced soon.</em>
+              <em>joining us.</em>
             </h2>
           </div>
-          <p className="deck">スピーカーは順次公開。</p>
+          <p className="deck">
+            登壇者を順次公開中。
+            <Link href="/speakers/" className="sp-more">
+              All speakers →
+            </Link>
+          </p>
         </div>
 
         <div className="sp-grid">
@@ -34,26 +33,5 @@ export function Speakers() {
         </div>
       </div>
     </section>
-  );
-}
-
-function SpeakerCard({ speaker }: { speaker: Speaker }) {
-  return (
-    <div className="sp-card">
-      <div className="sp-portrait">
-        {speaker.image && (
-          <Image
-            src={speaker.image}
-            alt={speaker.name}
-            fill
-            style={{ objectFit: 'cover' }}
-            sizes="(max-width: 768px) 50vw, 200px"
-          />
-        )}
-        <div className="badge">{speaker.badge}</div>
-      </div>
-      <div className="sp-name">{speaker.name}</div>
-      <div className="sp-org">{speaker.org}</div>
-    </div>
   );
 }

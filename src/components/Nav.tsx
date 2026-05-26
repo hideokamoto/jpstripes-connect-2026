@@ -11,7 +11,7 @@ export function Nav() {
         <div className="nav-links">
           <a href="#theme">Theme</a>
           <a href="#timetable">Timetable</a>
-          <a href="#speakers">Speakers</a>
+          <a href="/speakers/">Speakers</a>
           <a href="#venue">Venue</a>
           <a href="#sponsors">Sponsors</a>
           <a href="#past">2025</a>

@@ -362,6 +362,25 @@ section.s { padding: var(--pad-section) 0; border-bottom: 1px solid var(--line);
 .sp-name { font-family: var(--serif); font-size: 26px; letter-spacing: -0.01em; margin: 0 0 4px; }
 .sp-name em { font-style: italic; color: var(--accent); }
 .sp-org { font-family: var(--mono); font-size: 11px; color: var(--fg-3); letter-spacing: 0.05em; text-transform: uppercase; }
+.sp-more { display: inline-block; margin-top: 12px; font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: 0.06em; border-bottom: 1px solid color-mix(in oklch, var(--accent) 50%, transparent); transition: border-color .15s; }
+.sp-more:hover { border-color: var(--accent); }
+
+/* SPEAKERS PAGE */
+.speakers-page { padding: 64px 0 96px; }
+.sp-detail-list { display: flex; flex-direction: column; gap: 64px; max-width: 920px; }
+.sp-detail { display: grid; grid-template-columns: 220px 1fr; gap: 40px; padding-bottom: 64px; border-bottom: 1px solid var(--line); }
+.sp-detail:last-child { border-bottom: 0; padding-bottom: 0; }
+.sp-detail-portrait {
+  width: 100%; aspect-ratio: 4 / 5; border-radius: 4px; overflow: hidden;
+  background: var(--bg-1); position: relative; border: 1px solid var(--line);
+}
+.sp-detail-body h2 { font-family: var(--serif); font-weight: 400; font-size: 40px; line-height: 1.05; letter-spacing: -0.02em; margin: 0 0 8px; }
+.sp-detail-reading { font-family: var(--mono); font-size: 12px; color: var(--fg-3); letter-spacing: 0.08em; margin-bottom: 18px; }
+.sp-detail-role { font-family: var(--mono); font-size: 12px; color: var(--fg-2); letter-spacing: 0.04em; line-height: 1.6; margin-bottom: 20px; text-transform: uppercase; }
+.sp-detail-body p { font-family: var(--serif-text); font-size: 16px; line-height: 1.75; color: var(--fg); margin: 0 0 20px; text-wrap: pretty; }
+.sp-detail-links { display: flex; flex-wrap: wrap; gap: 10px 16px; }
+.sp-detail-links a { font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: 0.06em; border-bottom: 1px solid color-mix(in oklch, var(--accent) 50%, transparent); transition: border-color .15s; }
+.sp-detail-links a:hover { border-color: var(--accent); }
 .cfp-card {
   grid-column: span 1; background: var(--bg-1); border: 1px solid var(--accent);
   padding: 28px; border-radius: 4px;
@@ -536,4 +555,8 @@ footer.bot { padding: 100px 0 40px; }
   .legal { padding: 40px 0 64px; }
   .legal-body { max-width: none; }
   .legal-body h2 { font-size: 26px; }
+  .speakers-page { padding: 40px 0 64px; }
+  .sp-detail { grid-template-columns: 1fr; gap: 24px; }
+  .sp-detail-portrait { max-width: 220px; }
+  .sp-detail-body h2 { font-size: 32px; }
 }

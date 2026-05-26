@@ -15,7 +15,7 @@ export function Footer() {
             <h4>Event</h4>
             <a href="#theme">Theme</a>
             <a href="#timetable">Timetable</a>
-            <a href="#speakers">Speakers</a>
+            <a href="/speakers/">Speakers</a>
             <a href="#venue">Venue</a>
           </div>
           <div>

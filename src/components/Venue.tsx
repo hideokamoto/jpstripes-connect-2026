@@ -1,4 +1,27 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
 export function Venue() {
+  const [mapLoadError, setMapLoadError] = useState(false);
+  const mapRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const mapElement = mapRef.current;
+    if (!mapElement) return;
+
+    // Set a timeout to detect if the map fails to load
+    const timeoutId = setTimeout(() => {
+      // Check if the map has been initialized by Geolonia
+      const hasMapContent = mapElement.querySelector('.maplibregl-canvas');
+      if (!hasMapContent) {
+        setMapLoadError(true);
+      }
+    }, 5000); // 5 second timeout
+
+    return () => clearTimeout(timeoutId);
+  }, []);
+
   return (
     <section className="s" id="venue">
       <div className="container">
@@ -17,20 +40,23 @@ export function Venue() {
         <div className="venue-block">
           <div className="venue-figure">
             <div
+              ref={mapRef}
               className="geolonia"
               data-lat="35.469008"
               data-lng="139.621716"
               data-zoom="16"
               data-style="geolonia/basic"
             />
-            <a
-              className="map-fallback"
-              href="https://maps.google.com/?q=35.469008,139.621716"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              地図を開く
-            </a>
+            {mapLoadError && (
+              <a
+                className="map-fallback"
+                href="https://maps.google.com/?q=35.469008,139.621716"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                地図を開く
+              </a>
+            )}
           </div>
           <div className="venue-text">
             <h3>

@@ -2,36 +2,110 @@
   {
     "id": "daniel-heffernan",
     "name": "Daniel Heffernan",
-    "badge": "Keynote",
-    "org": "Stripe",
-    "image": "/speakers/1516767400750.jpg"
+    "nameReading": "ダニエル・ヘフェルナン",
+    "org": "ストライプジャパン株式会社",
+    "title": "代表取締役",
+    "image": "/speakers/daniel_heffernan.jpg",
+    "bio": "Stripe の日本におけるプロダクト・開発分野を担う。2014年にStripe 日本法人を創設。以来、日本向け製品の開発や組織の拡大に尽力し、日本市場向けのプロダクト戦略を統括。Stripe参画以前は、クックパッドでエンジニアとして従事。東京大学にて情報理工学修士号を取得。",
+    "links": [{ "label": "X", "url": "https://x.com/danielshi" }]
   },
   {
     "id": "kojima-hideki",
     "name": "小島 英揮",
-    "badge": "Track A",
     "org": "株式会社Still Day One",
     "image": "/speakers/ojima.jpg"
   },
   {
     "id": "akiyama",
     "name": "秋山さん",
-    "badge": "Track A",
     "org": "株式会社Helpfeel",
     "image": "/speakers/b5f641fdf20fc10651b5c8797b6e6461.png"
   },
   {
     "id": "nakano-kyohei",
     "name": "中野 恭兵",
-    "badge": "Track B",
+    "nameReading": "ナカノキョウヘイ",
     "org": "アトモフ株式会社",
-    "image": "/speakers/12a26cb6aa9617aed86cbb8ea40e5f2b.jpg"
+    "title": "共同創業者取締役 ソフトウェアエンジニア",
+    "image": "/speakers/nakano_kyohei.png",
+    "bio": "Yahoo! Japan では Yahoo! Sports のサーバ開発、mixiでは課金システムやミュージック/フォトサービスの開発を担当。任天堂でゲーム機本体の通信機能やNintendo eShopのシステム開発に参加した後、Atmophを共同創業しソフトウェア開発全般を担当。"
   },
   {
     "id": "okamoto-hidetaka",
     "name": "岡本 秀高",
-    "badge": "Track B",
     "org": "Revtrona",
     "image": "/speakers/DSC_5282.JPG"
+  },
+  {
+    "id": "manabe-shugo",
+    "name": "眞鍋 秀悟",
+    "nameReading": "まなべ しゅうご",
+    "org": "Recustomer株式会社",
+    "title": "取締役CTO",
+    "image": "/speakers/manabe_shugo.jpg",
+    "bio": "京都大学理学部を首席合格、同大学院で数学を専攻。FixstarsにてExecutive Engineerとして上場を経験後、Mujinにてアーキテクト、Preferred NetworksでEngineering Manager、HacobuでCTO室室長および研究開発部部長を歴任し、2024年Recustomer株式会社CTOに就任。Startup CTO of the Year 2025 にて Audience Award を受賞。",
+    "links": [{ "label": "X", "url": "https://x.com/curekoshimizu" }]
+  },
+  {
+    "id": "sekine-ken",
+    "name": "関根 健",
+    "nameReading": "せきね けん",
+    "title": "stripe導入サポート / 社内DX推進 / 業務改善担当",
+    "image": "/speakers/sekine_ken.jpg",
+    "bio": "10年ほどITエンジニアをしており、Stripeを活用した決済導入・請求業務の効率化・サブスクリプション運用の整備を進めています。Web制作や会員サイト構築の経験を活かし、業務改善とオンラインサービス運営を支援しています。現在は転職し、古い構造の会社状況を、社内の人間として、業務改革、DX推進を担当して、社内営業しながら業務効率化を進めています。",
+    "links": [
+      { "label": "X", "url": "https://x.com/kenken127_" },
+      { "label": "Qiita", "url": "https://qiita.com/KenKen127_" }
+    ]
+  },
+  {
+    "id": "shigeoka-tadashi",
+    "name": "重岡 正",
+    "nameReading": "しげおか ただし",
+    "org": "株式会社ROUTE06",
+    "title": "取締役 CTO / 共同創業者",
+    "image": "/speakers/shigeoka_tadashi.jpg",
+    "bio": "熊本大学大学院自然科学研究科情報電気電子工学専攻修了。株式会社ウェブインパクトでグルメ、不動産、ECなどの受託開発に従事。その後、Tokyo Otaku Mode Inc. に創業期から参画し、ソフトウェアエンジニアとして越境ECサービス開発などを担当。Engineering Managerを経て、株式会社ROUTE06を共同創業。2022年11月、CTOに就任。",
+    "links": [{ "label": "Website", "url": "https://codenote.net/ja/about/" }]
+  },
+  {
+    "id": "sakakibara-masahiko",
+    "name": "榊原昌彦",
+    "nameReading": "さかきばら まさひこ",
+    "org": "一般社団法人リレーションデザイン研究所",
+    "title": "代表理事",
+    "image": "/speakers/sakakibara_masahiko.jpg",
+    "bio": "西宮夙川の穏健派。Webやアプリつくってます。(一社)リレーションデザイン研究所 代表理事、Ionic Developer Expert、Stripe Community Expert等",
+    "links": [{ "label": "X", "url": "https://x.com/rdlabo" }]
+  },
+  {
+    "id": "kitazume-yu",
+    "name": "北爪 ゆう",
+    "nameReading": "きたづめ ゆう",
+    "org": "ストライプジャパン株式会社",
+    "title": "Solutions Architect",
+    "image": "/speakers/kitazume_yu.jpeg",
+    "bio": "インフラ・セキュリティ領域を経て、現在はStripeでSolutions Architectを務める。決済・金融・SaaS領域を中心に、企業の技術戦略やシステム設計、グローバル展開を支援している。",
+    "links": [{ "label": "LinkedIn", "url": "https://www.linkedin.com/in/kitazumeyu/" }]
+  },
+  {
+    "id": "ozasa-yuki",
+    "name": "小笹佑京",
+    "nameReading": "オザサユウキ",
+    "org": "株式会社アンチパターン",
+    "title": "代表取締役",
+    "image": "/speakers/ozasa_yuki.jpg",
+    "bio": "1991年生まれ。立教大学卒業後、2014年に株式会社イノベーションに入社。B2B SaaSの開発業務に従事し、2018年より開発本部⻑の職を務める。2019年7月「日本のソフトウェアエンジニアを憧れの職業へ」という理念を掲げ、株式会社アンチパターンを起業。",
+    "links": [{ "label": "X", "url": "https://x.com/yukiozasa" }]
+  },
+  {
+    "id": "shibata-kazuki",
+    "name": "柴田 和祈",
+    "nameReading": "シバタカズキ",
+    "org": "株式会社microCMS",
+    "title": "代表取締役",
+    "image": "/speakers/shibata_kauzki.jpg",
+    "bio": "デザイナー兼フロントエンドエンジニアとしてキャリアをスタートし、Web開発の経験をもとに株式会社microCMSを創業。著書に『Next.js+ヘッドレスCMSではじめる！かんたんモダンWebサイト制作入門』。プライベートでは2児の父で、ロシアンブルーと共に暮らしている。",
+    "links": [{ "label": "X", "url": "https://x.com/shibe97" }]
   }
 ]

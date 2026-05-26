@@ -375,8 +375,10 @@ section.s { padding: var(--pad-section) 0; border-bottom: 1px solid var(--line);
 
 /* VENUE */
 .venue-block { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: stretch; }
-.venue-figure { border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+.venue-figure { border: 1px solid var(--line); border-radius: 4px; overflow: hidden; position: relative; }
 .geolonia { width: 100%; height: 400px; }
+.map-fallback { position: absolute; bottom: 12px; right: 12px; font-family: var(--mono); font-size: 11px; color: var(--fg-3); background: var(--bg-1); border: 1px solid var(--line); border-radius: 3px; padding: 4px 8px; text-decoration: none; letter-spacing: 0.05em; }
+.map-fallback:hover { color: var(--fg); border-color: var(--line-2); }
 .venue-text h3 { font-family: var(--serif); font-weight: 400; font-size: 48px; line-height: 1; letter-spacing: -0.02em; margin: 0 0 16px; }
 .venue-text h3 em { color: var(--accent); font-style: italic; }
 .venue-text .place { font-family: var(--serif-text); font-size: 18px; color: var(--fg); margin-bottom: 28px; }

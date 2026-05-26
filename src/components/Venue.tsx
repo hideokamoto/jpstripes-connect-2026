@@ -23,6 +23,14 @@ export function Venue() {
               data-zoom="16"
               data-style="geolonia/basic"
             />
+            <a
+              className="map-fallback"
+              href="https://maps.google.com/?q=35.469008,139.621716"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              地図を開く
+            </a>
           </div>
           <div className="venue-text">
             <h3>

@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import sessions from '@/data/sessions.json';
 
 type Session = {
@@ -8,30 +7,56 @@ type Session = {
   duration: string;
   track: string;
   title: string;
-  description?: string;
   tags?: string[];
   speaker?: string;
   isBreak?: boolean;
 };
 
-type TrackKey = 'all' | 'A' | 'B' | 'LT';
+type TimeBlock = {
+  time: string;
+  duration: string;
+  common?: Session;
+  a?: Session;
+  b?: Session;
+};
 
-const TABS: { key: TrackKey; label: string }[] = [
-  { key: 'all', label: 'All' },
-  { key: 'A', label: 'A · Main' },
-  { key: 'B', label: 'B · Tech' },
-  { key: 'LT', label: 'LT' },
-];
+function buildBlocks(list: Session[]): TimeBlock[] {
+  const map = new Map<string, TimeBlock>();
+  for (const s of list) {
+    if (!map.has(s.time)) {
+      map.set(s.time, { time: s.time, duration: s.duration });
+    }
+    const block = map.get(s.time)!;
+    if (s.track === '—') block.common = s;
+    else if (s.track === 'A') block.a = s;
+    else if (s.track === 'B') block.b = s;
+  }
+  return Array.from(map.values());
+}
+
+function SessionCell({ s, track }: { s: Session; track: 'a' | 'b' }) {
+  const label = track === 'a' ? 'A · Main' : 'B · Tech';
+  return (
+    <div className={`tt-cell ${track}`}>
+      <div className="head">
+        <span className="track-tag">{label}</span>
+        <span className="dur">{s.duration}</span>
+      </div>
+      <h4>{s.title}</h4>
+      {s.speaker ? <p className="who">{s.speaker}</p> : null}
+      {s.tags && s.tags.length > 0 ? (
+        <div className="tags">
+          {s.tags.map((t) => (
+            <span key={t} className="tag">{t}</span>
+          ))}
+        </div>
+      ) : null}
+    </div>
+  );
+}
 
 export function Timetable() {
-  const [active, setActive] = useState<TrackKey>('all');
-  const list = sessions as Session[];
-
-  function isMuted(track: string): boolean {
-    if (active === 'all') return false;
-    if (track === '—') return false;
-    return track !== active;
-  }
+  const blocks = buildBlocks(sessions as Session[]);
 
   return (
     <section className="s" id="timetable">
@@ -86,78 +111,51 @@ export function Timetable() {
           </div>
         </div>
 
-        <div className="tt-controls">
-          <div className="tt-tabs" role="tablist" aria-label="Timetable track filter">
-            {TABS.map((t) => (
-              <button
-                key={t.key}
-                type="button"
-                role="tab"
-                id={`tt-tab-${t.key}`}
-                className="tt-tab"
-                data-track={t.key}
-                aria-controls="tt-list"
-                aria-selected={active === t.key}
-                tabIndex={active === t.key ? 0 : -1}
-                onClick={() => setActive(t.key)}
-              >
-                <span className="swatch"></span>
-                {t.label}
-              </button>
-            ))}
+        <div className="tt-grid">
+          <div className="tt-headrow">
+            <div className="col-time"></div>
+            <div className="col a">
+              <span className="dot"></span>
+              <span className="name">Track A</span>
+              <span className="sub">— Main · Keynotes &amp; talks</span>
+            </div>
+            <div className="col b">
+              <span className="dot"></span>
+              <span className="name">Track B</span>
+              <span className="sub">— Tech · Deep dives &amp; hands-on</span>
+            </div>
           </div>
-          <div className="tt-legend">
-            <span className="a">
-              <i></i>Track A
-            </span>
-            <span className="b">
-              <i></i>Track B
-            </span>
-            <span className="lt">
-              <i></i>LT
-            </span>
-            <span>— Break / Common</span>
-          </div>
-        </div>
 
-        <div
-          id="tt-list"
-          className="tt-list"
-          role="tabpanel"
-          aria-labelledby={`tt-tab-${active}`}
-        >
-          {list.map((s) => {
-            const muted = isMuted(s.track);
-            const className = ['tt-row', muted ? 'muted' : ''].filter(Boolean).join(' ');
-            return (
-              <div
-                key={s.time + s.track + s.title}
-                className={className}
-                data-track={s.track}
-                data-break={s.isBreak ? '' : undefined}
-              >
-                <div className="tt-time">
-                  {s.time}
-                  <span className="dur">{s.duration}</span>
-                </div>
-                <div className="tt-pill" data-t={s.track}>
-                  {s.track}
-                </div>
-                <div>
-                  <div className="tt-title">{s.title}</div>
-                  {s.description ? <div className="tt-desc">{s.description}</div> : null}
-                  {s.tags && s.tags.length > 0 ? (
-                    <div className="tt-tags">
-                      {s.tags.map((t) => (
-                        <span key={t}>{t}</span>
-                      ))}
-                    </div>
-                  ) : null}
-                </div>
-                <div className="tt-by">{s.speaker ?? ''}</div>
+          {blocks.map((block) => (
+            <div key={block.time} className="tt-block">
+              <div className="tt-time">
+                {block.time}
+                <span className="until" aria-hidden="true">{block.duration}</span>
               </div>
-            );
-          })}
+              {block.common ? (
+                <div className="tt-cell common">
+                  <div className="head">
+                    <span className="track-tag">Common</span>
+                    <span className="dur">{block.duration}</span>
+                  </div>
+                  <h4>{block.common.title}</h4>
+                </div>
+              ) : (
+                <>
+                  {block.a ? (
+                    <SessionCell s={block.a} track="a" />
+                  ) : (
+                    <div className="tt-cell empty" aria-hidden="true"></div>
+                  )}
+                  {block.b ? (
+                    <SessionCell s={block.b} track="b" />
+                  ) : (
+                    <div className="tt-cell empty" aria-hidden="true"></div>
+                  )}
+                </>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>

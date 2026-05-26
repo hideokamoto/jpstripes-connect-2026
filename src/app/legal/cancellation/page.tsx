@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { LegalNav } from '@/components/LegalNav';
 
 export const metadata: Metadata = {
@@ -21,9 +22,9 @@ export default function Cancellation() {
       <div className="legal-body">
         <p>
           JP_Stripes Connect 2026 懇親会参加権の購入に関する返金条件です。
-          <a href="/legal/terms/">利用規約</a>
+          <Link href="/legal/terms/">利用規約</Link>
           ・
-          <a href="/legal/privacy/">プライバシーポリシー</a>
+          <Link href="/legal/privacy/">プライバシーポリシー</Link>
           とあわせて、お申込み時点で同意いただいたものとみなします。
         </p>
 

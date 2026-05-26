@@ -1,20 +1,21 @@
+import Link from 'next/link';
 import { ThemeToggle } from './ThemeToggle';
 
 export function Nav() {
   return (
     <nav className="top">
       <div className="container row">
-        <a className="brand" href="/#top">
+        <Link className="brand" href="/#top">
           <span><em>JP_Stripes Connect</em></span>
           <span className="num">№ 2026</span>
-        </a>
+        </Link>
         <div className="nav-links">
-          <a href="/#theme">Theme</a>
-          <a href="/#timetable">Timetable</a>
-          <a href="/speakers/">Speakers</a>
-          <a href="/#venue">Venue</a>
-          <a href="/#sponsors">Sponsors</a>
-          <a href="/#past">2025</a>
+          <Link href="/#theme">Theme</Link>
+          <Link href="/#timetable">Timetable</Link>
+          <Link href="/speakers/">Speakers</Link>
+          <Link href="/#venue">Venue</Link>
+          <Link href="/#sponsors">Sponsors</Link>
+          <Link href="/#past">2025</Link>
         </div>
         <div className="nav-right">
           <span className="status-pill">

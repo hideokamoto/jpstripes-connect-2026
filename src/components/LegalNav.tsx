@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const links = [
   { href: '/legal/tokushoho/', label: '特定商取引法に基づく表記' },
   { href: '/legal/privacy/', label: 'プライバシーポリシー' },
@@ -11,9 +13,9 @@ export function LegalNav({ current }: { current: string }) {
       {links
         .filter((l) => l.href !== current)
         .map((l) => (
-          <a key={l.href} href={l.href}>
+          <Link key={l.href} href={l.href}>
             {l.label}
-          </a>
+          </Link>
         ))}
     </nav>
   );

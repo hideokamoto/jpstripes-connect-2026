@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { LegalNav } from '@/components/LegalNav';
 
 export const metadata: Metadata = {
@@ -60,7 +61,7 @@ export default function Tokushoho() {
 
           <dt>キャンセル・返金</dt>
           <dd>
-            <a href="/legal/cancellation/">キャンセル・返金ポリシー</a>
+            <Link href="/legal/cancellation/">キャンセル・返金ポリシー</Link>
             に定めるとおりです。クーリング・オフは適用されません。
           </dd>
 

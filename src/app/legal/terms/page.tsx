@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { LegalNav } from '@/components/LegalNav';
 
 export const metadata: Metadata = {
@@ -21,22 +22,22 @@ export default function Terms() {
       <div className="legal-body">
         <p>
           JP_Stripes（代表：岡本秀高）（以下「当団体」）が主催する JP_Stripes Connect 2026（以下「本イベント」）に申込み・参加される方（以下「参加者」）は、本規約および
-          <a href="/legal/privacy/">プライバシーポリシー</a>
+          <Link href="/legal/privacy/">プライバシーポリシー</Link>
           ・
-          <a href="/legal/cancellation/">キャンセル・返金ポリシー</a>
+          <Link href="/legal/cancellation/">キャンセル・返金ポリシー</Link>
           に同意したものとみなします。各ポリシーに定める事項については、当該ポリシーの定めが優先します。
         </p>
 
         <h2>1. 申込みと契約の成立</h2>
         <p>
           懇親会への参加申込みは connpass 上の申込フォームから行います。Stripe による決済完了をもって参加契約が成立します。カンファレンス本編は無料です。価格・支払条件は
-          <a href="/legal/tokushoho/">特定商取引法に基づく表記</a>
+          <Link href="/legal/tokushoho/">特定商取引法に基づく表記</Link>
           をご確認ください。
         </p>
 
         <h2>2. キャンセル・返金</h2>
         <p>
-          <a href="/legal/cancellation/">キャンセル・返金ポリシー</a>
+          <Link href="/legal/cancellation/">キャンセル・返金ポリシー</Link>
           に定めるとおりです。
         </p>
 
@@ -50,14 +51,14 @@ export default function Terms() {
 
         <h2>4. 個人情報・写真・動画</h2>
         <p>
-          <a href="/legal/privacy/">プライバシーポリシー</a>
+          <Link href="/legal/privacy/">プライバシーポリシー</Link>
           に従います。
         </p>
 
         <h2>5. 免責</h2>
         <p>
           当団体は、プログラム・会場等を運営上の都合により変更することがあります。天災等により開催を中止・変更した場合の取扱いは
-          <a href="/legal/cancellation/">キャンセル・返金ポリシー</a>
+          <Link href="/legal/cancellation/">キャンセル・返金ポリシー</Link>
           に従います。当団体の故意または重過失による場合を除き、参加に関連して生じた損害について責任を負いません。
         </p>
 

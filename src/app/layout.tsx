@@ -8,16 +8,6 @@ export const metadata: Metadata = {
     'JP_Stripes Connect 2026 — 決済・サブスク・請求管理の経験をコミュニティで共有する年に一度の場。2026年8月1日（土）横浜。',
 };
 
-const themeInitScript = `
-try {
-  var saved = localStorage.getItem('jp26-theme');
-  var theme = (saved === 'dark' || saved === 'light')
-    ? saved
-    : (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-  document.documentElement.dataset.theme = theme;
-} catch (e) {}
-`;
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
@@ -26,7 +16,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       data-density="compact"
       data-accent="electric"
       data-serif="instrument"
-      suppressHydrationWarning
     >
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,7 +25,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
           rel="stylesheet"
         />
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body>
         {children}

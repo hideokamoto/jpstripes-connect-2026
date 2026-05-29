@@ -32,18 +32,6 @@
   --pad-section: 96px;
   --pad-row: 14px;
 }
-[data-theme="light"] {
-  --bg: #f3ece1;
-  --bg-1: #ebe2d2;
-  --bg-2: #ddd0bb;
-  --line: rgba(14,18,25,.12);
-  --line-2: rgba(14,18,25,.22);
-  --fg: #16110b;
-  --fg-2: #5a4f3f;
-  --fg-3: #8a7d68;
-  --accent: #635bff;
-  --accent-ink: #fff;
-}
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }

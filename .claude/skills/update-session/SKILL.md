@@ -1,6 +1,6 @@
 ---
 description: セッション情報またはタイムテーブルを更新する。sessions.json の変更に合わせて対応する content/sessions/*.md を漏れなく同期する。
-allowed-tools: Read Edit Write Bash(grep *)
+allowed-tools: Read Edit Write Bash(grep *) Bash(ls *)
 disable-model-invocation: true
 ---
 
@@ -41,7 +41,7 @@ sessions.json で変更した各エントリの `slug` に対して `content/ses
 
 ### Step 4: 編集後に時刻言及を再 grep する
 
-**Step 1〜2 の編集をすべて終えた後**、Bash ツールで次を実行し、出力を編集後の sessions.json と突き合わせる:
+**Step 1〜2 の編集をすべて終えた後**、まず sessions.json を Read で再読み込みして編集後の状態を確認してから、Bash ツールで次を実行し出力と突き合わせる:
 
 ```
 grep -rn "[0-9][0-9]:[0-9][0-9] 枠" content/sessions/
@@ -51,6 +51,18 @@ grep -rn "[0-9][0-9]:[0-9][0-9] 枠" content/sessions/
 
 残っている古い時刻があれば修正する。
 
+### Step 5: slug とファイルの対応を検証する
+
+編集後の sessions.json に含まれる全 `slug` に対して `content/sessions/<slug>.md` が実在するか、Bash ツールで次を実行して確認する:
+
+```
+ls content/sessions/
+```
+
+（冒頭の注入結果は編集前スナップショットなので追加ファイルが映らない。必ずこのステップで再実行すること）
+
+sessions.json にあって `.md` が存在しない slug があれば、既存ファイルを参考に新規作成する。
+
 ## よくある漏れ
 
 | パターン | 結果 |
@@ -58,5 +70,6 @@ grep -rn "[0-9][0-9]:[0-9][0-9] 枠" content/sessions/
 | sessions.json だけ更新して .md を更新しない | 詳細ページに古い時刻が残る |
 | フロントマターは直したが本文の時刻言及を見落とす | 詳細ページ本文に古い時刻が残る |
 | 転換追加後にエントリ順が崩れている | タイムテーブルの並び順が乱れる |
+| slug 付きエントリを追加して .md 作成を忘れる | 詳細ページへのリンクが 404 になる |
 
 > **Note**: slug はURL・ファイル名になるため基本的に変えない。time と slug のずれ（例: `track-a-1510` なのに time が `15:05`）は許容される。

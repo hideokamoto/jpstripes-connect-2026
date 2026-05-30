@@ -1,20 +1,21 @@
 :root {
-  --bg: #0e1219;
-  --bg-1: #141a23;
-  --bg-2: #1c2330;
+  color-scheme: light;
+  --bg: #f3ece1;
+  --bg-1: #ebe2d2;
+  --bg-2: #ddd0bb;
   --paper: #f3ece1;
-  --line: rgba(243,236,225,.12);
-  --line-2: rgba(243,236,225,.22);
-  --fg: #f3ece1;
-  --fg-2: #b3aa9a;
-  --fg-3: #6b6557;
+  --line: rgba(14,18,25,.12);
+  --line-2: rgba(14,18,25,.22);
+  --fg: #16110b;
+  --fg-2: #5a4f3f;
+  --fg-3: #8a7d68;
   --accent: #635bff;
   --accent-end: #7c3aed;
   --accent-ink: #ffffff;
-  --accent-2: #b794ff;
-  --accent-3: #9d7bff;
+  --accent-2: #7c3aed;
+  --accent-3: #635bff;
   --accent-grad: linear-gradient(135deg, rgba(99, 91, 255, 0.98) 0%, rgba(124, 58, 237, 0.98) 100%);
-  --accent-grad-soft: linear-gradient(135deg, rgba(99, 91, 255, 0.16) 0%, rgba(124, 58, 237, 0.16) 100%);
+  --accent-grad-soft: linear-gradient(135deg, rgba(99, 91, 255, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
 
   /* Typography — Variation B: Modern Restrained */
   --jp: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;

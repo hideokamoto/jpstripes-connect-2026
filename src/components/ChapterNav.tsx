@@ -3,9 +3,9 @@
 import { useEffect, useState } from 'react';
 
 const CHAPTERS = [
-  { href: '#th-1', label: '§01 一発勝負' },
-  { href: '#th-2', label: '§02 ドキュメントの限界' },
-  { href: '#th-3', label: '§03 経験を分け合う' },
+  { href: '#th-1', label: '§01 心当たり' },
+  { href: '#th-2', label: '§02 扱う領域' },
+  { href: '#th-3', label: '§03 経験を共有' },
   { href: '#th-4', label: '§04 横浜で' },
 ];
 

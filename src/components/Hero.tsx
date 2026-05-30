@@ -24,8 +24,7 @@ export function Hero() {
         <div className="hero-grid">
           <div>
             <p className="hero-lead">
-              <span className="drop">運</span>
-              用にはステージング環境がない。価格改定は本番でしか試せない。チャーン対策の結果は、解約数でしか分からない。— ぶっつけ本番の決済を、コミュニティの経験で支え合う、年に一度の1日。
+              AIで何を売り、いくらに値づけし、どう課金するか。正解がまだ出そろっていないこの問いを、全国の現場と一緒に探す、年に一度の場です。2026年、AIの原価が料金の前提を変え、エージェントが買い手にも売り手にもなりはじめました。社内に経験者がいない領域だからこそ、ひとりで決めずに、現場の判断を持ち寄って探しましょう。
             </p>
             <div className="hero-cta">
               <button className="btn btn-primary" type="button" disabled aria-disabled="true">

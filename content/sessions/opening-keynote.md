@@ -7,7 +7,6 @@ track: A
 tags:
   - Keynote
 speakerId: daniel-heffernan
-speaker: "Daniel Heffernan"
 status: confirmed
 ---
 

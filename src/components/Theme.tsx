@@ -64,24 +64,6 @@ export function Theme() {
               AI時代のマネタイズ方法を、ひとりで抱えずに探す半日へ。— 2026年8月1日、横浜でお会いしましょう。
             </p>
           </div>
-
-          <aside className="sidenotes">
-            <div className="sidenote">
-              <div className="k">01 — Field note</div>
-              <em>&quot;AIの原価が、前提を変えた&quot;</em>
-              料金モデルの常識がリセットされつつある。エージェントが買い手にも売り手にもなる時代に、既存の課金設計はどこまで通用するか。
-            </div>
-            <div className="sidenote">
-              <div className="k">02 — Field note</div>
-              <em>&quot;社内に経験者がいない&quot;</em>
-              AIマネタイズは、どの会社も手探りの最中。だからこそ、現場の判断を持ち寄ることに意味がある。
-            </div>
-            <div className="sidenote">
-              <div className="k">03 — Theme</div>
-              <em>ひとりで決めない、ということ。</em>
-              それが2026年のテーマです。
-            </div>
-          </aside>
         </div>
 
         <div className="theme-three">

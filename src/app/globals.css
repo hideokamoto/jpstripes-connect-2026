@@ -250,7 +250,7 @@ section.s { padding: var(--pad-section) 0; border-bottom: 1px solid var(--line);
 .pull-quote .mark { color: var(--accent); }
 
 .theme-read {
-  display: grid; grid-template-columns: 96px 1fr 220px; gap: 48px;
+  display: grid; grid-template-columns: 96px 1fr; gap: 48px;
   align-items: start;
 }
 .theme-read .chapters {
@@ -267,10 +267,6 @@ section.s { padding: var(--pad-section) 0; border-bottom: 1px solid var(--line);
   text-wrap: pretty;
 }
 .theme-body p strong { font-weight: 700; color: var(--fg); }
-.theme-body p:first-of-type::first-letter {
-  font-family: var(--jp); font-size: 5em; float: left; line-height: 0.8;
-  padding-right: 14px; padding-top: 6px; color: var(--accent);
-}
 .theme-body h3 {
   font-family: var(--jp); font-weight: 700;
   font-size: 22px; letter-spacing: -0.012em; line-height: 1.35;

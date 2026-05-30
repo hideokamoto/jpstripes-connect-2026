@@ -6,7 +6,7 @@ export function Nav() {
       <div className="container row">
         <Link className="brand" href="/#top">
           <span><em>JP_Stripes Connect</em></span>
-          <span className="num">№ 2026</span>
+          <span className="num">2026</span>
         </Link>
         <div className="nav-links">
           <Link href="/#theme">Theme</Link>

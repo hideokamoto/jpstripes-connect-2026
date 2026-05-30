@@ -23,6 +23,13 @@
     "slug": "opening-keynote"
   },
   {
+    "time": "13:35",
+    "duration": "5 min",
+    "track": "—",
+    "isBreak": true,
+    "title": "転換"
+  },
+  {
     "time": "13:40",
     "duration": "30 min",
     "track": "A",
@@ -39,6 +46,13 @@
     "tags": ["Beginner"],
     "speaker": "調整中",
     "slug": "track-b-1340"
+  },
+  {
+    "time": "14:10",
+    "duration": "5 min",
+    "track": "—",
+    "isBreak": true,
+    "title": "転換"
   },
   {
     "time": "14:15",
@@ -67,7 +81,7 @@
   },
   {
     "time": "14:30",
-    "duration": "35 min",
+    "duration": "30 min",
     "track": "A",
     "title": "調整中",
     "tags": ["CTO", "Startup"],
@@ -76,7 +90,7 @@
   },
   {
     "time": "14:30",
-    "duration": "35 min",
+    "duration": "30 min",
     "track": "B",
     "title": "調整中",
     "tags": ["Use Case"],
@@ -84,8 +98,15 @@
     "slug": "track-b-1430"
   },
   {
-    "time": "15:10",
-    "duration": "40 min",
+    "time": "15:00",
+    "duration": "5 min",
+    "track": "—",
+    "isBreak": true,
+    "title": "転換"
+  },
+  {
+    "time": "15:05",
+    "duration": "30 min",
     "track": "A",
     "title": "調整中",
     "tags": ["Billing", "TAM"],
@@ -93,8 +114,8 @@
     "slug": "track-a-1510"
   },
   {
-    "time": "15:10",
-    "duration": "40 min",
+    "time": "15:05",
+    "duration": "30 min",
     "track": "B",
     "title": "調整中",
     "tags": ["Connect", "Terminal"],
@@ -102,8 +123,8 @@
     "slug": "track-b-1510"
   },
   {
-    "time": "15:50",
-    "duration": "10 min",
+    "time": "15:35",
+    "duration": "5 min",
     "track": "A",
     "title": "調整中",
     "tags": ["Sponsor"],
@@ -111,8 +132,8 @@
     "slug": "track-a-1550"
   },
   {
-    "time": "15:50",
-    "duration": "10 min",
+    "time": "15:35",
+    "duration": "5 min",
     "track": "B",
     "title": "調整中",
     "tags": ["Sponsor"],
@@ -120,24 +141,15 @@
     "slug": "track-b-1550"
   },
   {
-    "time": "16:00",
+    "time": "15:40",
     "duration": "10 min",
     "track": "—",
     "isBreak": true,
     "title": "休憩"
   },
   {
-    "time": "16:10",
-    "duration": "35 min",
-    "track": "A",
-    "title": "調整中",
-    "tags": ["CTO", "AI", "SaaS"],
-    "speaker": "調整中",
-    "slug": "track-a-1610"
-  },
-  {
-    "time": "16:50",
-    "duration": "35 min",
+    "time": "15:50",
+    "duration": "30 min",
     "track": "A",
     "title": "調整中",
     "tags": ["Pricing"],
@@ -145,12 +157,28 @@
     "slug": "track-a-1650"
   },
   {
-    "time": "16:50",
-    "duration": "35 min",
+    "time": "15:50",
+    "duration": "30 min",
     "track": "B",
     "title": "調整中",
     "tags": ["Terminal", "Hands-on"],
     "speaker": "調整中",
     "slug": "track-b-1650"
+  },
+  {
+    "time": "16:20",
+    "duration": "5 min",
+    "track": "—",
+    "isBreak": true,
+    "title": "転換"
+  },
+  {
+    "time": "16:25",
+    "duration": "30 min",
+    "track": "A",
+    "title": "調整中",
+    "tags": ["CTO", "AI", "SaaS"],
+    "speaker": "調整中",
+    "slug": "track-a-1610"
   }
 ]

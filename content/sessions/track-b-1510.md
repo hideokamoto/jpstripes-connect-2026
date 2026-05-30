@@ -1,8 +1,8 @@
 ---
 slug: track-b-1510
 title: 調整中
-time: "15:10"
-duration: "40 min"
+time: "15:05"
+duration: "30 min"
 track: B
 tags:
   - Connect
@@ -14,4 +14,4 @@ status: tbd
 
 このセッションは現在調整中です。詳細は順次公開予定です。
 
-**Track B — Tech トラック** の 15:10 枠です。Stripe Connect と Terminal に関する技術的なセッションを予定しています。
+**Track B — Tech トラック** の 15:05 枠です。Stripe Connect と Terminal に関する技術的なセッションを予定しています。

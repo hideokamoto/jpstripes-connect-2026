@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import sessions from '@/data/sessions.json';
 
 type Session = {
@@ -10,6 +11,7 @@ type Session = {
   tags?: string[];
   speaker?: string;
   isBreak?: boolean;
+  slug?: string;
 };
 
 type TimeBlock = {
@@ -36,8 +38,8 @@ function buildBlocks(list: Session[]): TimeBlock[] {
 
 function SessionCell({ s, track }: { s: Session; track: 'a' | 'b' }) {
   const label = track === 'a' ? 'A · Main' : 'B · Tech';
-  return (
-    <div className={`tt-cell ${track}`}>
+  const inner = (
+    <>
       <div className="head">
         <span className="track-tag">{label}</span>
         <span className="dur">{s.duration}</span>
@@ -51,8 +53,16 @@ function SessionCell({ s, track }: { s: Session; track: 'a' | 'b' }) {
           ))}
         </div>
       ) : null}
-    </div>
+    </>
   );
+  if (s.slug) {
+    return (
+      <Link href={`/sessions/${s.slug}/`} className={`tt-cell ${track} tt-cell-link`}>
+        {inner}
+      </Link>
+    );
+  }
+  return <div className={`tt-cell ${track}`}>{inner}</div>;
 }
 
 export function Timetable() {

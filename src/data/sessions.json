@@ -158,11 +158,11 @@
   },
   {
     "time": "15:50",
-    "duration": "30 min",
+    "duration": "60 min",
     "track": "B",
-    "title": "調整中",
-    "tags": ["Terminal", "Hands-on"],
-    "speaker": "調整中",
+    "title": "Web技術で対面決済をつくる：Stripe Terminal実装ワークショップ（仮）",
+    "tags": ["Terminal", "Hands-on", "Workshop"],
+    "speaker": "榊原昌彦",
     "slug": "track-b-1650"
   },
   {
@@ -180,5 +180,14 @@
     "tags": ["CTO", "AI", "SaaS"],
     "speaker": "調整中",
     "slug": "track-a-1610"
+  },
+  {
+    "time": "16:25",
+    "duration": "30 min",
+    "track": "B",
+    "title": "Web技術で対面決済をつくる：Stripe Terminal実装ワークショップ（仮・続き）",
+    "tags": ["Terminal", "Hands-on", "Workshop"],
+    "speaker": "榊原昌彦",
+    "slug": "track-b-1650"
   }
 ]

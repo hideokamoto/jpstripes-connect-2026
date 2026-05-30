@@ -19,7 +19,8 @@
     "track": "A",
     "title": "オープニングキーノート",
     "tags": ["Keynote"],
-    "speaker": "Stripe Daniel Heffernan"
+    "speaker": "Stripe Daniel Heffernan",
+    "slug": "opening-keynote"
   },
   {
     "time": "13:40",
@@ -27,7 +28,8 @@
     "track": "A",
     "title": "調整中",
     "tags": ["Case Study"],
-    "speaker": "調整中"
+    "speaker": "調整中",
+    "slug": "track-a-1340"
   },
   {
     "time": "13:40",
@@ -35,7 +37,8 @@
     "track": "B",
     "title": "調整中",
     "tags": ["Beginner"],
-    "speaker": "調整中"
+    "speaker": "調整中",
+    "slug": "track-b-1340"
   },
   {
     "time": "14:15",
@@ -43,7 +46,8 @@
     "track": "A",
     "title": "調整中",
     "tags": ["Sponsor"],
-    "speaker": "調整中"
+    "speaker": "調整中",
+    "slug": "track-a-1415"
   },
   {
     "time": "14:15",
@@ -51,7 +55,8 @@
     "track": "B",
     "title": "調整中",
     "tags": ["Sponsor"],
-    "speaker": "調整中"
+    "speaker": "調整中",
+    "slug": "track-b-1415"
   },
   {
     "time": "14:20",
@@ -66,7 +71,8 @@
     "track": "A",
     "title": "調整中",
     "tags": ["CTO", "Startup"],
-    "speaker": "調整中"
+    "speaker": "調整中",
+    "slug": "track-a-1430"
   },
   {
     "time": "14:30",
@@ -74,7 +80,8 @@
     "track": "B",
     "title": "調整中",
     "tags": ["Use Case"],
-    "speaker": "調整中"
+    "speaker": "調整中",
+    "slug": "track-b-1430"
   },
   {
     "time": "15:10",
@@ -82,7 +89,8 @@
     "track": "A",
     "title": "調整中",
     "tags": ["Billing", "TAM"],
-    "speaker": "調整中"
+    "speaker": "調整中",
+    "slug": "track-a-1510"
   },
   {
     "time": "15:10",
@@ -90,7 +98,8 @@
     "track": "B",
     "title": "調整中",
     "tags": ["Connect", "Terminal"],
-    "speaker": "調整中"
+    "speaker": "調整中",
+    "slug": "track-b-1510"
   },
   {
     "time": "15:50",
@@ -98,7 +107,8 @@
     "track": "A",
     "title": "調整中",
     "tags": ["Sponsor"],
-    "speaker": "調整中"
+    "speaker": "調整中",
+    "slug": "track-a-1550"
   },
   {
     "time": "15:50",
@@ -106,7 +116,8 @@
     "track": "B",
     "title": "調整中",
     "tags": ["Sponsor"],
-    "speaker": "調整中"
+    "speaker": "調整中",
+    "slug": "track-b-1550"
   },
   {
     "time": "16:00",
@@ -121,7 +132,8 @@
     "track": "A",
     "title": "調整中",
     "tags": ["CTO", "AI", "SaaS"],
-    "speaker": "調整中"
+    "speaker": "調整中",
+    "slug": "track-a-1610"
   },
   {
     "time": "16:50",
@@ -129,7 +141,8 @@
     "track": "A",
     "title": "調整中",
     "tags": ["Pricing"],
-    "speaker": "調整中"
+    "speaker": "調整中",
+    "slug": "track-a-1650"
   },
   {
     "time": "16:50",
@@ -137,6 +150,7 @@
     "track": "B",
     "title": "調整中",
     "tags": ["Terminal", "Hands-on"],
-    "speaker": "調整中"
+    "speaker": "調整中",
+    "slug": "track-b-1650"
   }
 ]

@@ -2,7 +2,7 @@
 slug: track-a-1430
 title: 調整中
 time: "14:30"
-duration: "35 min"
+duration: "30 min"
 track: A
 tags:
   - CTO

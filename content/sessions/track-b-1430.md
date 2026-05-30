@@ -2,7 +2,7 @@
 slug: track-b-1430
 title: 調整中
 time: "14:30"
-duration: "35 min"
+duration: "30 min"
 track: B
 tags:
   - Use Case

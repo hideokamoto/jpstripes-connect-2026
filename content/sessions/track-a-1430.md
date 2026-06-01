@@ -10,7 +10,7 @@ tags:
   - Agent
 speaker: 北爪 ゆう
 speakerId: kitazume-yu
-status: confirmed
+status: provisional
 ---
 
 ## セッション概要

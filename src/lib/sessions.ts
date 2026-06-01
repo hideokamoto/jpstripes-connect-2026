@@ -5,7 +5,7 @@ import { marked } from 'marked';
 
 const sessionsDir = path.join(process.cwd(), 'content/sessions');
 
-export type SessionStatus = 'confirmed' | 'tbd';
+export type SessionStatus = 'confirmed' | 'tbd' | 'provisional';
 
 export type SessionFrontmatter = {
   slug: string;

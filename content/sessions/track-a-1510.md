@@ -1,17 +1,21 @@
 ---
 slug: track-a-1510
-title: 調整中
+title: "スタートアップCTO Talk: ビジネスを立ち上げる上で知っておきたい決済とマネタイズの話(仮)"
 time: "15:05"
 duration: "30 min"
 track: A
 tags:
-  - Billing
-  - TAM
-status: tbd
+  - CTO
+  - Startup
+speaker: "眞鍋 秀悟（Recustomer）/ 秋山さん（Helpfeel）"
+status: provisional
 ---
 
 ## セッション概要
 
-このセッションは現在調整中です。詳細は順次公開予定です。
+「決済どうしてる？」「マネタイズの最初の一手は？」——スタートアップ CTO お二人に、ビジネスを立ち上げる過程で下した判断と、振り返ってみての反省を率直に語っていただきます。
 
-**Track A — Main トラック** の 15:05 枠です。Billing および TAM（Total Addressable Market）をテーマにしたセッションを予定しています。
+## スピーカー
+
+- **眞鍋 秀悟** — Recustomer株式会社 取締役CTO
+- **秋山さん** — 株式会社Helpfeel

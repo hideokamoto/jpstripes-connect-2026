@@ -39,6 +39,7 @@ export default async function SessionPage({ params }: Props) {
 
   const trackLabel = TRACK_LABEL[session.track] ?? session.track;
   const isTbd = session.status === 'tbd' || session.title === '調整中';
+  const isProvisional = session.status === 'provisional';
 
   return (
     <div className="container">
@@ -85,6 +86,10 @@ export default async function SessionPage({ params }: Props) {
         {isTbd ? (
           <div className="session-tbd">
             <p>このセッションは現在調整中です。詳細は順次公開されます。</p>
+          </div>
+        ) : isProvisional ? (
+          <div className="session-tbd">
+            <p>このセッションは現在最終調整中です。予告なく変更される場合があります。</p>
           </div>
         ) : null}
 

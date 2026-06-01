@@ -1,17 +1,18 @@
 ---
 slug: track-a-1430
-title: 調整中
+title: AIエージェント時代の決済と請求（仮）
 time: "14:30"
 duration: "30 min"
 track: A
 tags:
-  - CTO
-  - Startup
-status: tbd
+  - AI
+  - Stripe
+  - Agent
+speaker: 北爪 ゆう
+speakerId: kitazume-yu
+status: confirmed
 ---
 
 ## セッション概要
 
-このセッションは現在調整中です。詳細は順次公開予定です。
-
-**Track A — Main トラック** の 14:30 枠です。スタートアップ CTO による知見共有セッションを予定しています。
+Agent Commerce Protocol ( ACP )やx402にShared Payment Token ( SPT )など、AIエージェントが購入や契約までおこなう世界の話を耳にすることがふえてきました。このセッションでは、ACP / x402 / SPT ・そしてStripeのプロダクトアップデートから、AIエージェント時代のビジネスモデルなどについて紹介します。

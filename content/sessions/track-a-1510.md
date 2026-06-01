@@ -8,7 +8,7 @@ tags:
   - CTO
   - Startup
 speaker: "眞鍋 秀悟（Recustomer）/ 秋山さん（Helpfeel）"
-status: tbd
+status: provisional
 ---
 
 ## セッション概要

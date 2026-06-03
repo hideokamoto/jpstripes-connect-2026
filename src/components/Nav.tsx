@@ -17,10 +17,9 @@ export function Nav() {
           <Link href="/#past">2025</Link>
         </div>
         <div className="nav-right">
-          <span className="status-pill">
-            <span className="dot"></span>
-            <span className="label"></span>
-          </span>
+          <Link className="nav-cta" href="/tickets/">
+            参加申し込み
+          </Link>
         </div>
       </div>
     </nav>

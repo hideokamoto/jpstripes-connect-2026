@@ -492,9 +492,7 @@ section.s { padding: var(--pad-section) 0; border-bottom: 1px solid var(--line);
 
 /* SPONSORS */
 .sp-tier { margin-bottom: 56px; }
-.sp-tier[data-tier="special"],
-.sp-tier[data-tier="gold"],
-.sp-tier[data-tier="standard"] {
+.sp-tier:is([data-tier="special"], [data-tier="gold"], [data-tier="standard"]) {
   display: none;
 }
 .sp-tier h3 { display: flex; align-items: center; gap: 16px; font-family: var(--jp); font-weight: 700; font-size: 22px; letter-spacing: -0.01em; margin: 0 0 20px; }

@@ -14,18 +14,15 @@ declare module 'react' {
   }
 }
 
-const BUY_BUTTON_ID = 'buy_btn_1TeDSUGbTZifRHVZsvFTdN8Y';
+// publishable key は公開前提の値（シークレットではない）。
 const PUBLISHABLE_KEY =
   'pk_live_51TVLfSGbTZifRHVZRbViwpjiF79kchA2E59V3n1jW2jGPGeIq7488HaW2DttWtbty8pdcE1EqinmlHLbConzengO00tgDRtFso';
 
-export function TicketButton() {
+export function TicketButton({ buyButtonId }: { buyButtonId: string }) {
   return (
     <>
       <Script src="https://js.stripe.com/v3/buy-button.js" strategy="afterInteractive" />
-      <stripe-buy-button
-        buy-button-id={BUY_BUTTON_ID}
-        publishable-key={PUBLISHABLE_KEY}
-      />
+      <stripe-buy-button buy-button-id={buyButtonId} publishable-key={PUBLISHABLE_KEY} />
     </>
   );
 }

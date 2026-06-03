@@ -797,16 +797,10 @@ footer.bot { padding: 100px 0 40px; }
 .ticket-feats { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
 .ticket-feats li { font-family: var(--jp); font-size: 14.5px; color: var(--fg); line-height: 1.5; padding-left: 24px; position: relative; }
 .ticket-feats li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--accent); font-weight: 700; }
+.ticket-tier-cta { margin-top: auto; padding-top: 24px; }
+.ticket-tier-cta stripe-buy-button { display: block; }
 
-.ticket-checkout { border-top: 1px solid var(--line); padding-top: 56px; }
-.ticket-checkout-head .num { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; }
-.ticket-checkout-head h2 { font-family: var(--jp); font-weight: 700; font-size: clamp(26px, 3.5vw, 36px); line-height: 1.18; letter-spacing: -0.015em; margin: 0 0 14px; }
-.ticket-checkout-head h2 em { color: var(--accent); }
-.ticket-checkout-head p { font-family: var(--jp); font-size: 16px; color: var(--fg-2); line-height: var(--line-jp); max-width: 680px; margin: 0; text-wrap: pretty; }
-.ticket-checkout-head p strong { color: var(--fg); font-weight: 700; }
-.ticket-buy { margin: 36px 0 28px; display: flex; justify-content: center; }
-.ticket-buy stripe-buy-button { width: 100%; max-width: 480px; }
-.ticket-note { font-family: var(--jp); font-size: 13px; color: var(--fg-2); line-height: var(--line-jp); background: var(--bg-1); border-left: 2px solid var(--accent); padding: 16px 18px; border-radius: 4px; max-width: 720px; }
+.ticket-note { font-family: var(--jp); font-size: 13px; color: var(--fg-2); line-height: var(--line-jp); background: var(--bg-1); border-left: 2px solid var(--accent); padding: 16px 18px; border-radius: 4px; max-width: 720px; margin-top: 40px; }
 .ticket-note a { color: var(--accent); border-bottom: 1px solid color-mix(in oklch, var(--accent) 50%, transparent); }
 .ticket-note a:hover { border-color: var(--accent); }
 

@@ -2,6 +2,10 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { TicketButton } from '@/components/TicketButton';
 
+// 本編のみ（無料）と 本編＋懇親会（2,000円・税込）の 2 種類の Stripe buy button。
+const BUY_BUTTON_HONPEN = 'buy_btn_1TeDepGbTZifRHVZnvlIMeLS';
+const BUY_BUTTON_KONSHINKAI = 'buy_btn_1TeDSUGbTZifRHVZsvFTdN8Y';
+
 export const metadata: Metadata = {
   title: '参加申し込み — JP_Stripes Connect 2026',
   description:
@@ -19,7 +23,7 @@ export default function Tickets() {
           <em>申し込む。</em>
         </h1>
         <p className="deck">
-          JP_Stripes Connect 2026 への参加チケットです。カンファレンス本編は無料、懇親会まで参加する場合は懇親会込みチケットをお選びください。お支払いは Stripe のセキュアな決済画面で完結します。
+          JP_Stripes Connect 2026 への参加チケットです。カンファレンス本編は無料、懇親会まで参加する場合は懇親会込みチケットをお選びください。下の各チケットのボタンから、それぞれの申し込みにお進みいただけます。お支払いは Stripe のセキュアな決済画面で完結します。
         </p>
         <dl className="tickets-meta">
           <div>
@@ -55,6 +59,9 @@ export default function Tickets() {
             <li>会場での聴講・ネットワーキング</li>
             <li>事前のお支払いは不要</li>
           </ul>
+          <div className="ticket-tier-cta">
+            <TicketButton buyButtonId={BUY_BUTTON_HONPEN} />
+          </div>
         </div>
 
         <div className="ticket-tier featured">
@@ -74,32 +81,21 @@ export default function Tickets() {
             <li>懇親会（飲食つき）への参加</li>
             <li>登壇者・参加者との交流の場</li>
           </ul>
+          <div className="ticket-tier-cta">
+            <TicketButton buyButtonId={BUY_BUTTON_KONSHINKAI} />
+          </div>
         </div>
       </section>
 
-      <section className="ticket-checkout" aria-label="チケットの申し込み">
-        <div className="ticket-checkout-head">
-          <div className="num">Checkout</div>
-          <h2>
-            申し込む<em>チケット</em>を選択
-          </h2>
-          <p>
-            下のカードでチケットを切り替え、<strong>「購入する」</strong>からお進みください。本編参加（無料）と懇親会込み（2,000円）のどちらかをお選びいただけます。
-          </p>
-        </div>
-        <div className="ticket-buy">
-          <TicketButton />
-        </div>
-        <p className="ticket-note">
-          決済は Stripe により安全に処理されます。お申し込みをもって
-          <Link href="/legal/terms/">利用規約</Link>・
-          <Link href="/legal/privacy/">プライバシーポリシー</Link>・
-          <Link href="/legal/cancellation/">キャンセル・返金ポリシー</Link>
-          に同意いただいたものとみなします。懇親会参加費に関する表示は
-          <Link href="/legal/tokushoho/">特定商取引法に基づく表記</Link>
-          をご確認ください。
-        </p>
-      </section>
+      <p className="ticket-note">
+        決済は Stripe により安全に処理されます。お申し込みをもって
+        <Link href="/legal/terms/">利用規約</Link>・
+        <Link href="/legal/privacy/">プライバシーポリシー</Link>・
+        <Link href="/legal/cancellation/">キャンセル・返金ポリシー</Link>
+        に同意いただいたものとみなします。懇親会参加費に関する表示は
+        <Link href="/legal/tokushoho/">特定商取引法に基づく表記</Link>
+        をご確認ください。
+      </p>
     </article>
   );
 }

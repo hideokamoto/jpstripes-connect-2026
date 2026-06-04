@@ -44,10 +44,10 @@
     "time": "13:40",
     "duration": "30 min",
     "track": "B",
-    "title": "Stripe 入門（仮）",
+    "title": "Stripe 入門（調整中）",
     "tags": ["Beginner"],
     "speaker": "関根 健",
-    "status": "provisional",
+    "status": "tbd",
     "slug": "track-b-1340"
   },
   {
@@ -98,10 +98,10 @@
     "time": "14:30",
     "duration": "30 min",
     "track": "B",
-    "title": "決済・請求管理のハマりどころ（仮）",
+    "title": "決済・請求管理のハマりどころ（調整中）",
     "tags": ["Billing", "Use Case"],
     "speaker": "Stripe TAM メンバー",
-    "status": "provisional",
+    "status": "tbd",
     "slug": "track-b-1430"
   },
   {
@@ -125,10 +125,10 @@
     "time": "15:05",
     "duration": "30 min",
     "track": "B",
-    "title": "Stripe Connect × PayPay／銀行振込（仮）",
+    "title": "Stripe Connect × PayPay／銀行振込（調整中）",
     "tags": ["Connect", "PayPay"],
     "speaker": "INFLU",
-    "status": "provisional",
+    "status": "tbd",
     "slug": "track-b-1510"
   },
   {
@@ -162,10 +162,10 @@
     "time": "15:50",
     "duration": "30 min",
     "track": "A",
-    "title": "価格戦略の話（仮）",
+    "title": "価格戦略の話（調整中）",
     "tags": ["Pricing"],
     "speaker": "小笹佑京（アンチパターン）／柴田 和祈（microCMS）",
-    "status": "provisional",
+    "status": "tbd",
     "slug": "track-a-1650"
   },
   {
@@ -189,10 +189,10 @@
     "time": "16:25",
     "duration": "30 min",
     "track": "A",
-    "title": "CTO Talk：AI SaaS のマネタイズ（仮）",
+    "title": "CTO Talk：AI SaaS のマネタイズ（調整中）",
     "tags": ["CTO", "AI", "SaaS"],
     "speaker": "重岡 正（ROUTE06）／村主さん（ABEJA）",
-    "status": "provisional",
+    "status": "tbd",
     "slug": "track-a-1610"
   },
   {

@@ -1,6 +1,6 @@
 ---
 slug: track-a-1610
-title: "CTO Talk：AI SaaS のマネタイズ（仮）"
+title: "CTO Talk：AI SaaS のマネタイズ（調整中）"
 time: "16:25"
 duration: "30 min"
 track: A
@@ -11,12 +11,12 @@ tags:
 speaker: "重岡 正（ROUTE06）／村主さん（ABEJA）"
 speakerIds:
   - shigeoka-tadashi
-status: provisional
+status: tbd
 ---
 
 ## セッション概要
 
-AI を組み込んだ SaaS のマネタイズを、CTO の視点から掘り下げます。プロダクト設計と価格・課金の交差点で何を考えるか、お二人の実践知を共有いただきます（仮）。
+AI を組み込んだ SaaS のマネタイズを、CTO の視点から掘り下げます。プロダクト設計と価格・課金の交差点で何を考えるか、お二人の実践知を共有いただく予定です（調整中）。
 
 ## スピーカー
 

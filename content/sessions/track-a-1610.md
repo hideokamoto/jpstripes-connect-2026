@@ -9,7 +9,8 @@ tags:
   - AI
   - SaaS
 speaker: "重岡 正（ROUTE06）／村主さん（ABEJA）"
-speakerId: shigeoka-tadashi
+speakerIds:
+  - shigeoka-tadashi
 status: provisional
 ---
 

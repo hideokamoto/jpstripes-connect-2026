@@ -7,7 +7,9 @@ track: A
 tags:
   - Pricing
 speaker: "小笹佑京（アンチパターン）／柴田 和祈（microCMS）"
-speakerId: ozasa-yuki
+speakerIds:
+  - ozasa-yuki
+  - shibata-kazuki
 status: provisional
 ---
 

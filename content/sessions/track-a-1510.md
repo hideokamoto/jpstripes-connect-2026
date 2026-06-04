@@ -8,7 +8,9 @@ tags:
   - CTO
   - Startup
 speaker: "眞鍋 秀悟（Recustomer）／秋山さん（Helpfeel）"
-speakerId: manabe-shugo
+speakerIds:
+  - manabe-shugo
+  - akiyama
 status: provisional
 ---
 

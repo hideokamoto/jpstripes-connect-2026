@@ -40,7 +40,9 @@ function buildBlocks(list: Session[]): TimeBlock[] {
 function SessionCell({ s, track }: { s: Session; track: 'a' | 'b' }) {
   const label = track === 'a' ? 'A · Main' : 'B · Tech';
   const isTbd = s.status === 'tbd';
-  const statusClass = isTbd ? ' tt-cell--tbd' : '';
+  const isTentative = isTbd || s.status === 'provisional';
+  const statusClass = isTbd ? 'tt-cell--tbd' : '';
+  const classes = ['tt-cell', track, statusClass].filter(Boolean).join(' ');
   const inner = (
     <>
       <div className="head">
@@ -50,7 +52,7 @@ function SessionCell({ s, track }: { s: Session; track: 'a' | 'b' }) {
       <h4>{s.title}</h4>
       {s.speaker ? (
         <p className="who">{s.speaker}</p>
-      ) : isTbd ? (
+      ) : isTentative ? (
         <p className="who who-tbd">登壇者調整中</p>
       ) : null}
       {s.tags && s.tags.length > 0 ? (
@@ -64,12 +66,12 @@ function SessionCell({ s, track }: { s: Session; track: 'a' | 'b' }) {
   );
   if (s.slug) {
     return (
-      <Link href={`/sessions/${s.slug}/`} className={`tt-cell ${track}${statusClass} tt-cell-link`}>
+      <Link href={`/sessions/${s.slug}/`} className={`${classes} tt-cell-link`}>
         {inner}
       </Link>
     );
   }
-  return <div className={`tt-cell ${track}${statusClass}`}>{inner}</div>;
+  return <div className={classes}>{inner}</div>;
 }
 
 export function Timetable() {

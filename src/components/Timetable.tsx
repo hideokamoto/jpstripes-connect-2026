@@ -12,6 +12,7 @@ type Session = {
   speaker?: string;
   isBreak?: boolean;
   slug?: string;
+  status?: 'confirmed' | 'provisional' | 'tbd';
 };
 
 type TimeBlock = {
@@ -38,6 +39,10 @@ function buildBlocks(list: Session[]): TimeBlock[] {
 
 function SessionCell({ s, track }: { s: Session; track: 'a' | 'b' }) {
   const label = track === 'a' ? 'A · Main' : 'B · Tech';
+  const isTbd = s.status === 'tbd';
+  const isTentative = isTbd || s.status === 'provisional';
+  const statusClass = isTbd ? 'tt-cell--tbd' : '';
+  const classes = ['tt-cell', track, statusClass].filter(Boolean).join(' ');
   const inner = (
     <>
       <div className="head">
@@ -45,7 +50,11 @@ function SessionCell({ s, track }: { s: Session; track: 'a' | 'b' }) {
         <span className="dur">{s.duration}</span>
       </div>
       <h4>{s.title}</h4>
-      {s.speaker ? <p className="who">{s.speaker}</p> : null}
+      {s.speaker ? (
+        <p className="who">{s.speaker}</p>
+      ) : isTentative ? (
+        <p className="who who-tbd">登壇者調整中</p>
+      ) : null}
       {s.tags && s.tags.length > 0 ? (
         <div className="tags">
           {s.tags.map((t) => (
@@ -57,12 +66,12 @@ function SessionCell({ s, track }: { s: Session; track: 'a' | 'b' }) {
   );
   if (s.slug) {
     return (
-      <Link href={`/sessions/${s.slug}/`} className={`tt-cell ${track} tt-cell-link`}>
+      <Link href={`/sessions/${s.slug}/`} className={`${classes} tt-cell-link`}>
         {inner}
       </Link>
     );
   }
-  return <div className={`tt-cell ${track}`}>{inner}</div>;
+  return <div className={classes}>{inner}</div>;
 }
 
 export function Timetable() {
@@ -84,6 +93,10 @@ export function Timetable() {
             8月1日(土) 12:30 — 18:00。MainトラックとTechトラック、そしてLT。詳細は順次公開。
           </p>
         </div>
+
+        <p className="tt-note">
+          ※ 一部セッションはテーマ・登壇者・時間を調整中です。内容は予告なく変更される場合があります。
+        </p>
 
         <div className="tt-summary">
           <div className="tt-sum-card" data-t="A">

@@ -33,9 +33,10 @@ export default async function SessionPage({ params }: Props) {
   const session = getSessionBySlug(slug);
   if (!session) notFound();
 
-  const speaker = session.speakerId
-    ? (speakers as Speaker[]).find((s) => s.id === session.speakerId) ?? null
-    : null;
+  const speakerIds = session.speakerIds ?? (session.speakerId ? [session.speakerId] : []);
+  const sessionSpeakers = speakerIds
+    .map((id) => (speakers as Speaker[]).find((s) => s.id === id))
+    .filter((s): s is Speaker => Boolean(s));
 
   const trackLabel = TRACK_LABEL[session.track] ?? session.track;
   const isTbd = session.status === 'tbd' || session.title === '調整中';
@@ -93,43 +94,51 @@ export default async function SessionPage({ params }: Props) {
           </div>
         ) : null}
 
-        {speaker ? (
+        {sessionSpeakers.length > 0 ? (
           <div className="session-speaker">
-            <h2>Speaker</h2>
-            <div className="sp-detail" style={{ gridTemplateColumns: '160px 1fr' }}>
-              <div className="sp-detail-portrait">
-                {speaker.image ? (
-                  <Image
-                    src={speaker.image}
-                    alt={speaker.name}
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    sizes="160px"
-                  />
-                ) : null}
-              </div>
-              <div className="sp-detail-body">
-                <h3>{speaker.name}</h3>
-                {speaker.nameReading ? (
-                  <div className="sp-detail-reading">{speaker.nameReading}</div>
-                ) : null}
-                {(speaker.org || speaker.title) && (
-                  <div className="sp-detail-role">
-                    {speaker.org ? <div>{speaker.org}</div> : null}
-                    {speaker.title ? <div>{speaker.title}</div> : null}
+            <h2>{sessionSpeakers.length > 1 ? 'Speakers' : 'Speaker'}</h2>
+            <div className="sp-detail-list">
+              {sessionSpeakers.map((speaker) => (
+                <div
+                  key={speaker.id}
+                  className="sp-detail"
+                  style={{ gridTemplateColumns: '160px 1fr' }}
+                >
+                  <div className="sp-detail-portrait">
+                    {speaker.image ? (
+                      <Image
+                        src={speaker.image}
+                        alt={speaker.name}
+                        fill
+                        style={{ objectFit: 'cover' }}
+                        sizes="160px"
+                      />
+                    ) : null}
                   </div>
-                )}
-                {speaker.bio ? <p>{speaker.bio}</p> : null}
-                {speaker.links && speaker.links.length > 0 ? (
-                  <div className="sp-detail-links">
-                    {speaker.links.map((link) => (
-                      <a key={link.url} href={link.url} target="_blank" rel="noopener noreferrer">
-                        {link.label} ↗
-                      </a>
-                    ))}
+                  <div className="sp-detail-body">
+                    <h3>{speaker.name}</h3>
+                    {speaker.nameReading ? (
+                      <div className="sp-detail-reading">{speaker.nameReading}</div>
+                    ) : null}
+                    {(speaker.org || speaker.title) && (
+                      <div className="sp-detail-role">
+                        {speaker.org ? <div>{speaker.org}</div> : null}
+                        {speaker.title ? <div>{speaker.title}</div> : null}
+                      </div>
+                    )}
+                    {speaker.bio ? <p>{speaker.bio}</p> : null}
+                    {speaker.links && speaker.links.length > 0 ? (
+                      <div className="sp-detail-links">
+                        {speaker.links.map((link) => (
+                          <a key={link.url} href={link.url} target="_blank" rel="noopener noreferrer">
+                            {link.label} ↗
+                          </a>
+                        ))}
+                      </div>
+                    ) : null}
                   </div>
-                ) : null}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         ) : null}

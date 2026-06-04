@@ -1,13 +1,16 @@
 ---
 slug: track-a-1510
-title: "スタートアップCTO Talk: ビジネスを立ち上げる上で知っておきたい決済とマネタイズの話(仮)"
+title: "スタートアップ CTO Talk：決済とマネタイズ（仮）"
 time: "15:05"
 duration: "30 min"
 track: A
 tags:
   - CTO
   - Startup
-speaker: "眞鍋 秀悟（Recustomer）/ 秋山さん（Helpfeel）"
+speaker: "眞鍋 秀悟（Recustomer）／秋山さん（Helpfeel）"
+speakerIds:
+  - manabe-shugo
+  - akiyama
 status: provisional
 ---
 

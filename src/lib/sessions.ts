@@ -15,6 +15,7 @@ export type SessionFrontmatter = {
   track: string;
   tags?: string[];
   speakerId?: string;
+  speakerIds?: string[];
   status?: SessionStatus;
 };
 

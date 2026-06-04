@@ -1,17 +1,18 @@
 ---
 slug: track-b-1510
-title: 調整中
+title: Stripe Connect × PayPay／銀行振込（調整中）
 time: "15:05"
 duration: "30 min"
 track: B
 tags:
   - Connect
-  - Terminal
+  - PayPay
+speaker: INFLU
 status: tbd
 ---
 
 ## セッション概要
 
-このセッションは現在調整中です。詳細は順次公開予定です。
+プラットフォーム／マーケットプレイス構築の定番である Stripe Connect に、PayPay や銀行振込といった日本ならではの決済手段をどう組み合わせるか。INFLU の実装事例をもとに紹介する予定です（調整中）。
 
-**Track B — Tech トラック** の 15:05 枠です。Stripe Connect と Terminal に関する技術的なセッションを予定しています。
+※タイトル・内容・登壇者は調整中です。詳細は順次公開予定です。

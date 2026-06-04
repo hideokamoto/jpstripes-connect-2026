@@ -398,6 +398,20 @@ section.s { padding: var(--pad-section) 0; border-bottom: 1px solid var(--line);
   font-family: var(--mono);
   font-feature-settings: "tnum" 1;
 }
+/* tentative (tbd) sessions — muted only, no color coding / no badge */
+.tt-cell--tbd h4 { color: var(--fg-2); font-weight: 600; }
+.tt-cell--tbd .who,
+.tt-cell .who-tbd { color: var(--fg-3); }
+.tt-cell--tbd .tag { opacity: 0.72; }
+/* timetable-wide tentative note */
+.tt-note {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  line-height: 1.6;
+  color: var(--fg-3);
+  letter-spacing: 0.01em;
+  margin: 0 0 32px;
+}
 .tt-cell.empty {
   background: transparent;
   border-style: dashed;

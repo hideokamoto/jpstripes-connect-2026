@@ -19,7 +19,8 @@
     "track": "A",
     "title": "オープニングキーノート",
     "tags": ["Keynote"],
-    "speaker": "Stripe Daniel Heffernan",
+    "speaker": "Daniel Heffernan（Stripe）",
+    "status": "confirmed",
     "slug": "opening-keynote"
   },
   {
@@ -33,18 +34,20 @@
     "time": "13:40",
     "duration": "30 min",
     "track": "A",
-    "title": "調整中",
+    "title": "Stripe 導入事例のご紹介（調整中）",
     "tags": ["Case Study"],
-    "speaker": "調整中",
+    "speaker": "Stripe",
+    "status": "tbd",
     "slug": "track-a-1340"
   },
   {
     "time": "13:40",
     "duration": "30 min",
     "track": "B",
-    "title": "調整中",
+    "title": "Stripe 入門（調整中）",
     "tags": ["Beginner"],
-    "speaker": "調整中",
+    "speaker": "関根 健",
+    "status": "tbd",
     "slug": "track-b-1340"
   },
   {
@@ -58,18 +61,20 @@
     "time": "14:15",
     "duration": "5 min",
     "track": "A",
-    "title": "調整中",
-    "tags": ["Sponsor"],
-    "speaker": "調整中",
+    "title": "スポンサー LT",
+    "tags": ["Sponsor", "LT"],
+    "speaker": "Gold スポンサー",
+    "status": "tbd",
     "slug": "track-a-1415"
   },
   {
     "time": "14:15",
     "duration": "5 min",
     "track": "B",
-    "title": "調整中",
-    "tags": ["Sponsor"],
-    "speaker": "調整中",
+    "title": "スポンサー LT",
+    "tags": ["Sponsor", "LT"],
+    "speaker": "Silver スポンサー",
+    "status": "tbd",
     "slug": "track-b-1415"
   },
   {
@@ -83,18 +88,20 @@
     "time": "14:30",
     "duration": "30 min",
     "track": "A",
-    "title": "AIエージェント時代の決済と請求（仮）",
+    "title": "AI × Stripe：エージェント時代の決済と請求（仮）",
     "tags": ["AI", "Stripe", "Agent"],
-    "speaker": "北爪 ゆう",
+    "speaker": "北爪 ゆう（Stripe）",
+    "status": "provisional",
     "slug": "track-a-1430"
   },
   {
     "time": "14:30",
     "duration": "30 min",
     "track": "B",
-    "title": "調整中",
-    "tags": ["Use Case"],
-    "speaker": "調整中",
+    "title": "決済・請求管理のハマりどころ（調整中）",
+    "tags": ["Billing", "Use Case"],
+    "speaker": "Stripe TAM メンバー",
+    "status": "tbd",
     "slug": "track-b-1430"
   },
   {
@@ -108,36 +115,40 @@
     "time": "15:05",
     "duration": "30 min",
     "track": "A",
-    "title": "スタートアップCTO Talk: ビジネスを立ち上げる上で知っておきたい決済とマネタイズの話(仮)",
+    "title": "スタートアップ CTO Talk：決済とマネタイズ（仮）",
     "tags": ["CTO", "Startup"],
-    "speaker": "眞鍋 秀悟（Recustomer）/ 秋山さん（Helpfeel）",
+    "speaker": "眞鍋 秀悟（Recustomer）／秋山さん（Helpfeel）",
+    "status": "provisional",
     "slug": "track-a-1510"
   },
   {
     "time": "15:05",
     "duration": "30 min",
     "track": "B",
-    "title": "調整中",
-    "tags": ["Connect", "Terminal"],
-    "speaker": "調整中",
+    "title": "Stripe Connect × PayPay／銀行振込（調整中）",
+    "tags": ["Connect", "PayPay"],
+    "speaker": "INFLU",
+    "status": "tbd",
     "slug": "track-b-1510"
   },
   {
     "time": "15:35",
     "duration": "5 min",
     "track": "A",
-    "title": "調整中",
-    "tags": ["Sponsor"],
-    "speaker": "調整中",
+    "title": "スポンサー LT",
+    "tags": ["Sponsor", "LT"],
+    "speaker": "Stripe",
+    "status": "tbd",
     "slug": "track-a-1550"
   },
   {
     "time": "15:35",
     "duration": "5 min",
     "track": "B",
-    "title": "調整中",
-    "tags": ["Sponsor"],
-    "speaker": "調整中",
+    "title": "スポンサー LT",
+    "tags": ["Sponsor", "LT"],
+    "speaker": "Silver スポンサー",
+    "status": "tbd",
     "slug": "track-b-1550"
   },
   {
@@ -151,18 +162,20 @@
     "time": "15:50",
     "duration": "30 min",
     "track": "A",
-    "title": "調整中",
+    "title": "価格戦略の話（調整中）",
     "tags": ["Pricing"],
-    "speaker": "調整中",
+    "speaker": "小笹佑京（アンチパターン）／柴田 和祈（microCMS）",
+    "status": "tbd",
     "slug": "track-a-1650"
   },
   {
     "time": "15:50",
     "duration": "60 min",
     "track": "B",
-    "title": "Web技術で対面決済をつくる：Stripe Terminal実装ワークショップ（仮）",
+    "title": "Web技術で対面決済をつくる：Stripe Terminal 実装ワークショップ",
     "tags": ["Terminal", "Hands-on", "Workshop"],
     "speaker": "榊原昌彦",
+    "status": "confirmed",
     "slug": "track-b-1650"
   },
   {
@@ -176,18 +189,20 @@
     "time": "16:25",
     "duration": "30 min",
     "track": "A",
-    "title": "調整中",
+    "title": "CTO Talk：AI SaaS のマネタイズ（調整中）",
     "tags": ["CTO", "AI", "SaaS"],
-    "speaker": "調整中",
+    "speaker": "重岡 正（ROUTE06）／村主さん（ABEJA）",
+    "status": "tbd",
     "slug": "track-a-1610"
   },
   {
     "time": "16:25",
     "duration": "30 min",
     "track": "B",
-    "title": "Web技術で対面決済をつくる：Stripe Terminal実装ワークショップ（仮・続き）",
+    "title": "Web技術で対面決済をつくる：Stripe Terminal 実装ワークショップ（続き）",
     "tags": ["Terminal", "Hands-on", "Workshop"],
     "speaker": "榊原昌彦",
+    "status": "confirmed",
     "slug": "track-b-1650"
   }
 ]

@@ -132,11 +132,6 @@ export default async function SessionPage({ params }: Props) {
               </div>
             </div>
           </div>
-        ) : session.speaker && !isTbd ? (
-          <div className="session-speaker-name">
-            <h2>Speaker</h2>
-            <p>{session.speaker}</p>
-          </div>
         ) : null}
 
         <div

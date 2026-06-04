@@ -1,6 +1,6 @@
 ---
 slug: track-a-1430
-title: AIエージェント時代の決済と請求（仮）
+title: "AI × Stripe：エージェント時代の決済と請求（仮）"
 time: "14:30"
 duration: "30 min"
 track: A

@@ -1,16 +1,16 @@
 ---
 slug: track-a-1415
-title: 調整中
+title: スポンサー LT
 time: "14:15"
 duration: "5 min"
 track: A
 tags:
   - Sponsor
+  - LT
+speaker: Gold スポンサー
 status: tbd
 ---
 
 ## セッション概要
 
-このセッションは現在調整中です。詳細は順次公開予定です。
-
-**Track A — Main トラック** の 14:15 枠です。スポンサーセッションを予定しています。
+本イベントを支えてくださる Gold スポンサーによるライトニングトーク（5分）です。登壇スポンサーは調整中です。

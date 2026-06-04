@@ -1,16 +1,18 @@
 ---
 slug: track-b-1340
-title: 調整中
+title: Stripe 入門（仮）
 time: "13:40"
 duration: "30 min"
 track: B
 tags:
   - Beginner
-status: tbd
+speaker: 関根 健
+speakerId: sekine-ken
+status: provisional
 ---
 
 ## セッション概要
 
-このセッションは現在調整中です。詳細は順次公開予定です。
+これから Stripe を触りはじめる方に向けた入門セッション（仮）です。アカウント開設から最初の決済・サブスクリプションの実装まで、つまずきやすいポイントを実体験ベースで解説します。
 
-**Track B — Tech トラック** の 13:40 枠です。Stripe 初心者向けの入門セッションを予定しています。
+※タイトル・内容は仮のものです。詳細は順次公開予定です。

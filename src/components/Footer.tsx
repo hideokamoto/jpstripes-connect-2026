@@ -19,6 +19,7 @@ export function Footer() {
             <Link href="/#theme">Theme</Link>
             <Link href="/#timetable">Timetable</Link>
             <Link href="/speakers/">Speakers</Link>
+            <Link href="/blog/">Blog</Link>
             <Link href="/#venue">Venue</Link>
           </div>
           <div>

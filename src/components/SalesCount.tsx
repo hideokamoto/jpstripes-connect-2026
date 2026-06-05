@@ -22,25 +22,32 @@ function isSalesStats(data: unknown): data is SalesStats {
   );
 }
 
+/**
+ * チケット申込枚数（種別ごとの内訳）を webhook Worker の /stats から取得して表示する。
+ * URL 未設定・取得失敗・件数ゼロ時は何も描画しない（販促表示のため静かにフォールバック）。
+ */
 export function SalesCount() {
   const [stats, setStats] = useState<SalesStats | null>(null);
 
   useEffect(() => {
     if (!STATS_API_URL) return;
 
-    let active = true;
-    fetch(STATS_API_URL)
+    // ネットワーク遅延や無応答で待ち続けないようタイムアウトで中断し、アンマウント時もキャンセルする。
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 5000);
+    fetch(STATS_API_URL, { signal: controller.signal })
       .then((res) => (res.ok ? (res.json() as Promise<unknown>) : null))
       .then((data) => {
         // API が想定外のレスポンス（欠落・型不一致）を返しても落ちないよう検証する。
-        if (active && isSalesStats(data)) setStats(data);
+        if (isSalesStats(data)) setStats(data);
       })
       .catch(() => {
-        // 販促表示のため、取得失敗時は静かに非表示にする。
+        // 取得失敗・中断時は静かに非表示にする。
       });
 
     return () => {
-      active = false;
+      clearTimeout(timeoutId);
+      controller.abort();
     };
   }, []);
 

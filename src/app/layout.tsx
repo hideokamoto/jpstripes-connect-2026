@@ -3,7 +3,7 @@ import Script from 'next/script';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://connect2026.jpstripes.org'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://connect2026.jpstripes.com'),
   title: 'JP_Stripes Connect 2026 — 決済の判断を、一人で抱えない。',
   description:
     'JP_Stripes Connect 2026 — 決済・サブスク・請求管理の経験をコミュニティで共有する年に一度の場。2026年8月1日（土）横浜。',

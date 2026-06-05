@@ -6,6 +6,28 @@ export const metadata: Metadata = {
   title: 'JP_Stripes Connect 2026 — 決済の判断を、一人で抱えない。',
   description:
     'JP_Stripes Connect 2026 — 決済・サブスク・請求管理の経験をコミュニティで共有する年に一度の場。2026年8月1日（土）横浜。',
+  openGraph: {
+    title: 'JP_Stripes Connect 2026 — 決済の判断を、一人で抱えない。',
+    description:
+      'JP_Stripes Connect 2026 — 決済・サブスク・請求管理の経験をコミュニティで共有する年に一度の場。2026年8月1日（土）横浜。',
+    images: [
+      {
+        url: '/ogp.png',
+        width: 1200,
+        height: 630,
+        alt: 'JP_Stripes Connect 2026',
+      },
+    ],
+    type: 'website',
+    locale: 'ja_JP',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'JP_Stripes Connect 2026 — 決済の判断を、一人で抱えない。',
+    description:
+      'JP_Stripes Connect 2026 — 決済・サブスク・請求管理の経験をコミュニティで共有する年に一度の場。2026年8月1日（土）横浜。',
+    images: ['/ogp.png'],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

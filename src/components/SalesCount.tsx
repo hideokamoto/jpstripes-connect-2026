@@ -12,6 +12,16 @@ interface SalesStats {
   total: number;
 }
 
+function isSalesStats(data: unknown): data is SalesStats {
+  if (typeof data !== 'object' || data === null) return false;
+  const s = data as Record<string, unknown>;
+  return (
+    typeof s.total === 'number' &&
+    typeof s.honpen === 'number' &&
+    typeof s.konshinkai === 'number'
+  );
+}
+
 export function SalesCount() {
   const [stats, setStats] = useState<SalesStats | null>(null);
 
@@ -20,9 +30,10 @@ export function SalesCount() {
 
     let active = true;
     fetch(STATS_API_URL)
-      .then((res) => (res.ok ? (res.json() as Promise<SalesStats>) : null))
+      .then((res) => (res.ok ? (res.json() as Promise<unknown>) : null))
       .then((data) => {
-        if (active && data) setStats(data);
+        // API が想定外のレスポンス（欠落・型不一致）を返しても落ちないよう検証する。
+        if (active && isSalesStats(data)) setStats(data);
       })
       .catch(() => {
         // 販促表示のため、取得失敗時は静かに非表示にする。

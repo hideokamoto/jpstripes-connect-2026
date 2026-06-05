@@ -1,18 +1,12 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { getAllPosts } from '@/lib/blog';
+import { getAllPosts, formatDate } from '@/lib/blog';
 
 export const metadata: Metadata = {
   title: 'Blog — JP_Stripes Connect 2026',
   description:
     'JP_Stripes Connect 2026 の公式ブログ。イベントの最新情報や運営の裏側、Stripe 活用の知見をお届けします。',
 };
-
-function formatDate(date: string): string {
-  const d = new Date(date);
-  if (Number.isNaN(d.getTime())) return date;
-  return `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日`;
-}
 
 export default function BlogIndexPage() {
   const posts = getAllPosts();

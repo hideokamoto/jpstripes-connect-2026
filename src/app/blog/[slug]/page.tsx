@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getAllPostSlugs, getPostBySlug } from '@/lib/blog';
+import { getAllPostSlugs, getPostBySlug, formatDate } from '@/lib/blog';
 
 type Props = { params: Promise<{ slug: string }> };
+
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   return getAllPostSlugs().map((slug) => ({ slug }));
@@ -18,12 +20,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${post.title} — JP_Stripes Connect 2026`,
     description: desc,
   };
-}
-
-function formatDate(date: string): string {
-  const d = new Date(date);
-  if (Number.isNaN(d.getTime())) return date;
-  return `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日`;
 }
 
 export default async function BlogPostPage({ params }: Props) {

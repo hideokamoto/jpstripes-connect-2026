@@ -12,6 +12,7 @@ export function Nav() {
           <Link href="/#theme">Theme</Link>
           <Link href="/#timetable">Timetable</Link>
           <Link href="/speakers/">Speakers</Link>
+          <Link href="/blog/">Blog</Link>
           <Link href="/#venue">Venue</Link>
           <Link href="/#sponsors">Sponsors</Link>
           <Link href="/#past">2025</Link>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { TicketButton } from '@/components/TicketButton';
+import { SalesCount } from '@/components/SalesCount';
 
 // 本編のみ（無料）と 本編＋懇親会（2,000円・税込）の 2 種類の Stripe buy button。
 const BUY_BUTTON_HONPEN = 'buy_btn_1TeDepGbTZifRHVZnvlIMeLS';
@@ -25,6 +26,7 @@ export default function Tickets() {
         <p className="deck">
           JP_Stripes Connect 2026 への参加チケットです。カンファレンス本編は無料、懇親会まで参加する場合は懇親会込みチケットをお選びください。下の各チケットのボタンから、それぞれの申し込みにお進みいただけます。お支払いは Stripe のセキュアな決済画面で完結します。
         </p>
+        <SalesCount />
         <dl className="tickets-meta">
           <div>
             <dt>Date</dt>

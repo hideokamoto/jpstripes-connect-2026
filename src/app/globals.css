@@ -81,6 +81,7 @@ nav.top .row { display: flex; align-items: center; justify-content: space-betwee
 .nav-links a:hover { color: var(--accent); }
 .nav-right { display: flex; gap: 12px; align-items: center; }
 .nav-cta {
+  display: inline-block;
   font-family: var(--jp); font-size: 13px; font-weight: 700;
   padding: 9px 18px; border-radius: 999px;
   background: var(--accent-grad); color: var(--accent-ink);
@@ -89,6 +90,7 @@ nav.top .row { display: flex; align-items: center; justify-content: space-betwee
   white-space: nowrap;
 }
 .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 12px 24px -12px rgba(124, 58, 237, .75); }
+.blog-cta-wrap { text-align: center; margin: 2rem 0; }
 
 /* Status pill */
 .status-pill {

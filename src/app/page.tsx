@@ -3,6 +3,7 @@ import { Hero } from '@/components/Hero';
 import { Theme } from '@/components/Theme';
 import { Timetable } from '@/components/Timetable';
 import { Speakers } from '@/components/Speakers';
+import { CallForLT } from '@/components/CallForLT';
 import { Venue } from '@/components/Venue';
 import { Sponsors } from '@/components/Sponsors';
 import { Past } from '@/components/Past';
@@ -16,6 +17,7 @@ export default function Page() {
       <Theme />
       <Timetable />
       <Speakers />
+      <CallForLT />
       <Venue />
       <Sponsors />
       <Past />

@@ -1,7 +1,7 @@
 [
   {
     "time": "12:00",
-    "duration": "30 min",
+    "duration": "45 min",
     "track": "—",
     "isBreak": true,
     "title": "開場・受付"
@@ -24,13 +24,6 @@
     "slug": "opening-keynote"
   },
   {
-    "time": "13:35",
-    "duration": "5 min",
-    "track": "—",
-    "isBreak": true,
-    "title": "転換"
-  },
-  {
     "time": "13:40",
     "duration": "30 min",
     "track": "A",
@@ -51,15 +44,8 @@
     "slug": "track-b-1340"
   },
   {
-    "time": "14:10",
-    "duration": "5 min",
-    "track": "—",
-    "isBreak": true,
-    "title": "転換"
-  },
-  {
     "time": "14:15",
-    "duration": "5 min",
+    "duration": "10 min",
     "track": "A",
     "title": "スポンサー LT",
     "tags": ["Sponsor", "LT"],
@@ -69,7 +55,7 @@
   },
   {
     "time": "14:15",
-    "duration": "5 min",
+    "duration": "10 min",
     "track": "B",
     "title": "スポンサー LT",
     "tags": ["Sponsor", "LT"],
@@ -78,14 +64,14 @@
     "slug": "track-b-1415"
   },
   {
-    "time": "14:20",
+    "time": "14:25",
     "duration": "10 min",
     "track": "—",
     "isBreak": true,
     "title": "休憩"
   },
   {
-    "time": "14:30",
+    "time": "14:35",
     "duration": "30 min",
     "track": "A",
     "title": "AI × Stripe：エージェント時代の決済と請求（仮）",
@@ -95,7 +81,7 @@
     "slug": "track-a-1430"
   },
   {
-    "time": "14:30",
+    "time": "14:35",
     "duration": "30 min",
     "track": "B",
     "title": "決済・請求管理のハマりどころ（調整中）",
@@ -105,14 +91,7 @@
     "slug": "track-b-1430"
   },
   {
-    "time": "15:00",
-    "duration": "5 min",
-    "track": "—",
-    "isBreak": true,
-    "title": "転換"
-  },
-  {
-    "time": "15:05",
+    "time": "15:10",
     "duration": "30 min",
     "track": "A",
     "title": "スタートアップ CTO Talk：決済とマネタイズ（仮）",
@@ -122,7 +101,7 @@
     "slug": "track-a-1510"
   },
   {
-    "time": "15:05",
+    "time": "15:10",
     "duration": "30 min",
     "track": "B",
     "title": "Stripe Connect × PayPay／銀行振込（調整中）",
@@ -132,8 +111,8 @@
     "slug": "track-b-1510"
   },
   {
-    "time": "15:35",
-    "duration": "5 min",
+    "time": "15:40",
+    "duration": "10 min",
     "track": "A",
     "title": "スポンサー LT",
     "tags": ["Sponsor", "LT"],
@@ -142,8 +121,8 @@
     "slug": "track-a-1550"
   },
   {
-    "time": "15:35",
-    "duration": "5 min",
+    "time": "15:40",
+    "duration": "10 min",
     "track": "B",
     "title": "スポンサー LT",
     "tags": ["Sponsor", "LT"],
@@ -152,14 +131,14 @@
     "slug": "track-b-1550"
   },
   {
-    "time": "15:40",
+    "time": "15:50",
     "duration": "10 min",
     "track": "—",
     "isBreak": true,
     "title": "休憩"
   },
   {
-    "time": "15:50",
+    "time": "16:00",
     "duration": "30 min",
     "track": "A",
     "title": "価格戦略の話（調整中）",
@@ -169,7 +148,7 @@
     "slug": "track-a-1650"
   },
   {
-    "time": "15:50",
+    "time": "16:00",
     "duration": "60 min",
     "track": "B",
     "title": "Web技術で対面決済をつくる：Stripe Terminal 実装ワークショップ",
@@ -179,14 +158,7 @@
     "slug": "track-b-1650"
   },
   {
-    "time": "16:20",
-    "duration": "5 min",
-    "track": "—",
-    "isBreak": true,
-    "title": "転換"
-  },
-  {
-    "time": "16:25",
+    "time": "16:35",
     "duration": "30 min",
     "track": "A",
     "title": "CTO Talk：AI SaaS のマネタイズ（調整中）",
@@ -196,7 +168,7 @@
     "slug": "track-a-1610"
   },
   {
-    "time": "16:25",
+    "time": "16:35",
     "duration": "30 min",
     "track": "B",
     "title": "Web技術で対面決済をつくる：Stripe Terminal 実装ワークショップ（続き）",
@@ -204,5 +176,31 @@
     "speaker": "榊原昌彦",
     "status": "confirmed",
     "slug": "track-b-1650"
+  },
+  {
+    "time": "17:10",
+    "duration": "20 min",
+    "track": "—",
+    "title": "公募 LT（各5分）"
+  },
+  {
+    "time": "17:30",
+    "duration": "10 min",
+    "track": "—",
+    "isBreak": true,
+    "title": "閉会挨拶"
+  },
+  {
+    "time": "17:40",
+    "duration": "15 min",
+    "track": "—",
+    "isBreak": true,
+    "title": "懇親会準備（受付チェック等）"
+  },
+  {
+    "time": "17:55",
+    "duration": "150 min",
+    "track": "—",
+    "title": "懇親会"
   }
 ]

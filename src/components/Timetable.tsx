@@ -90,7 +90,7 @@ export function Timetable() {
             </h2>
           </div>
           <p className="deck">
-            8月1日(土) 12:30 — 18:00。MainトラックとTechトラック、そしてLT。詳細は順次公開。
+            8月1日(土) 12:30 開場。MainトラックとTechトラック、公募LT、閉会後は懇親会まで。詳細は順次公開。
           </p>
         </div>
 

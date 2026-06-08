@@ -204,5 +204,38 @@
     "speaker": "榊原昌彦",
     "status": "confirmed",
     "slug": "track-b-1650"
+  },
+  {
+    "time": "16:55",
+    "duration": "5 min",
+    "track": "—",
+    "isBreak": true,
+    "title": "転換"
+  },
+  {
+    "time": "17:00",
+    "duration": "20 min",
+    "track": "—",
+    "title": "公募 LT（各5分）"
+  },
+  {
+    "time": "17:20",
+    "duration": "10 min",
+    "track": "—",
+    "isBreak": true,
+    "title": "閉会挨拶"
+  },
+  {
+    "time": "17:30",
+    "duration": "15 min",
+    "track": "—",
+    "isBreak": true,
+    "title": "懇親会準備（受付チェック等）"
+  },
+  {
+    "time": "17:45",
+    "duration": "150 min",
+    "track": "—",
+    "title": "懇親会"
   }
 ]

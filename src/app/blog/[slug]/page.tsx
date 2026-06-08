@@ -50,12 +50,12 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         )}
 
-        <BlogEventInfo />
-
         <div
           className="session-body"
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
         />
+
+        <BlogEventInfo />
       </div>
 
       <nav className="legal-nav">

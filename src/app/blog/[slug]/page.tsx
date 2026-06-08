@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getAllPostSlugs, getPostBySlug, formatDate } from '@/lib/blog';
+import { BlogEventInfo } from '@/components/BlogEventInfo';
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -48,6 +49,8 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
           </div>
         )}
+
+        <BlogEventInfo />
 
         <div
           className="session-body"

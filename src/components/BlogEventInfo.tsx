@@ -32,9 +32,9 @@ export function BlogEventInfo() {
         </div>
       </dl>
       <div className="blog-event-links">
-        <Link href="/#theme">テーマを読む →</Link>
-        <Link href="/#venue">会場・アクセス →</Link>
-        <Link href="/tickets/">参加チケット →</Link>
+        <Link href="/#theme">テーマを読む <span aria-hidden="true">→</span></Link>
+        <Link href="/#venue">会場・アクセス <span aria-hidden="true">→</span></Link>
+        <Link href="/tickets/">参加チケット <span aria-hidden="true">→</span></Link>
       </div>
     </aside>
   );

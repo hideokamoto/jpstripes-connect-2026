@@ -847,7 +847,7 @@ footer.bot { padding: 100px 0 40px; }
 }
 .blog-event-links a:hover { opacity: 0.7; }
 
-@media (max-width: 640px) {
+@media (max-width: 920px) {
   .blog-event { padding: 20px; }
   .blog-event-meta { grid-template-columns: 1fr; gap: 14px; }
 }

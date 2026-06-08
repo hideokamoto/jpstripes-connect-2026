@@ -14,13 +14,6 @@
     "title": "開会挨拶"
   },
   {
-    "time": "12:55",
-    "duration": "5 min",
-    "track": "—",
-    "isBreak": true,
-    "title": "転換"
-  },
-  {
     "time": "13:00",
     "duration": "35 min",
     "track": "A",
@@ -29,13 +22,6 @@
     "speaker": "Daniel Heffernan（Stripe）",
     "status": "confirmed",
     "slug": "opening-keynote"
-  },
-  {
-    "time": "13:35",
-    "duration": "5 min",
-    "track": "—",
-    "isBreak": true,
-    "title": "転換"
   },
   {
     "time": "13:40",
@@ -56,13 +42,6 @@
     "speaker": "関根 健",
     "status": "tbd",
     "slug": "track-b-1340"
-  },
-  {
-    "time": "14:10",
-    "duration": "5 min",
-    "track": "—",
-    "isBreak": true,
-    "title": "転換"
   },
   {
     "time": "14:15",
@@ -110,13 +89,6 @@
     "speaker": "Stripe TAM メンバー",
     "status": "tbd",
     "slug": "track-b-1430"
-  },
-  {
-    "time": "15:05",
-    "duration": "5 min",
-    "track": "—",
-    "isBreak": true,
-    "title": "転換"
   },
   {
     "time": "15:10",
@@ -186,13 +158,6 @@
     "slug": "track-b-1650"
   },
   {
-    "time": "16:30",
-    "duration": "5 min",
-    "track": "—",
-    "isBreak": true,
-    "title": "転換"
-  },
-  {
     "time": "16:35",
     "duration": "30 min",
     "track": "A",
@@ -211,13 +176,6 @@
     "speaker": "榊原昌彦",
     "status": "confirmed",
     "slug": "track-b-1650"
-  },
-  {
-    "time": "17:05",
-    "duration": "5 min",
-    "track": "—",
-    "isBreak": true,
-    "title": "転換"
   },
   {
     "time": "17:10",

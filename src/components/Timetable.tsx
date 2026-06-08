@@ -90,7 +90,7 @@ export function Timetable() {
             </h2>
           </div>
           <p className="deck">
-            8月1日(土) 12:30 開場。MainトラックとTechトラック、公募LT、閉会後は懇親会まで。詳細は順次公開。
+            8月1日(土) 12:00 開場。MainトラックとTechトラック、公募LT、閉会後は懇親会まで。詳細は順次公開。
           </p>
         </div>
 
@@ -126,7 +126,7 @@ export function Timetable() {
               <i></i>LT · 5分の知恵
             </div>
             <div className="ttl">
-              5 lightning talks,
+              4 lightning talks,
               <br />
               community-fed.
             </div>

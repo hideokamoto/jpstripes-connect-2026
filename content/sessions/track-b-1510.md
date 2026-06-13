@@ -1,18 +1,19 @@
 ---
 slug: track-b-1510
-title: Stripe Connect × PayPay／銀行振込（調整中）
-time: "15:05"
+title: "【Connect×PayPay×LINE EC 】決済流通額を3.9倍上げた〇つの施策"
+time: "15:10"
 duration: "30 min"
 track: B
 tags:
   - Connect
   - PayPay
+  - LINE EC
 speaker: INFLU
-status: tbd
+status: confirmed
 ---
 
 ## セッション概要
 
-プラットフォーム／マーケットプレイス構築の定番である Stripe Connect に、PayPay や銀行振込といった日本ならではの決済手段をどう組み合わせるか。INFLU の実装事例をもとに紹介する予定です（調整中）。
+Stripe Connect を利用した EC プラットフォームにおける手数料収益をアップさせる為に、いかに利用ショップに成果を出していただくか？
 
-※タイトル・内容・登壇者は調整中です。詳細は順次公開予定です。
+EC 機能の改善や PayPay、銀行振込機能など、具体的に効果のあった施策をお話しします。

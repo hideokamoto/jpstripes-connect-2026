@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { existsSync } from 'fs';
+import { join } from 'path';
 import { notFound } from 'next/navigation';
 import { getAllSessionSlugs, getSessionBySlug } from '@/lib/sessions';
 import speakers from '@/data/speakers.json';
@@ -17,9 +19,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const session = getSessionBySlug(slug);
   if (!session) return {};
   const desc = session.contentHtml.replace(/<[^>]+>/g, '').slice(0, 160);
+  const sessionImagePath = `/sessions/${slug}.png`;
+  const hasSessionImage = existsSync(join(process.cwd(), 'public', 'sessions', `${slug}.png`));
+  const ogImage = hasSessionImage ? sessionImagePath : '/ogp.png';
   return {
     title: `${session.title} — JP_Stripes Connect 2026`,
     description: desc,
+    openGraph: {
+      images: [{ url: ogImage, width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: [ogImage],
+    },
   };
 }
 

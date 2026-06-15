@@ -8,7 +8,7 @@ tags:
   - Connect
   - PayPay
   - LINE EC
-speaker: INFLU
+speakerId: hirata-haruya
 status: confirmed
 ---
 

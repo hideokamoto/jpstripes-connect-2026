@@ -8,7 +8,7 @@ tags:
   - AI
   - Pricing
   - Stripe
-speaker: "重岡 正（ROUTE06）／村主さん（ABEJA）"
+speaker: "重岡 正（ROUTE06）／村主 壮悟（ABEJA）"
 speakerIds:
   - shigeoka-tadashi
   - muranushi
@@ -22,4 +22,4 @@ AI を組み込んだプロダクトを開発・運営するお二人に、開�
 ## スピーカー
 
 - **重岡 正** — 株式会社ROUTE06 取締役CTO / 共同創業者
-- **村主さん** — 株式会社ABEJA
+- **村主 壮悟** — 株式会社ABEJA CTO室長

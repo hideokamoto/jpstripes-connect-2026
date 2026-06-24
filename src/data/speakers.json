@@ -119,7 +119,11 @@
   },
   {
     "id": "muranushi",
-    "name": "村主さん",
-    "org": "株式会社ABEJA"
+    "name": "村主 壮悟",
+    "nameReading": "ムラヌシショウゴ",
+    "org": "株式会社ABEJA",
+    "title": "CTO室長",
+    "bio": "前職でAWSのクラウドインテグレーターとして大規模案件を多数コンサル、構築、運用する。2017年にABEJA Platformを開発するためにABEJAに参画。AWSパートナーとしてAWS Well-Architectedに準拠したMachine Learningコンピテンシーの取得を推進。現在はCTO室室長とABEJA Platformの責任者として従事。",
+    "links": [{ "label": "X", "url": "https://x.com/rwle1212" }]
   }
 ]

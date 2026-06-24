@@ -7,6 +7,8 @@ track: A
 tags:
   - CTO
   - Startup
+  - AI
+  - Pricing
 speaker: "眞鍋 秀悟（Recustomer）／秋山さん（Helpfeel）"
 speakerIds:
   - manabe-shugo

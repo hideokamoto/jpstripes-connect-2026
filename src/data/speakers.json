@@ -116,5 +116,10 @@
     "image": "/speakers/shibata_kauzki.jpg",
     "bio": "デザイナー兼フロントエンドエンジニアとしてキャリアをスタートし、Web開発の経験をもとに株式会社microCMSを創業。著書に『Next.js+ヘッドレスCMSではじめる！かんたんモダンWebサイト制作入門』。プライベートでは2児の父で、ロシアンブルーと共に暮らしている。",
     "links": [{ "label": "X", "url": "https://x.com/shibe97" }]
+  },
+  {
+    "id": "muranushi",
+    "name": "村主さん",
+    "org": "株式会社ABEJA"
   }
 ]

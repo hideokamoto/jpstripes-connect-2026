@@ -106,6 +106,11 @@ export default async function SessionPage({ params }: Props) {
           </div>
         ) : null}
 
+        <div
+          className="session-body"
+          dangerouslySetInnerHTML={{ __html: session.contentHtml }}
+        />
+
         {sessionSpeakers.length > 0 ? (
           <div className="session-speaker">
             <h2>{sessionSpeakers.length > 1 ? 'Speakers' : 'Speaker'}</h2>
@@ -154,11 +159,6 @@ export default async function SessionPage({ params }: Props) {
             </div>
           </div>
         ) : null}
-
-        <div
-          className="session-body"
-          dangerouslySetInnerHTML={{ __html: session.contentHtml }}
-        />
       </div>
 
       <nav className="legal-nav">

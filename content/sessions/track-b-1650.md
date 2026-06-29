@@ -1,8 +1,8 @@
 ---
 slug: track-b-1650
 title: "Web技術で対面決済をつくる：Stripe Terminal 実装ワークショップ"
-time: "15:50"
-duration: "60 min"
+time: "16:10"
+duration: "80 min"
 track: B
 tags:
   - Terminal

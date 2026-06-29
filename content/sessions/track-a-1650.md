@@ -1,8 +1,8 @@
 ---
 slug: track-a-1650
 title: 価格戦略の話（調整中）
-time: "15:50"
-duration: "30 min"
+time: "16:10"
+duration: "40 min"
 track: A
 tags:
   - Pricing

@@ -92,7 +92,7 @@
   },
   {
     "time": "15:10",
-    "duration": "30 min",
+    "duration": "40 min",
     "track": "A",
     "title": "スタートアップ CTO Talk：溶けていく決済とビジネスのいま",
     "tags": ["CTO", "Startup", "AI", "Pricing"],
@@ -102,7 +102,7 @@
   },
   {
     "time": "15:10",
-    "duration": "30 min",
+    "duration": "40 min",
     "track": "B",
     "title": "【Connect×PayPay×LINE EC 】決済流通額を3.9倍上げた〇つの施策",
     "tags": ["Connect", "PayPay", "LINE EC"],
@@ -111,7 +111,7 @@
     "slug": "track-b-1510"
   },
   {
-    "time": "15:40",
+    "time": "15:50",
     "duration": "10 min",
     "track": "A",
     "title": "スポンサー LT",
@@ -121,7 +121,7 @@
     "slug": "track-a-1550"
   },
   {
-    "time": "15:40",
+    "time": "15:50",
     "duration": "10 min",
     "track": "B",
     "title": "スポンサー LT",
@@ -131,15 +131,15 @@
     "slug": "track-b-1550"
   },
   {
-    "time": "15:50",
+    "time": "16:00",
     "duration": "10 min",
     "track": "—",
     "isBreak": true,
     "title": "休憩"
   },
   {
-    "time": "16:00",
-    "duration": "30 min",
+    "time": "16:10",
+    "duration": "40 min",
     "track": "A",
     "title": "価格戦略の話（調整中）",
     "tags": ["Pricing"],
@@ -148,8 +148,8 @@
     "slug": "track-a-1650"
   },
   {
-    "time": "16:00",
-    "duration": "60 min",
+    "time": "16:10",
+    "duration": "40 min",
     "track": "B",
     "title": "Web技術で対面決済をつくる：Stripe Terminal 実装ワークショップ",
     "tags": ["Terminal", "Hands-on", "Workshop"],
@@ -158,8 +158,8 @@
     "slug": "track-b-1650"
   },
   {
-    "time": "16:35",
-    "duration": "30 min",
+    "time": "16:55",
+    "duration": "40 min",
     "track": "A",
     "title": "トークセッション：AIプロダクトの開発・課金のリアル",
     "tags": ["AI", "Pricing", "Stripe"],
@@ -168,8 +168,8 @@
     "slug": "track-a-1610"
   },
   {
-    "time": "16:35",
-    "duration": "30 min",
+    "time": "16:55",
+    "duration": "40 min",
     "track": "B",
     "title": "Web技術で対面決済をつくる：Stripe Terminal 実装ワークショップ（続き）",
     "tags": ["Terminal", "Hands-on", "Workshop"],
@@ -178,27 +178,21 @@
     "slug": "track-b-1650"
   },
   {
-    "time": "17:10",
-    "duration": "20 min",
-    "track": "—",
-    "title": "公募 LT（各5分）"
-  },
-  {
-    "time": "17:30",
+    "time": "17:40",
     "duration": "10 min",
     "track": "—",
     "isBreak": true,
     "title": "閉会挨拶"
   },
   {
-    "time": "17:40",
+    "time": "17:50",
     "duration": "15 min",
     "track": "—",
     "isBreak": true,
     "title": "懇親会準備（受付チェック等）"
   },
   {
-    "time": "17:55",
+    "time": "18:05",
     "duration": "150 min",
     "track": "—",
     "title": "懇親会"

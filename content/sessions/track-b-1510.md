@@ -2,7 +2,7 @@
 slug: track-b-1510
 title: "【Connect×PayPay×LINE EC 】決済流通額を3.9倍上げた〇つの施策"
 time: "15:10"
-duration: "30 min"
+duration: "40 min"
 track: B
 tags:
   - Connect

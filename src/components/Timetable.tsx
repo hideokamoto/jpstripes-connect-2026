@@ -108,7 +108,7 @@ export function Timetable() {
               <br />
               front and center.
             </div>
-            <div className="meta">6 sessions · 30min each</div>
+            <div className="meta">6 sessions · 30–40min</div>
           </div>
           <div className="tt-sum-card" data-t="B">
             <div className="h">
@@ -119,18 +119,7 @@ export function Timetable() {
               <br />
               in the trenches.
             </div>
-            <div className="meta">4 sessions · 30min each</div>
-          </div>
-          <div className="tt-sum-card" data-t="LT">
-            <div className="h">
-              <i></i>LT · 5分の知恵
-            </div>
-            <div className="ttl">
-              4 lightning talks,
-              <br />
-              community-fed.
-            </div>
-            <div className="meta">5min each</div>
+            <div className="meta">4 sessions · 30–80min</div>
           </div>
         </div>
 

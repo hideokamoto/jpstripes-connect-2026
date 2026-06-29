@@ -1,26 +1,25 @@
 ---
 slug: track-a-1510
-title: "スタートアップ CTO Talk：溶けていく決済とビジネスのいま"
-time: "15:10"
+title: "トークセッション：AIプロダクトの開発・課金のリアル"
+time: "16:55"
 duration: "40 min"
 track: A
 tags:
-  - CTO
-  - Startup
   - AI
   - Pricing
-speaker: "眞鍋 秀悟（Recustomer）／秋山さん（Helpfeel）"
+  - Stripe
+speaker: "重岡 正（ROUTE06）／村主 壮悟（ABEJA）"
 speakerIds:
-  - manabe-shugo
-  - akiyama
+  - shigeoka-tadashi
+  - muranushi
 status: confirmed
 ---
 
 ## セッション概要
 
-サブスクが当たり前だった時代から、従量課金・成果報酬・AI 前提の価格設計が混ざり始めた今。Stripe を長く使ってきた Helpfeel の秋山さんと、Stripe 上に返品保証保険の販売モデルを組んでいる Recustomer CTO の眞鍋さんに、SaaS is Dead をどう見ているか、従量課金と成果課金の違い、AI が決済とビジネスをどう変えるかを伺います。
+AI を組み込んだプロダクトを開発・運営するお二人に、開発と課金の「リアル」を伺います。プロダクトのどこで AI や Stripe を活用しているのか、AI 利用にかかるコストをどう工夫しているのか、料金・プライシングをどう設計しているのか——日々の意思決定の裏側を率直に語っていただきます。最後は「AI 時代に収益を上げるために、プロダクト開発で本当に大切なことは何か」を掘り下げます。
 
 ## スピーカー
 
-- **眞鍋 秀悟** — Recustomer株式会社 取締役CTO
-- **秋山さん** — 株式会社Helpfeel
+- **重岡 正** — 株式会社ROUTE06 取締役CTO / 共同創業者
+- **村主 壮悟** — 株式会社ABEJA CTO室長

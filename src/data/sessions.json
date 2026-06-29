@@ -82,12 +82,12 @@
   },
   {
     "time": "14:35",
-    "duration": "40 min",
+    "duration": "30 min",
     "track": "B",
-    "title": "【Connect×PayPay×LINE EC 】決済流通額を3.9倍上げた〇つの施策",
-    "tags": ["Connect", "PayPay", "LINE EC"],
-    "speaker": "平田 晴弥（株式会社INFLU）",
-    "status": "confirmed",
+    "title": "決済・請求管理のハマりどころ（調整中）",
+    "tags": ["Billing", "Use Case"],
+    "speaker": "Stripe TAM メンバー",
+    "status": "tbd",
     "slug": "track-b-1430"
   },
   {
@@ -102,12 +102,12 @@
   },
   {
     "time": "15:10",
-    "duration": "30 min",
+    "duration": "40 min",
     "track": "B",
-    "title": "決済・請求管理のハマりどころ（調整中）",
-    "tags": ["Billing", "Use Case"],
-    "speaker": "Stripe TAM メンバー",
-    "status": "tbd",
+    "title": "【Connect×PayPay×LINE EC 】決済流通額を3.9倍上げた〇つの施策",
+    "tags": ["Connect", "PayPay", "LINE EC"],
+    "speaker": "平田 晴弥（株式会社INFLU）",
+    "status": "confirmed",
     "slug": "track-b-1510"
   },
   {

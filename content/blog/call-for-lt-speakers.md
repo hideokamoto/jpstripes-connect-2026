@@ -1,13 +1,15 @@
 ---
 slug: call-for-lt-speakers
-title: LT（Lightning Talk）登壇者を募集します
+title: 【募集終了】LT（Lightning Talk）登壇者を募集します
 date: "2026-06-08"
-excerpt: JP_Stripes Connect 2026 では LT 登壇者を募集中。発表は5分程度、登壇経験の有無は問いません。Stripe に関する内容ならどなたでも歓迎です。
+excerpt: JP_Stripes Connect 2026 の LT 登壇者募集は終了しました。たくさんのご応募・ご検討、ありがとうございました。
 author: JP_Stripes 運営チーム
 tags:
   - お知らせ
   - 登壇者募集
 ---
+
+> **本 LT の登壇者募集は終了しました。** たくさんのご応募・ご検討をいただき、ありがとうございました。以下は募集当時の内容を記録として残しています。
 
 ## LT 登壇者を募集しています
 
@@ -35,11 +37,7 @@ JP_Stripes Connect 2026 では **LT（Lightning Talk）登壇者** を募集し�
 
 ## 応募方法
 
-応募は以下のフォームからお願いします。
-
-<p class="blog-cta-wrap">
-  <a class="nav-cta" href="https://forms.gle/JxqT3ZUygxCFPKbZ9" target="_blank" rel="noopener noreferrer">応募する 👇</a>
-</p>
+**この募集は終了しました。** 応募フォームの受付は締め切っています。
 
 横浜でお会いできるのを楽しみにしています。
 

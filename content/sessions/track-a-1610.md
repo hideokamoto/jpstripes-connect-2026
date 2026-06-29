@@ -1,7 +1,7 @@
 ---
 slug: track-a-1610
 title: "トークセッション：AIプロダクトの開発・課金のリアル"
-time: "16:55"
+time: "15:10"
 duration: "40 min"
 track: A
 tags:

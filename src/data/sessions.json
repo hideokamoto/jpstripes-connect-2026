@@ -94,11 +94,11 @@
     "time": "15:10",
     "duration": "40 min",
     "track": "A",
-    "title": "スタートアップ CTO Talk：溶けていく決済とビジネスのいま",
-    "tags": ["CTO", "Startup", "AI", "Pricing"],
-    "speaker": "眞鍋 秀悟（Recustomer）／秋山さん（Helpfeel）",
+    "title": "トークセッション：AIプロダクトの開発・課金のリアル",
+    "tags": ["AI", "Pricing", "Stripe"],
+    "speaker": "重岡 正（ROUTE06）／村主 壮悟（ABEJA）",
     "status": "confirmed",
-    "slug": "track-a-1510"
+    "slug": "track-a-1610"
   },
   {
     "time": "14:35",
@@ -161,11 +161,11 @@
     "time": "16:55",
     "duration": "40 min",
     "track": "A",
-    "title": "トークセッション：AIプロダクトの開発・課金のリアル",
-    "tags": ["AI", "Pricing", "Stripe"],
-    "speaker": "重岡 正（ROUTE06）／村主 壮悟（ABEJA）",
+    "title": "スタートアップ CTO Talk：溶けていく決済とビジネスのいま",
+    "tags": ["CTO", "Startup", "AI", "Pricing"],
+    "speaker": "眞鍋 秀悟（Recustomer）／秋山さん（Helpfeel）",
     "status": "confirmed",
-    "slug": "track-a-1610"
+    "slug": "track-a-1510"
   },
   {
     "time": "16:55",

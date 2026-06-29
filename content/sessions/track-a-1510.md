@@ -1,7 +1,7 @@
 ---
 slug: track-a-1510
 title: "スタートアップ CTO Talk：溶けていく決済とビジネスのいま"
-time: "15:10"
+time: "16:55"
 duration: "40 min"
 track: A
 tags:

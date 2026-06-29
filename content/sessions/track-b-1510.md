@@ -1,19 +1,18 @@
 ---
 slug: track-b-1510
-title: "【Connect×PayPay×LINE EC 】決済流通額を3.9倍上げた〇つの施策"
+title: 決済・請求管理のハマりどころ（調整中）
 time: "15:10"
-duration: "40 min"
+duration: "30 min"
 track: B
 tags:
-  - Connect
-  - PayPay
-  - LINE EC
-speakerId: hirata-haruya
-status: confirmed
+  - Billing
+  - Use Case
+speaker: Stripe TAM メンバー
+status: tbd
 ---
 
 ## セッション概要
 
-Stripe Connect を利用した EC プラットフォームにおける手数料収益をアップさせる為に、いかに利用ショップに成果を出していただくか？
+Stripe の TAM（Technical Account Manager）メンバーが、決済・請求まわりで実際によく遭遇する「ハマりどころ」とその回避策を、現場の支援経験から紹介する予定です（調整中）。
 
-EC 機能の改善や PayPay、銀行振込機能など、具体的に効果のあった施策をお話しします。
+※タイトル・内容・登壇者は調整中です。詳細は順次公開予定です。

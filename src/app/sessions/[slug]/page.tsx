@@ -80,20 +80,17 @@ export default async function SessionPage({ params }: Props) {
               <em>coming soon.</em>
             </>
           ) : (
-            (() => {
-              const [head, tail] = splitTitle(session.title);
-              return (
-                <>
-                  {head}
-                  {tail ? (
-                    <>
-                      <br />
-                      <em>{tail}</em>
-                    </>
-                  ) : null}
-                </>
-              );
-            })()
+            (([head, tail]) => (
+              <>
+                {head}
+                {tail && (
+                  <>
+                    <br />
+                    <em>{tail}</em>
+                  </>
+                )}
+              </>
+            ))(splitTitle(session.title))
           )}
         </h1>
         <div className="meta">JP_Stripes Connect 2026 — 2026年8月1日（土）</div>

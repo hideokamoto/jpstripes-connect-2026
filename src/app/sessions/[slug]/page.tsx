@@ -40,6 +40,18 @@ const TRACK_LABEL: Record<string, string> = {
   B: 'Track B · Tech',
 };
 
+// Split the title into a black head + purple tail at a meaningful boundary
+// (the full-width colon, then a closing bracket) so words are never cut.
+function splitTitle(title: string): [string, string | null] {
+  for (const delim of ['：', '】']) {
+    const idx = title.indexOf(delim);
+    if (idx !== -1 && idx < title.length - 1) {
+      return [title.slice(0, idx + 1), title.slice(idx + 1)];
+    }
+  }
+  return [title, null];
+}
+
 export default async function SessionPage({ params }: Props) {
   const { slug } = await params;
   const session = getSessionBySlug(slug);
@@ -68,15 +80,17 @@ export default async function SessionPage({ params }: Props) {
               <em>coming soon.</em>
             </>
           ) : (
-            <>
-              {session.title.split('').slice(0, 10).join('')}
-              {session.title.length > 10 ? (
-                <>
-                  <br />
-                  <em>{session.title.slice(10)}</em>
-                </>
-              ) : null}
-            </>
+            (([head, tail]) => (
+              <>
+                {head}
+                {tail && (
+                  <>
+                    <br />
+                    <em>{tail}</em>
+                  </>
+                )}
+              </>
+            ))(splitTitle(session.title))
           )}
         </h1>
         <div className="meta">JP_Stripes Connect 2026 — 2026年8月1日（土）</div>

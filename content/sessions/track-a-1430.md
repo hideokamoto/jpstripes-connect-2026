@@ -1,6 +1,6 @@
 ---
 slug: track-a-1430
-title: "AI × Stripe：エージェント時代の決済と請求（仮）"
+title: "AI × Stripe：エージェント時代の決済と請求"
 time: "14:30"
 duration: "30 min"
 track: A
@@ -10,7 +10,7 @@ tags:
   - Agent
 speaker: 北爪 ゆう
 speakerId: kitazume-yu
-status: provisional
+status: confirmed
 ---
 
 ## セッション概要

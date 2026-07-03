@@ -6,7 +6,7 @@ duration: "30 min"
 track: A
 tags:
   - Case Study
-speaker: daniel / wada yusuke
+speaker: "Daniel Heffernan（Stripe）／和田裕介（Cloudflare）"
 status: tbd
 ---
 

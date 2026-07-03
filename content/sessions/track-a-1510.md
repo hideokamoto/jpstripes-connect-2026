@@ -9,7 +9,7 @@ tags:
   - Startup
   - AI
   - Pricing
-speaker: "眞鍋 秀悟（Recustomer）／秋山さん（Helpfeel）"
+speaker: "眞鍋 秀悟（Recustomer）／秋山 博紀（Helpfeel）"
 speakerIds:
   - manabe-shugo
   - akiyama
@@ -23,4 +23,4 @@ status: confirmed
 ## スピーカー
 
 - **眞鍋 秀悟** — Recustomer株式会社 取締役CTO
-- **秋山さん** — 株式会社Helpfeel
+- **秋山 博紀** — 株式会社Helpfeel

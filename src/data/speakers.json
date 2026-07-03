@@ -118,6 +118,16 @@
     "links": [{ "label": "X", "url": "https://x.com/shibe97" }]
   },
   {
+    "id": "yusuke-wada",
+    "name": "和田裕介",
+    "nameReading": "わだ ゆうすけ",
+    "org": "Cloudflare, Inc.",
+    "title": "Developer Advocate",
+    "image": "/speakers/yusuke.jpg",
+    "bio": "Cloudflare Developer Advocate、Honoの作者",
+    "links": [{ "label": "X", "url": "https://x.com/yusukebe" }]
+  },
+  {
     "id": "muranushi",
     "name": "村主 壮悟",
     "nameReading": "ムラヌシショウゴ",

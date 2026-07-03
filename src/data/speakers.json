@@ -10,12 +10,6 @@
     "links": [{ "label": "X", "url": "https://x.com/danielshi" }]
   },
   {
-    "id": "kojima-hideki",
-    "name": "小島 英揮",
-    "org": "株式会社Still Day One",
-    "image": "/speakers/ojima.jpg"
-  },
-  {
     "id": "akiyama",
     "name": "秋山さん",
     "org": "株式会社Helpfeel",

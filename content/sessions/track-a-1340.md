@@ -7,6 +7,9 @@ track: A
 tags:
   - Case Study
 speaker: "Daniel Heffernan（Stripe）／和田裕介（Cloudflare）"
+speakerIds:
+  - daniel-heffernan
+  - yusuke-wada
 status: tbd
 ---
 

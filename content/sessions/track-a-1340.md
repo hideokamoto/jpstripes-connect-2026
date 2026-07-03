@@ -1,12 +1,15 @@
 ---
 slug: track-a-1340
-title: Stripe 導入事例のご紹介（調整中）
+title: "対談セッション: x402/MPP とエージェントの決済（仮）"
 time: "13:40"
 duration: "30 min"
 track: A
 tags:
   - Case Study
-speaker: Stripe
+speaker: "Daniel Heffernan（Stripe）／和田裕介（Cloudflare）"
+speakerIds:
+  - daniel-heffernan
+  - yusuke-wada
 status: tbd
 ---
 
@@ -14,4 +17,4 @@ status: tbd
 
 このセッションは現在調整中です。詳細は順次公開予定です。
 
-**Track A — Main トラック** の 13:40 枠では、Stripe による導入事例のご紹介を予定しています。実際のビジネスでどのように決済・課金が組み立てられているかを、事例ベースでお届けします。
+**Track A — Main トラック** の 13:40 枠では、x402/MPP とエージェントの決済をテーマにした対談セッションを予定しています（仮タイトル）。

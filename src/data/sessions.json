@@ -27,10 +27,10 @@
     "time": "13:40",
     "duration": "30 min",
     "track": "A",
-    "title": "対談セッション: x402/MPP とエージェントの決済（仮）",
+    "title": "Stripe x Cloudflare対談：x402/MPP - AIエージェントは、何を買おうとしているのか？",
     "tags": ["Case Study"],
     "speaker": "Daniel Heffernan（Stripe）／和田裕介（Cloudflare）",
-    "status": "tbd",
+    "status": "confirmed",
     "slug": "track-a-1340"
   },
   {

@@ -1,6 +1,6 @@
 ---
 slug: track-a-1340
-title: "対談セッション: x402/MPP とエージェントの決済（仮）"
+title: "Stripe x Cloudflare対談：x402/MPP - AIエージェントは、何を買おうとしているのか？"
 time: "13:40"
 duration: "30 min"
 track: A
@@ -10,11 +10,9 @@ speaker: "Daniel Heffernan（Stripe）／和田裕介（Cloudflare）"
 speakerIds:
   - daniel-heffernan
   - yusuke-wada
-status: tbd
+status: confirmed
 ---
 
 ## セッション概要
 
-このセッションは現在調整中です。詳細は順次公開予定です。
-
-**Track A — Main トラック** の 13:40 枠では、x402/MPP とエージェントの決済をテーマにした対談セッションを予定しています（仮タイトル）。
+AIエージェントが自律的に動きはじめると、その先には「買い手」としてのエージェントが現れます。サービスか、プロダクトか、コンテンツか——あるいは、推論では片づかない仕事を任せる相手としての人間か。Stripe の Daniel Heffernan さんと、Hono 作者で Cloudflare のyusukebeさんが、Stripe × Cloudflare のデモと x402 の実演を交えて、エージェントが何を買い、そこにどう売るのかを掘り下げます。

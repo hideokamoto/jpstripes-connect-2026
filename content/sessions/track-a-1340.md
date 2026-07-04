@@ -1,6 +1,6 @@
 ---
 slug: track-a-1340
-title: "Stripe x Cloudflare対談: x402/MPP - AIエージェントは、何を買おうとしているのか？"
+title: "Stripe x Cloudflare対談：x402/MPP - AIエージェントは、何を買おうとしているのか？"
 time: "13:40"
 duration: "30 min"
 track: A

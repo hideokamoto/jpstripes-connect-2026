@@ -151,8 +151,8 @@
     "time": "16:10",
     "duration": "40 min",
     "track": "B",
-    "title": "Web技術で対面決済をつくる：Stripe Terminal 実装ワークショップ",
-    "tags": ["Terminal", "Hands-on", "Workshop"],
+    "title": "決済端末ビジネスを、決済会社だけのものにしない— Stripe Terminalで始める店舗インフラ事業",
+    "tags": ["Terminal", "Business"],
     "speaker": "榊原昌彦",
     "status": "confirmed",
     "slug": "track-b-1650"
@@ -171,11 +171,11 @@
     "time": "16:55",
     "duration": "40 min",
     "track": "B",
-    "title": "Web技術で対面決済をつくる：Stripe Terminal 実装ワークショップ（続き）",
+    "title": "JavaScriptで始める店舗インフラ決済構築 - Stripe Terminal簡易ワークショップ",
     "tags": ["Terminal", "Hands-on", "Workshop"],
     "speaker": "榊原昌彦",
     "status": "confirmed",
-    "slug": "track-b-1650"
+    "slug": "track-b-1655"
   },
   {
     "time": "17:40",

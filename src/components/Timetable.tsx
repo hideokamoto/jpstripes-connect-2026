@@ -119,7 +119,7 @@ export function Timetable() {
               <br />
               in the trenches.
             </div>
-            <div className="meta">4 sessions · 30–80min</div>
+            <div className="meta">5 sessions · 30–40min</div>
           </div>
         </div>
 

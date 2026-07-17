@@ -518,24 +518,28 @@ section.s { padding: var(--pad-section) 0; border-bottom: 1px solid var(--line);
 .venue-text li .k { font-family: var(--mono); font-size: 12px; color: var(--fg-3); padding-top: 3px; }
 
 /* SPONSORS */
-.sp-tier { margin-bottom: 56px; }
-.sp-tier:is([data-tier="special"], [data-tier="gold"], [data-tier="standard"]) {
-  display: none;
-}
+.sp-tier { margin-bottom: 48px; }
 .sp-tier h3 { display: flex; align-items: center; gap: 16px; font-family: var(--jp); font-weight: 700; font-size: 22px; letter-spacing: -0.01em; margin: 0 0 20px; }
 .sp-tier h3 em { color: var(--accent); }
+.sp-tier h3 .tier-jp { font-family: var(--mono); font-size: 12px; font-weight: 400; color: var(--fg-3); letter-spacing: 0.04em; }
 .sp-tier h3::after { content: ""; flex: 1; height: 1px; background: var(--line); }
-.sp-grid-tier { display: grid; gap: 12px; }
-.sp-tier[data-tier="special"] .sp-grid-tier { grid-template-columns: 1fr; }
-.sp-tier[data-tier="gold"] .sp-grid-tier { grid-template-columns: repeat(2, 1fr); }
-.sp-tier[data-tier="standard"] .sp-grid-tier { grid-template-columns: repeat(4, 1fr); }
-.sp-slot { background: var(--bg-1); border: 1px dashed var(--line-2); border-radius: 4px; aspect-ratio: 3.5 / 1; display: grid; place-items: center; font-family: var(--mono); font-size: 12px; color: var(--fg-3); }
-.sp-tier[data-tier="special"] .sp-slot { aspect-ratio: 7 / 1; font-family: var(--jp); font-size: 22px; font-weight: 500; color: var(--fg-2); }
-.sponsor-cta { margin-top: 32px; display: flex; align-items: center; justify-content: space-between; padding: 32px; border: 1px solid var(--accent); border-radius: 4px; gap: 24px; flex-wrap: wrap; }
+.sp-grid-tier { display: flex; flex-wrap: wrap; gap: 16px; }
+.sp-logo-card {
+  flex: 0 1 260px; background: #fff; border: 1px solid var(--line); border-radius: 4px;
+  aspect-ratio: 3.2 / 1; display: grid; place-items: center; padding: 20px 28px;
+  transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+.sp-logo-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(14, 18, 25, 0.08); }
+.sp-logo-card img { max-width: 100%; max-height: 64px; width: auto; height: auto; object-fit: contain; }
+.sp-tier[data-tier="platinum"] .sp-logo-card { flex-basis: 100%; aspect-ratio: 6 / 1; padding: 32px 48px; }
+.sp-tier[data-tier="platinum"] .sp-logo-card img { max-height: 96px; }
+.sp-tier[data-tier="gold"] .sp-logo-card { flex-basis: 380px; aspect-ratio: 4 / 1; }
+.sponsor-cta { margin-top: 40px; display: flex; align-items: center; justify-content: space-between; padding: 32px; border: 1px solid var(--accent); border-radius: 4px; gap: 24px; flex-wrap: wrap; }
 .sponsor-cta h4 { font-family: var(--jp); font-weight: 700; font-size: 22px; margin: 0 0 6px; letter-spacing: -0.01em; }
 .sponsor-cta h4 em { color: var(--accent); }
 .sponsor-cta p { font-family: var(--jp); font-size: 15px; color: var(--fg-2); margin: 0; line-height: var(--line-jp); }
-.sponsor-cta .right { font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; }
+.sponsor-cta .right { font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; transition: color .15s; }
+a.sponsor-cta .right:hover, .sponsor-cta a.right:hover { color: var(--accent-2); }
 
 /* PAST */
 .past-card { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: stretch; padding: 48px; background: var(--bg-1); border-radius: 4px; border: 1px solid var(--line); }
@@ -644,8 +648,7 @@ footer.bot { padding: 100px 0 40px; }
   .date-stamp { display: none; }
   .section-mast { grid-template-columns: 1fr; }
   .section-mast .deck { max-width: none; }
-  .sp-tier[data-tier="standard"] .sp-grid-tier { grid-template-columns: repeat(2, 1fr); }
-  .sp-tier[data-tier="gold"] .sp-grid-tier { grid-template-columns: 1fr; }
+  .sp-logo-card, .sp-tier[data-tier="gold"] .sp-logo-card { flex-basis: 100%; }
   .past-stats { grid-template-columns: repeat(2, 1fr); }
   .past-stat:nth-child(3) { border-left: 0; }
   .archive-head { grid-template-columns: 1fr; align-items: start; }

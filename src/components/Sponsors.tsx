@@ -102,18 +102,11 @@ export function Sponsors() {
         <div className="sponsor-cta">
           <div>
             <h4>
-              Sponsor <em>Inquiries</em>
+              Sponsor <em>Recruitment</em>
             </h4>
-            <p>スポンサーシップの詳細・特典資料をご希望の方は、運営までお問い合わせください。</p>
+            <p>スポンサーの募集は締め切りました。ご協賛いただいた皆様、誠にありがとうございます。</p>
           </div>
-          <a
-            className="right"
-            href="https://connect2025.jpstripes.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            [ Contact ↗ ]
-          </a>
+          <div className="right">[ Closed ]</div>
         </div>
       </div>
     </section>

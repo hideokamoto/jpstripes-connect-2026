@@ -51,6 +51,7 @@ const TIERS: Tier[] = [
     jp: 'ロゴスポンサー',
     sponsors: [
       { name: 'DIGITALJET', alt: '株式会社DIGITALJET', href: 'https://digitaljet.co.jp', logo: '/sponsors/digitaljet.png' },
+      { name: 'Atmoph', alt: '株式会社Atmoph', href: 'https://atmoph.com/', logo: '/sponsors/atmoph-alpha.png' },
     ],
   },
 ];

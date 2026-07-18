@@ -12,14 +12,15 @@ interface SalesStats {
   total: number;
 }
 
+// 件数は非負の安全な整数のみ受け付ける（負数・小数・不正値を表示前に弾く）。
+function isCount(value: unknown): value is number {
+  return typeof value === 'number' && Number.isSafeInteger(value) && value >= 0;
+}
+
 function isSalesStats(data: unknown): data is SalesStats {
   if (typeof data !== 'object' || data === null) return false;
   const s = data as Record<string, unknown>;
-  return (
-    typeof s.total === 'number' &&
-    typeof s.honpen === 'number' &&
-    typeof s.konshinkai === 'number'
-  );
+  return isCount(s.total) && isCount(s.honpen) && isCount(s.konshinkai);
 }
 
 /**

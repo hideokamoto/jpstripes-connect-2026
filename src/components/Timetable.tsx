@@ -90,7 +90,7 @@ export function Timetable() {
             </h2>
           </div>
           <p className="deck">
-            8月1日(土) 12:30 — 18:00。MainトラックとTechトラック、そしてLT。詳細は順次公開。
+            8月1日(土) 12:00 開場。MainトラックとTechトラック、閉会後は懇親会まで。詳細は順次公開。
           </p>
         </div>
 
@@ -108,7 +108,7 @@ export function Timetable() {
               <br />
               front and center.
             </div>
-            <div className="meta">6 sessions · 30min each</div>
+            <div className="meta">6 sessions · 30–40min</div>
           </div>
           <div className="tt-sum-card" data-t="B">
             <div className="h">
@@ -119,18 +119,7 @@ export function Timetable() {
               <br />
               in the trenches.
             </div>
-            <div className="meta">4 sessions · 30min each</div>
-          </div>
-          <div className="tt-sum-card" data-t="LT">
-            <div className="h">
-              <i></i>LT · 5分の知恵
-            </div>
-            <div className="ttl">
-              5 lightning talks,
-              <br />
-              community-fed.
-            </div>
-            <div className="meta">5min each</div>
+            <div className="meta">5 sessions · 30–40min</div>
           </div>
         </div>
 

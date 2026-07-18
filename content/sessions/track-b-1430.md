@@ -1,7 +1,7 @@
 ---
 slug: track-b-1430
 title: 決済・請求管理のハマりどころ（調整中）
-time: "14:30"
+time: "15:10"
 duration: "30 min"
 track: B
 tags:

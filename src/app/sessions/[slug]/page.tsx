@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { existsSync } from 'fs';
+import { join } from 'path';
 import { notFound } from 'next/navigation';
 import { getAllSessionSlugs, getSessionBySlug } from '@/lib/sessions';
 import speakers from '@/data/speakers.json';
@@ -17,9 +19,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const session = getSessionBySlug(slug);
   if (!session) return {};
   const desc = session.contentHtml.replace(/<[^>]+>/g, '').slice(0, 160);
+  const sessionImagePath = `/sessions/${slug}.png`;
+  const hasSessionImage = existsSync(join(process.cwd(), 'public', 'sessions', `${slug}.png`));
+  const ogImage = hasSessionImage ? sessionImagePath : '/ogp.png';
   return {
     title: `${session.title} — JP_Stripes Connect 2026`,
     description: desc,
+    openGraph: {
+      images: [{ url: ogImage, width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: [ogImage],
+    },
   };
 }
 
@@ -27,6 +39,18 @@ const TRACK_LABEL: Record<string, string> = {
   A: 'Track A · Main',
   B: 'Track B · Tech',
 };
+
+// Split the title into a black head + purple tail at a meaningful boundary
+// (the full-width colon, then a closing bracket) so words are never cut.
+function splitTitle(title: string): [string, string | null] {
+  for (const delim of ['：', '】']) {
+    const idx = title.indexOf(delim);
+    if (idx !== -1 && idx < title.length - 1) {
+      return [title.slice(0, idx + 1), title.slice(idx + 1)];
+    }
+  }
+  return [title, null];
+}
 
 export default async function SessionPage({ params }: Props) {
   const { slug } = await params;
@@ -56,15 +80,17 @@ export default async function SessionPage({ params }: Props) {
               <em>coming soon.</em>
             </>
           ) : (
-            <>
-              {session.title.split('').slice(0, 10).join('')}
-              {session.title.length > 10 ? (
-                <>
-                  <br />
-                  <em>{session.title.slice(10)}</em>
-                </>
-              ) : null}
-            </>
+            (([head, tail]) => (
+              <>
+                {head}
+                {tail && (
+                  <>
+                    <br />
+                    <em>{tail}</em>
+                  </>
+                )}
+              </>
+            ))(splitTitle(session.title))
           )}
         </h1>
         <div className="meta">JP_Stripes Connect 2026 — 2026年8月1日（土）</div>
@@ -93,6 +119,11 @@ export default async function SessionPage({ params }: Props) {
             <p>このセッションは現在最終調整中です。予告なく変更される場合があります。</p>
           </div>
         ) : null}
+
+        <div
+          className="session-body"
+          dangerouslySetInnerHTML={{ __html: session.contentHtml }}
+        />
 
         {sessionSpeakers.length > 0 ? (
           <div className="session-speaker">
@@ -142,11 +173,6 @@ export default async function SessionPage({ params }: Props) {
             </div>
           </div>
         ) : null}
-
-        <div
-          className="session-body"
-          dangerouslySetInnerHTML={{ __html: session.contentHtml }}
-        />
       </div>
 
       <nav className="legal-nav">

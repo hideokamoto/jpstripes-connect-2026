@@ -1,3 +1,75 @@
+type Sponsor = {
+  name: string;
+  alt: string;
+  href: string;
+  logo: string;
+};
+
+type Tier = {
+  key: string;
+  label: string;
+  jp: string;
+  sponsors: Sponsor[];
+};
+
+const TIERS: Tier[] = [
+  {
+    key: 'platinum',
+    label: 'Platinum',
+    jp: 'プラチナスポンサー',
+    sponsors: [
+      { name: 'Stripe', alt: 'Stripe', href: 'https://stripe.com', logo: '/sponsors/Stripe_logo.png' },
+    ],
+  },
+  {
+    key: 'gold',
+    label: 'Gold',
+    jp: 'ゴールドスポンサー',
+    sponsors: [
+      { name: 'アンチパターン', alt: '株式会社アンチパターン', href: 'https://anti-pattern.co.jp', logo: '/sponsors/anti-pattern.png' },
+    ],
+  },
+  {
+    key: 'silver',
+    label: 'Silver',
+    jp: 'シルバースポンサー',
+    sponsors: [
+      { name: 'revtrona', alt: 'revtrona', href: 'https://revtrona.com', logo: '/sponsors/Revtrona.png' },
+    ],
+  },
+  {
+    key: 'tool',
+    label: 'Tool',
+    jp: 'ツールスポンサー',
+    sponsors: [
+      { name: 'Nulab', alt: '株式会社ヌーラボ', href: 'https://nulab.com/ja/', logo: '/sponsors/Nulab_logo.png' },
+    ],
+  },
+  {
+    key: 'logo',
+    label: 'Logo',
+    jp: 'ロゴスポンサー',
+    sponsors: [
+      { name: 'DIGITALJET', alt: '株式会社DIGITALJET', href: 'https://digitaljet.co.jp', logo: '/sponsors/digitaljet.png' },
+      { name: 'Atmoph', alt: '株式会社Atmoph', href: 'https://atmoph.com/', logo: '/sponsors/atmoph-alpha.png' },
+    ],
+  },
+];
+
+function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
+  return (
+    <a
+      className="sp-logo-card"
+      href={sponsor.href}
+      target="_blank"
+      rel="sponsored noopener noreferrer"
+      aria-label={sponsor.alt}
+    >
+      <img loading="lazy" src={sponsor.logo} alt={sponsor.alt} />
+    </a>
+  );
+}
+
 export function Sponsors() {
   return (
     <section className="s" id="sponsors">
@@ -11,44 +83,31 @@ export function Sponsors() {
               <em>the community.</em>
             </h2>
           </div>
-          <p className="deck">スポンサー募集中。コミュニティと共に決済の知恵を広げてください。</p>
+          <p className="deck">本イベントは、以下のスポンサー企業のご支援により開催されます。決済とビジネスの知恵を、コミュニティと共に広げてくれる仲間たちです。</p>
         </div>
 
-        <div className="sp-tier" data-tier="special">
-          <h3>
-            <em>Special</em> Sponsor
-          </h3>
-          <div className="sp-grid-tier">
-            <div className="sp-slot">— Special Sponsor / 募集中 —</div>
+        {TIERS.map((tier) => (
+          <div className="sp-tier" data-tier={tier.key} key={tier.key}>
+            <h3>
+              <em>{tier.label}</em> Sponsor
+              <span className="tier-jp">{tier.jp}</span>
+            </h3>
+            <div className="sp-grid-tier">
+              {tier.sponsors.map((s) => (
+                <SponsorCard key={s.name} sponsor={s} />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="sp-tier" data-tier="gold">
-          <h3>
-            <em>Gold</em> Sponsor
-          </h3>
-          <div className="sp-grid-tier">
-            <div className="sp-slot">GOLD 01 / 募集中</div>
-            <div className="sp-slot">GOLD 02 / 募集中</div>
-          </div>
-        </div>
-        <div className="sp-tier" data-tier="standard">
-          <h3>Sponsor</h3>
-          <div className="sp-grid-tier">
-            <div className="sp-slot">SLOT 01</div>
-            <div className="sp-slot">SLOT 02</div>
-            <div className="sp-slot">SLOT 03</div>
-            <div className="sp-slot">SLOT 04</div>
-          </div>
-        </div>
+        ))}
 
         <div className="sponsor-cta">
           <div>
             <h4>
-              Sponsor <em>Inquiries</em>
+              Sponsor <em>Recruitment</em>
             </h4>
-            <p>スポンサーシップ詳細・特典資料は近日公開。</p>
+            <p>スポンサーの募集は締め切りました。ご協賛いただいた皆様、誠にありがとうございます。</p>
           </div>
-          <div className="right">[ Coming Soon ]</div>
+          <div className="right">[ Closed ]</div>
         </div>
       </div>
     </section>

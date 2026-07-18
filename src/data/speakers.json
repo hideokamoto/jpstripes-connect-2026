@@ -10,16 +10,13 @@
     "links": [{ "label": "X", "url": "https://x.com/danielshi" }]
   },
   {
-    "id": "kojima-hideki",
-    "name": "小島 英揮",
-    "org": "株式会社Still Day One",
-    "image": "/speakers/ojima.jpg"
-  },
-  {
     "id": "akiyama",
-    "name": "秋山さん",
+    "name": "秋山 博紀",
+    "nameReading": "あきやま ひろき",
     "org": "株式会社Helpfeel",
-    "image": "/speakers/b5f641fdf20fc10651b5c8797b6e6461.png"
+    "title": "CTO",
+    "image": "/speakers/b5f641fdf20fc10651b5c8797b6e6461.png",
+    "bio": "株式会社Helpfeel CTOとして、開発組織のマネジメントおよび技術戦略を担う。11歳よりソフトウェア制作を始め、2005年経済産業大臣賞受賞、2008年未踏ソフトウェア創造事業採択。ユーザーインタフェース研究を経て、複数のWebサービス・アプリ事業の立ち上げに参画。2015年にHelpfeelへ入社し、事業成長を支える開発組織の構築を主導。AIの進化によりプロダクトの在り方が根本から変わる現在、技術と事業を横断する視点から新たな価値創出に取り組んでいる。"
   },
   {
     "id": "nakano-kyohei",
@@ -99,6 +96,15 @@
     "links": [{ "label": "X", "url": "https://x.com/yukiozasa" }]
   },
   {
+    "id": "hirata-haruya",
+    "name": "平田 晴弥",
+    "nameReading": "ひらた はるや",
+    "org": "株式会社INFLU",
+    "image": "/speakers/hirata.png",
+    "bio": "Webエンジニア×マーケティング/株式会社INFLU所属/LINE×Stripe×〇〇のツールを開発/ TS,Next,LINE API,StripeAPI/機能開発で効果が出た事例を発信/累計2000件のLINE×StripeのECショップを分析しました。",
+    "links": [{ "label": "X", "url": "https://x.com/haruya_em" }]
+  },
+  {
     "id": "shibata-kazuki",
     "name": "柴田 和祈",
     "nameReading": "シバタカズキ",
@@ -107,5 +113,25 @@
     "image": "/speakers/shibata_kauzki.jpg",
     "bio": "デザイナー兼フロントエンドエンジニアとしてキャリアをスタートし、Web開発の経験をもとに株式会社microCMSを創業。著書に『Next.js+ヘッドレスCMSではじめる！かんたんモダンWebサイト制作入門』。プライベートでは2児の父で、ロシアンブルーと共に暮らしている。",
     "links": [{ "label": "X", "url": "https://x.com/shibe97" }]
+  },
+  {
+    "id": "yusuke-wada",
+    "name": "和田裕介",
+    "nameReading": "わだ ゆうすけ",
+    "org": "Cloudflare, Inc.",
+    "title": "Developer Advocate",
+    "image": "/speakers/yusuke.jpg",
+    "bio": "Cloudflare Developer Advocate、Honoの作者",
+    "links": [{ "label": "X", "url": "https://x.com/yusukebe" }]
+  },
+  {
+    "id": "muranushi",
+    "name": "村主 壮悟",
+    "nameReading": "ムラヌシショウゴ",
+    "org": "株式会社ABEJA",
+    "title": "CTO室長",
+    "image": "/speakers/muranushi_shogo.jpg",
+    "bio": "前職でAWSのクラウドインテグレーターとして大規模案件を多数コンサル、構築、運用する。2017年にABEJA Platformを開発するためにABEJAに参画。AWSパートナーとしてAWS Well-Architectedに準拠したMachine Learningコンピテンシーの取得を推進。現在はCTO室室長とABEJA Platformの責任者として従事。",
+    "links": [{ "label": "X", "url": "https://x.com/rwle1212" }]
   }
 ]

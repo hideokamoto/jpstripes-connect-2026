@@ -1,6 +1,7 @@
 import { Hono } from 'hono';
 import { appendTrailingSlash } from 'hono/trailing-slash';
 import { renderer, renderPage, appUrl } from './renderer';
+import { x402Gate } from './middleware/x402-gate';
 import { getAllPosts, getPostBySlug } from './lib/blog';
 import { getSessionBySlug } from './lib/sessions';
 import { sessionOgSlugs } from './generated/content';
@@ -20,6 +21,12 @@ type Env = {
   Bindings: {
     APP_URL?: string;
     STATS_API_URL?: string;
+    // x402 決済ゲート用（src/middleware/x402-gate.ts）。
+    // X402_PAY_TO は受取ウォレットアドレス（未設定なら fail-open で全員 200）。
+    X402_PAY_TO?: string;
+    X402_FACILITATOR_URL?: string;
+    X402_NETWORK?: string;
+    X402_PRICE?: string;
   };
 };
 
@@ -34,6 +41,11 @@ const app = new Hono<Env>();
 // 末尾スラッシュ付きを正とし、なしはリダイレクトで寄せる。
 app.use(appendTrailingSlash());
 app.use(renderer);
+
+// セッション/スピーカー情報は AIエージェントのみ x402（HTTP 402）でゲートし、人間は 200。
+// 詳細は src/middleware/x402-gate.ts。
+app.use('/sessions/*', x402Gate());
+app.use('/speakers/*', x402Gate());
 
 app.get('/', (c) => renderPage(c, <Home />));
 

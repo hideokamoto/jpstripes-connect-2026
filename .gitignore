@@ -6,4 +6,6 @@ src/generated/
 .DS_Store
 .env*
 !.env.example
+.dev.vars
+.dev.vars.*
 *.tsbuildinfo

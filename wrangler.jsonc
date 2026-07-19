@@ -10,6 +10,12 @@
     // Web サイトの公開 URL（OGP / メタデータの絶対 URL 用）
     "APP_URL": "https://connect2026.jpstripes.com",
     // webhook Worker の公開集計エンドポイント（申込枚数表示。未設定なら表示しない）
-    "STATS_API_URL": "https://jpstripes-connect-2026-webhook.wp-kyoto.workers.dev/stats"
+    "STATS_API_URL": "https://jpstripes-connect-2026-webhook.wp-kyoto.workers.dev/stats",
+    // x402 決済ゲート設定（src/middleware/x402-gate.ts）。
+    // 受取アドレス X402_PAY_TO は Secret で注入（`wrangler secret put X402_PAY_TO`）。
+    // 未設定なら fail-open で全リクエスト 200。
+    "X402_FACILITATOR_URL": "https://x402.org/facilitator", // testnet 用・無料
+    "X402_NETWORK": "base-sepolia",
+    "X402_PRICE": "$0.005"
   }
 }

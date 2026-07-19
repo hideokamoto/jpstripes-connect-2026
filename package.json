@@ -18,7 +18,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "hono": "^4.11.9"
+    "@hono/ua-blocker": "^0.1.35",
+    "hono": "^4.11.9",
+    "x402-hono": "^1.2.0"
   },
   "devDependencies": {
     "@types/node": "^22.10.7",

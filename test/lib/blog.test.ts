@@ -37,8 +37,36 @@ describe('formatDate', () => {
     try {
       expect(formatDate('2026-08-01')).toBe('2026年8月1日');
     } finally {
-      process.env.TZ = originalTZ;
+      if (originalTZ === undefined) {
+        delete process.env.TZ;
+      } else {
+        process.env.TZ = originalTZ;
+      }
     }
+  });
+
+  it('タイムゾーン付き ISO 日時（フォールバック分岐）も UTC 基準で整形する', () => {
+    // 'YYYY-MM-DD' 以外の形式は Date 経由でパースされるフォールバック分岐に入る。
+    // ローカル getter だと UTC より遅いタイムゾーンで前日にずれてしまう回帰を防ぐ。
+    const originalTZ = process.env.TZ;
+    process.env.TZ = 'America/Los_Angeles';
+    try {
+      expect(formatDate('2026-08-01T00:30:00Z')).toBe('2026年8月1日');
+    } finally {
+      if (originalTZ === undefined) {
+        delete process.env.TZ;
+      } else {
+        process.env.TZ = originalTZ;
+      }
+    }
+  });
+
+  it('実在しない日付（2月31日など）はそのまま返す', () => {
+    expect(formatDate('2026-02-31')).toBe('2026-02-31');
+  });
+
+  it('存在しない月（13月）はそのまま返す', () => {
+    expect(formatDate('2026-13-01')).toBe('2026-13-01');
   });
 
   it('パースできない文字列はそのまま返す', () => {

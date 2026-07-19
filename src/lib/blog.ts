@@ -28,9 +28,15 @@ export function formatDate(date: string): string {
   const match = ISO_DATE.exec(date);
   if (match) {
     const [, year, month, day] = match;
-    return `${year}年${Number(month)}月${Number(day)}日`;
+    const monthNumber = Number(month);
+    const dayNumber = Number(day);
+    const lastDayOfMonth = new Date(Date.UTC(Number(year), monthNumber, 0)).getUTCDate();
+    if (monthNumber < 1 || monthNumber > 12 || dayNumber < 1 || dayNumber > lastDayOfMonth) {
+      return date;
+    }
+    return `${year}年${monthNumber}月${dayNumber}日`;
   }
   const d = new Date(date);
   if (Number.isNaN(d.getTime())) return date;
-  return `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日`;
+  return `${d.getUTCFullYear()}年${d.getUTCMonth() + 1}月${d.getUTCDate()}日`;
 }

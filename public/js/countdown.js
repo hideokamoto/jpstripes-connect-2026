@@ -14,12 +14,12 @@
   };
 
   function compute() {
-    const diff = target - Date.now();
+    const diff = Math.max(0, target - Date.now());
     return {
-      d: String(Math.max(0, Math.floor(diff / 86400000))).padStart(units.d.length, '0'),
-      h: String(Math.max(0, Math.floor((diff % 86400000) / 3600000))).padStart(2, '0'),
-      m: String(Math.max(0, Math.floor((diff % 3600000) / 60000))).padStart(2, '0'),
-      s: String(Math.max(0, Math.floor((diff % 60000) / 1000))).padStart(2, '0'),
+      d: String(Math.floor(diff / 86400000)).padStart(units.d.length, '0'),
+      h: String(Math.floor((diff % 86400000) / 3600000)).padStart(2, '0'),
+      m: String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0'),
+      s: String(Math.floor((diff % 60000) / 1000)).padStart(2, '0'),
     };
   }
 

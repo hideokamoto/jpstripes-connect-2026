@@ -11,7 +11,7 @@ export function ChapterNav() {
   return (
     <nav className="chapters">
       {CHAPTERS.map((c, i) => (
-        <a key={c.href} href={c.href} className={i === 0 ? 'on' : ''}>
+        <a key={c.href} href={c.href} className={i === 0 ? 'on' : undefined}>
           {c.label}
         </a>
       ))}

@@ -20,7 +20,8 @@ export const DEFAULT_DESCRIPTION =
 export const FALLBACK_APP_URL = 'https://connect2026.jpstripes.com';
 
 export function appUrl(c: Context): string {
-  return (c.env?.APP_URL as string | undefined) || FALLBACK_APP_URL;
+  const url = (c.env?.APP_URL as string | undefined) || FALLBACK_APP_URL;
+  return url.replace(/\/+$/, '');
 }
 
 export const renderer = jsxRenderer(

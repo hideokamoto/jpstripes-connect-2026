@@ -3,7 +3,15 @@
 (() => {
   const links = Array.from(document.querySelectorAll('.chapters a[href^="#"]'));
   if (links.length === 0) return;
-  const targets = links.map((a) => document.querySelector(a.getAttribute('href')));
+  const targets = links.map((a) => {
+    const href = a.getAttribute('href');
+    if (!href || href === '#') return null;
+    try {
+      return document.querySelector(href);
+    } catch {
+      return null;
+    }
+  });
 
   function onScroll() {
     let active = 0;

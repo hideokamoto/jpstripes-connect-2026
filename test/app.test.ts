@@ -29,6 +29,13 @@ describe('トップページ /', () => {
     expect(html).toContain('name="twitter:card"');
   });
 
+  it('APP_URL が末尾スラッシュ付きでも OGP 画像 URL が二重スラッシュにならない', async () => {
+    const res = await app.request('/', {}, { ...env, APP_URL: 'https://connect2026.jpstripes.com/' });
+    const html = await res.text();
+    expect(html).toContain('https://connect2026.jpstripes.com/ogp.png');
+    expect(html).not.toContain('.com//ogp.png');
+  });
+
   it('主要セクション（theme / timetable / speakers / venue / sponsors / past）を含む', async () => {
     const html = await (await get('/')).text();
     for (const id of ['id="theme"', 'id="timetable"', 'id="speakers"', 'id="venue"', 'id="sponsors"', 'id="past"']) {

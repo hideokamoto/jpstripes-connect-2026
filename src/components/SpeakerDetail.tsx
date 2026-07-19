@@ -15,7 +15,7 @@ export function SpeakerDetail({
     <article
       className="sp-detail"
       id={compact ? undefined : speaker.id}
-      style={compact ? 'grid-template-columns: 160px 1fr;' : undefined}
+      style={compact ? { gridTemplateColumns: '160px 1fr' } : undefined}
     >
       <div className="sp-detail-portrait">
         {speaker.image ? <img src={speaker.image} alt={speaker.name} loading="lazy" /> : null}

@@ -1,13 +1,8 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import { marked } from 'marked';
-
-const sessionsDir = path.join(process.cwd(), 'content/sessions');
+import { sessionEntries } from '../generated/content';
 
 export type SessionStatus = 'confirmed' | 'provisional' | 'tbd';
 
-export type SessionFrontmatter = {
+export type SessionData = {
   slug: string;
   title: string;
   time: string;
@@ -17,37 +12,35 @@ export type SessionFrontmatter = {
   speakerId?: string;
   speakerIds?: string[];
   status?: SessionStatus;
-};
-
-export type SessionData = SessionFrontmatter & {
   contentHtml: string;
 };
 
-export function getAllSessionSlugs(): string[] {
-  if (!fs.existsSync(sessionsDir)) return [];
-  return fs
-    .readdirSync(sessionsDir)
-    .filter((f) => f.endsWith('.md'))
-    .map((f) => f.replace(/\.md$/, ''));
+const defaultSessions = sessionEntries as SessionData[];
+
+export function getAllSessions(sessions: SessionData[] = defaultSessions): SessionData[] {
+  return [...sessions].sort((a, b) => {
+    const timeA = a.time.replaceAll(':', '');
+    const timeB = b.time.replaceAll(':', '');
+    if (timeA !== timeB) return timeA.localeCompare(timeB);
+    return a.track.localeCompare(b.track);
+  });
 }
 
-export function getSessionBySlug(slug: string): SessionData | null {
-  const filePath = path.join(sessionsDir, `${slug}.md`);
-  if (!fs.existsSync(filePath)) return null;
-  const raw = fs.readFileSync(filePath, 'utf8');
-  const { data, content } = matter(raw);
-  const contentHtml = marked(content) as string;
-  return { ...(data as SessionFrontmatter), contentHtml };
+export function getSessionBySlug(
+  slug: string,
+  sessions: SessionData[] = defaultSessions
+): SessionData | null {
+  return sessions.find((s) => s.slug === slug) ?? null;
 }
 
-export function getAllSessions(): SessionData[] {
-  return getAllSessionSlugs()
-    .map((slug) => getSessionBySlug(slug))
-    .filter((s): s is SessionData => s !== null)
-    .sort((a, b) => {
-      const timeA = a.time.replace(':', '');
-      const timeB = b.time.replace(':', '');
-      if (timeA !== timeB) return timeA.localeCompare(timeB);
-      return a.track.localeCompare(b.track);
-    });
+// タイトルを黒字の前半 + アクセント色の後半に、単語が切れない位置
+// （全角コロン、次いで閉じ括弧）で分割する。
+export function splitTitle(title: string): [string, string | null] {
+  for (const delim of ['：', '】']) {
+    const idx = title.indexOf(delim);
+    if (idx !== -1 && idx < title.length - 1) {
+      return [title.slice(0, idx + 1), title.slice(idx + 1)];
+    }
+  }
+  return [title, null];
 }

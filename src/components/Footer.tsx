@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 export function Footer() {
   return (
     <footer className="bot">
@@ -15,12 +13,12 @@ export function Footer() {
           </div>
           <div>
             <h4>Event</h4>
-            <Link href="/tickets/">参加申し込み</Link>
-            <Link href="/#theme">Theme</Link>
-            <Link href="/#timetable">Timetable</Link>
-            <Link href="/speakers/">Speakers</Link>
-            <Link href="/blog/">Blog</Link>
-            <Link href="/#venue">Venue</Link>
+            <a href="/tickets/">参加申し込み</a>
+            <a href="/#theme">Theme</a>
+            <a href="/#timetable">Timetable</a>
+            <a href="/speakers/">Speakers</a>
+            <a href="/blog/">Blog</a>
+            <a href="/#venue">Venue</a>
           </div>
           <div>
             <h4>Community</h4>
@@ -48,10 +46,10 @@ export function Footer() {
           </div>
           <div>
             <h4>Legal</h4>
-            <Link href="/legal/tokushoho/">特定商取引法に基づく表記</Link>
-            <Link href="/legal/privacy/">プライバシーポリシー</Link>
-            <Link href="/legal/cancellation/">キャンセル・返金ポリシー</Link>
-            <Link href="/legal/terms/">利用規約</Link>
+            <a href="/legal/tokushoho/">特定商取引法に基づく表記</a>
+            <a href="/legal/privacy/">プライバシーポリシー</a>
+            <a href="/legal/cancellation/">キャンセル・返金ポリシー</a>
+            <a href="/legal/terms/">利用規約</a>
           </div>
         </div>
         <div className="foot-bot">

@@ -1,70 +1,13 @@
-'use client';
-
-import { useEffect, useState } from 'react';
-
-// webhook Worker の公開集計エンドポイント（GET /stats）。
-// PII を含まない種別ごとの累計枚数を返す。未設定なら何も表示しない。
-const STATS_API_URL = process.env.NEXT_PUBLIC_STATS_API_URL;
-
-interface SalesStats {
-  honpen: number;
-  konshinkai: number;
-  total: number;
-}
-
-// 件数は非負の安全な整数のみ受け付ける（負数・小数・不正値を表示前に弾く）。
-function isCount(value: unknown): value is number {
-  return typeof value === 'number' && Number.isSafeInteger(value) && value >= 0;
-}
-
-function isSalesStats(data: unknown): data is SalesStats {
-  if (typeof data !== 'object' || data === null) return false;
-  const s = data as Record<string, unknown>;
-  return isCount(s.total) && isCount(s.honpen) && isCount(s.konshinkai);
-}
-
-/**
- * チケット申込枚数（種別ごとの内訳）を webhook Worker の /stats から取得して表示する。
- * URL 未設定・取得失敗・件数ゼロ時は何も描画しない（販促表示のため静かにフォールバック）。
- */
-export function SalesCount() {
-  const [stats, setStats] = useState<SalesStats | null>(null);
-
-  useEffect(() => {
-    if (!STATS_API_URL) return;
-
-    // ネットワーク遅延や無応答で待ち続けないようタイムアウトで中断し、アンマウント時もキャンセルする。
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 5000);
-    fetch(STATS_API_URL, { signal: controller.signal })
-      .then((res) => (res.ok ? (res.json() as Promise<unknown>) : null))
-      .then((data) => {
-        // API が想定外のレスポンス（欠落・型不一致）を返しても落ちないよう検証する。
-        if (isSalesStats(data)) setStats(data);
-      })
-      .catch(() => {
-        // 取得失敗・中断時は静かに非表示にする。
-      });
-
-    return () => {
-      clearTimeout(timeoutId);
-      controller.abort();
-    };
-  }, []);
-
-  // データ未取得・件数ゼロのときは何も描画しない。
-  if (!stats || stats.total <= 0) return null;
-
+// チケット申込枚数の表示。SSR では空の器（data-endpoint 付き）だけを出し、
+// /js/sales-count.js（vanilla JS）が webhook Worker の /stats を fetch して
+// 中身とスタイル用クラスを与える。取得失敗・件数ゼロ時は何も表示されない。
+// endpoint 未設定（STATS_API_URL なし）の場合は器ごと描画しない。
+export function SalesCount({ endpoint }: { endpoint?: string }) {
+  if (!endpoint) return null;
   return (
-    <div className="sales-count" role="status" aria-live="polite">
-      <span className="sales-count-total">
-        これまでに <em>{stats.total.toLocaleString('ja-JP')}</em> 枚 申し込まれました
-      </span>
-      <span className="sales-count-breakdown">
-        本編 {stats.honpen.toLocaleString('ja-JP')}
-        <span className="sep">・</span>
-        懇親会 {stats.konshinkai.toLocaleString('ja-JP')}
-      </span>
-    </div>
+    <>
+      <div data-sales-count data-endpoint={endpoint}></div>
+      <script src="/js/sales-count.js" defer></script>
+    </>
   );
 }

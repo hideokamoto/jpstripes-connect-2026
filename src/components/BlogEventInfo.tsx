@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 // イベントの基本情報。トップページ（Hero / Venue / Theme）と同じ内容を、
 // ブログ記事の読者がページを離れずに確認できるようにまとめたカード。
 export function BlogEventInfo() {
@@ -32,9 +30,9 @@ export function BlogEventInfo() {
         </div>
       </dl>
       <div className="blog-event-links">
-        <Link href="/#theme">テーマを読む <span aria-hidden="true">→</span></Link>
-        <Link href="/#venue">会場・アクセス <span aria-hidden="true">→</span></Link>
-        <Link href="/tickets/">参加チケット <span aria-hidden="true">→</span></Link>
+        <a href="/#theme">テーマを読む <span aria-hidden="true">→</span></a>
+        <a href="/#venue">会場・アクセス <span aria-hidden="true">→</span></a>
+        <a href="/tickets/">参加チケット <span aria-hidden="true">→</span></a>
       </div>
     </aside>
   );

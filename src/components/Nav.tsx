@@ -1,26 +1,24 @@
-import Link from 'next/link';
-
 export function Nav() {
   return (
     <nav className="top">
       <div className="container row">
-        <Link className="brand" href="/#top">
+        <a className="brand" href="/#top">
           <span><em>JP_Stripes Connect</em></span>
           <span className="num">2026</span>
-        </Link>
+        </a>
         <div className="nav-links">
-          <Link href="/#theme">Theme</Link>
-          <Link href="/#timetable">Timetable</Link>
-          <Link href="/speakers/">Speakers</Link>
-          <Link href="/blog/">Blog</Link>
-          <Link href="/#venue">Venue</Link>
-          <Link href="/#sponsors">Sponsors</Link>
-          <Link href="/#past">2025</Link>
+          <a href="/#theme">Theme</a>
+          <a href="/#timetable">Timetable</a>
+          <a href="/speakers/">Speakers</a>
+          <a href="/blog/">Blog</a>
+          <a href="/#venue">Venue</a>
+          <a href="/#sponsors">Sponsors</a>
+          <a href="/#past">2025</a>
         </div>
         <div className="nav-right">
-          <Link className="nav-cta" href="/tickets/">
+          <a className="nav-cta" href="/tickets/">
             参加申し込み
-          </Link>
+          </a>
         </div>
       </div>
     </nav>

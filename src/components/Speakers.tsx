@@ -1,7 +1,6 @@
-import Link from 'next/link';
-import speakers from '@/data/speakers.json';
-import { SpeakerCard } from '@/components/SpeakerCard';
-import type { Speaker } from '@/types/speaker';
+import speakers from '../data/speakers.json';
+import { SpeakerCard } from './SpeakerCard';
+import type { Speaker } from '../types/speaker';
 
 export function Speakers() {
   const list = speakers as Speaker[];
@@ -20,9 +19,9 @@ export function Speakers() {
           </div>
           <p className="deck">
             登壇者を順次公開中。
-            <Link href="/speakers/" className="sp-more">
+            <a href="/speakers/" className="sp-more">
               All speakers →
-            </Link>
+            </a>
           </p>
         </div>
 

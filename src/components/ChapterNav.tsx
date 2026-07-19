@@ -1,7 +1,5 @@
-'use client';
-
-import { useEffect, useState } from 'react';
-
+// テーマ本文の章ナビ。スクロール位置に応じた現在地のハイライトは
+// /js/chapter-nav.js（vanilla JS）が .chapters a に 'on' クラスを付けて行う。
 const CHAPTERS = [
   { href: '#th-1', label: '§01 心当たり' },
   { href: '#th-2', label: '§02 扱う領域' },
@@ -10,29 +8,10 @@ const CHAPTERS = [
 ];
 
 export function ChapterNav() {
-  const [active, setActive] = useState(0);
-
-  useEffect(() => {
-    const elements = CHAPTERS.map((c) => document.querySelector(c.href));
-    function onScroll() {
-      let i = 0;
-      for (let n = 0; n < elements.length; n++) {
-        const el = elements[n];
-        if (el && el.getBoundingClientRect().top < window.innerHeight * 0.5) {
-          i = n;
-        }
-      }
-      setActive(i);
-    }
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
   return (
     <nav className="chapters">
       {CHAPTERS.map((c, i) => (
-        <a key={c.href} href={c.href} className={i === active ? 'on' : ''}>
+        <a key={c.href} href={c.href} className={i === 0 ? 'on' : undefined}>
           {c.label}
         </a>
       ))}

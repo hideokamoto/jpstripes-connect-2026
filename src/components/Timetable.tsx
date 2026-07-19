@@ -1,43 +1,8 @@
-'use client';
+import sessions from '../data/sessions.json';
+import { buildBlocks } from '../lib/timetable';
+import type { TimetableSession } from '../lib/timetable';
 
-import Link from 'next/link';
-import sessions from '@/data/sessions.json';
-
-type Session = {
-  time: string;
-  duration: string;
-  track: string;
-  title: string;
-  tags?: string[];
-  speaker?: string;
-  isBreak?: boolean;
-  slug?: string;
-  status?: 'confirmed' | 'provisional' | 'tbd';
-};
-
-type TimeBlock = {
-  time: string;
-  duration: string;
-  common?: Session;
-  a?: Session;
-  b?: Session;
-};
-
-function buildBlocks(list: Session[]): TimeBlock[] {
-  const map = new Map<string, TimeBlock>();
-  for (const s of list) {
-    if (!map.has(s.time)) {
-      map.set(s.time, { time: s.time, duration: s.duration });
-    }
-    const block = map.get(s.time)!;
-    if (s.track === '—') block.common = s;
-    else if (s.track === 'A') block.a = s;
-    else if (s.track === 'B') block.b = s;
-  }
-  return Array.from(map.values());
-}
-
-function SessionCell({ s, track }: { s: Session; track: 'a' | 'b' }) {
+function SessionCell({ s, track }: { s: TimetableSession; track: 'a' | 'b' }) {
   const label = track === 'a' ? 'A · Main' : 'B · Tech';
   const isTbd = s.status === 'tbd';
   const isTentative = isTbd || s.status === 'provisional';
@@ -66,16 +31,16 @@ function SessionCell({ s, track }: { s: Session; track: 'a' | 'b' }) {
   );
   if (s.slug) {
     return (
-      <Link href={`/sessions/${s.slug}/`} className={`${classes} tt-cell-link`}>
+      <a href={`/sessions/${s.slug}/`} className={`${classes} tt-cell-link`}>
         {inner}
-      </Link>
+      </a>
     );
   }
   return <div className={classes}>{inner}</div>;
 }
 
 export function Timetable() {
-  const blocks = buildBlocks(sessions as Session[]);
+  const blocks = buildBlocks(sessions as TimetableSession[]);
 
   return (
     <section className="s" id="timetable">

@@ -6,6 +6,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
 import { marked } from 'marked';
+import { sanitizeContentHtml } from './sanitize-content-html.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const outDir = path.join(root, 'src/generated');
@@ -22,7 +23,7 @@ function readMarkdownDir(dir) {
       const slug = f.replace(/\.md$/, '');
       const raw = fs.readFileSync(path.join(abs, f), 'utf8');
       const { data, content } = matter(raw);
-      return { ...data, slug, contentHtml: marked.parse(content) };
+      return { ...data, slug, contentHtml: sanitizeContentHtml(marked.parse(content)) };
     });
 }
 

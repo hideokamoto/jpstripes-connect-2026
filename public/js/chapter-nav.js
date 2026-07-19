@@ -14,7 +14,8 @@
   });
 
   function onScroll() {
-    let active = 0;
+    // 有効なターゲットが一つもない場合は、どのリンクも 'on' にしない。
+    let active = targets.findIndex((el) => el !== null);
     targets.forEach((el, i) => {
       if (el && el.getBoundingClientRect().top < window.innerHeight * 0.5) {
         active = i;

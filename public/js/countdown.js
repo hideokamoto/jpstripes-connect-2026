@@ -6,25 +6,36 @@
   const target = Date.parse(root.getAttribute('data-countdown'));
   if (Number.isNaN(target)) return;
 
-  const units = {
-    d: root.querySelectorAll('[data-unit="d"] .digit'),
-    h: root.querySelectorAll('[data-unit="h"] .digit'),
-    m: root.querySelectorAll('[data-unit="m"] .digit'),
-    s: root.querySelectorAll('[data-unit="s"] .digit'),
+  const containers = {
+    d: root.querySelector('[data-unit="d"]'),
+    h: root.querySelector('[data-unit="h"]'),
+    m: root.querySelector('[data-unit="m"]'),
+    s: root.querySelector('[data-unit="s"]'),
   };
 
   function compute() {
     const diff = Math.max(0, target - Date.now());
     return {
-      d: String(Math.floor(diff / 86400000)).padStart(units.d.length, '0'),
+      d: String(Math.floor(diff / 86400000)),
       h: String(Math.floor((diff % 86400000) / 3600000)).padStart(2, '0'),
       m: String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0'),
       s: String(Math.floor((diff % 60000) / 1000)).padStart(2, '0'),
     };
   }
 
-  function setDigits(spans, value) {
-    const digits = value.slice(-spans.length).padStart(spans.length, '0').split('');
+  // SSR は固定桁数（日は 3 桁）で .digit 要素を出すが、実際の日数がそれを
+  // 超えても切り詰めず表示できるよう、必要なら先頭に .digit 要素を足す。
+  function setDigits(container, value) {
+    if (!container) return;
+    let spans = Array.from(container.querySelectorAll('.digit'));
+    while (value.length > spans.length) {
+      const span = document.createElement('span');
+      span.className = 'digit';
+      span.textContent = '0';
+      container.insertBefore(span, container.firstChild);
+      spans = Array.from(container.querySelectorAll('.digit'));
+    }
+    const digits = value.padStart(spans.length, '0').split('');
     spans.forEach((span, i) => {
       if (span.textContent === digits[i]) return;
       span.textContent = digits[i];
@@ -42,10 +53,10 @@
 
   function render() {
     const parts = compute();
-    setDigits(units.d, parts.d);
-    setDigits(units.h, parts.h);
-    setDigits(units.m, parts.m);
-    setDigits(units.s, parts.s);
+    setDigits(containers.d, parts.d);
+    setDigits(containers.h, parts.h);
+    setDigits(containers.m, parts.m);
+    setDigits(containers.s, parts.s);
   }
 
   render();

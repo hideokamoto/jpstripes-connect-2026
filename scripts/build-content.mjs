@@ -17,6 +17,7 @@ function readMarkdownDir(dir) {
   return fs
     .readdirSync(abs)
     .filter((f) => f.endsWith('.md'))
+    .sort()
     .map((f) => {
       const slug = f.replace(/\.md$/, '');
       const raw = fs.readFileSync(path.join(abs, f), 'utf8');
@@ -32,6 +33,7 @@ function listSessionOgSlugs() {
   return fs
     .readdirSync(dir)
     .filter((f) => f.endsWith('.png'))
+    .sort()
     .map((f) => f.replace(/\.png$/, ''));
 }
 

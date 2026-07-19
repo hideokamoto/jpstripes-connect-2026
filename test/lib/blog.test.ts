@@ -25,6 +25,22 @@ describe('formatDate', () => {
     expect(formatDate('2026-08-01')).toBe('2026年8月1日');
   });
 
+  it('月・日の 0 埋めを取り除く', () => {
+    expect(formatDate('2026-01-05')).toBe('2026年1月5日');
+  });
+
+  it('実行環境のタイムゾーンに関わらず同じ日付を返す（UTC 変換に依存しない）', () => {
+    // new Date('2026-08-01') を UTC-8h などローカル getter で整形すると、
+    // UTC より遅いタイムゾーンでは前日の 7/31 にずれてしまう回帰を防ぐ。
+    const originalTZ = process.env.TZ;
+    process.env.TZ = 'America/Los_Angeles';
+    try {
+      expect(formatDate('2026-08-01')).toBe('2026年8月1日');
+    } finally {
+      process.env.TZ = originalTZ;
+    }
+  });
+
   it('パースできない文字列はそのまま返す', () => {
     expect(formatDate('日付未定')).toBe('日付未定');
   });

@@ -19,8 +19,8 @@ const defaultSessions = sessionEntries as SessionData[];
 
 export function getAllSessions(sessions: SessionData[] = defaultSessions): SessionData[] {
   return [...sessions].sort((a, b) => {
-    const timeA = a.time.replace(':', '');
-    const timeB = b.time.replace(':', '');
+    const timeA = a.time.replaceAll(':', '');
+    const timeB = b.time.replaceAll(':', '');
     if (timeA !== timeB) return timeA.localeCompare(timeB);
     return a.track.localeCompare(b.track);
   });

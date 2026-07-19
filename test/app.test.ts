@@ -69,7 +69,7 @@ describe('スピーカー一覧 /speakers/', () => {
   it('末尾スラッシュなしはリダイレクトする', async () => {
     const res = await get('/speakers');
     expect([301, 308]).toContain(res.status);
-    expect(res.headers.get('location')).toBe('/speakers/');
+    expect(new URL(res.headers.get('location')!, 'http://localhost').pathname).toBe('/speakers/');
   });
 });
 
@@ -158,10 +158,11 @@ describe('法務ページ /legal/*', () => {
 
   it('法務ページには他の法務文書へのナビが付く', async () => {
     const html = await (await get('/legal/terms/')).text();
-    expect(html).toContain('class="legal-nav"');
-    expect(html).toContain('/legal/privacy/');
-    // 自分自身へのリンクは出さない
-    expect(html).not.toMatch(/legal-nav[^]*href="\/legal\/terms\/"/);
+    const nav = html.match(/<nav class="legal-nav"[^>]*>([^]*?)<\/nav>/);
+    expect(nav).not.toBeNull();
+    expect(nav![1]).toContain('href="/legal/privacy/"');
+    // 自分自身へのリンクは法務ナビ内には出さない（フッターは対象外）
+    expect(nav![1]).not.toContain('href="/legal/terms/"');
   });
 });
 

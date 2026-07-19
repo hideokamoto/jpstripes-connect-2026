@@ -956,3 +956,11 @@ footer.bot { padding: 100px 0 40px; }
 @media (max-width: 760px) {
   .blog-card-title { font-size: 20px; }
 }
+
+/* PORTRAIT IMAGES (SSR: plain <img> が親の枠いっぱいに収まるように) */
+.sp-portrait img,
+.sp-detail-portrait img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}

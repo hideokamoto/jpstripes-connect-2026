@@ -35,6 +35,7 @@ const TIERS: Tier[] = [
     jp: 'シルバースポンサー',
     sponsors: [
       { name: 'revtrona', alt: 'revtrona', href: 'https://revtrona.com', logo: '/sponsors/Revtrona.png' },
+      { name: 'UnderSpark', alt: 'UnderSpark', href: 'https://underspark.app', logo: '/sponsors/UnderSpark.jpeg' },
     ],
   },
   {

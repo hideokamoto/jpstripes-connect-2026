@@ -1,7 +1,7 @@
 ---
 slug: track-a-1650
 title: "CxOトークセッション：SaaSの値づけと価格改定"
-time: "16:10"
+time: "16:15"
 duration: "40 min"
 track: A
 tags:

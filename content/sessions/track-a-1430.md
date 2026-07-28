@@ -1,7 +1,7 @@
 ---
 slug: track-a-1430
 title: "AI × Stripe：エージェント時代の決済と請求"
-time: "14:30"
+time: "14:35"
 duration: "30 min"
 track: A
 tags:

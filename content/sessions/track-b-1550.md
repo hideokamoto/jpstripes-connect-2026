@@ -1,7 +1,7 @@
 ---
 slug: track-b-1550
 title: スポンサー LT
-time: "15:50"
+time: "15:55"
 duration: "10 min"
 track: B
 tags:

@@ -1,7 +1,7 @@
 ---
 slug: track-b-1655
 title: "JavaScriptで始める店舗インフラ決済構築：Stripe Terminal簡易ワークショップ"
-time: "16:55"
+time: "17:00"
 duration: "40 min"
 track: B
 tags:

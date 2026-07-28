@@ -1,7 +1,7 @@
 ---
 slug: track-b-1650
 title: "決済端末ビジネスを、決済会社だけのものにしない：Stripe Terminalで始める店舗インフラ事業"
-time: "16:10"
+time: "16:15"
 duration: "40 min"
 track: B
 tags:

@@ -49,4 +49,14 @@ describe('buildBlocks', () => {
     ]);
     expect(blocks[0].duration).toBe('40 min');
   });
+
+  it('JSON の並び順に関わらずブロックは時刻順に並ぶ', () => {
+    const blocks = buildBlocks([
+      { time: '14:35', duration: '30 min', track: 'A', title: 'A-1' },
+      { time: '15:20', duration: '30 min', track: 'B', title: 'B-2' },
+      { time: '15:10', duration: '40 min', track: 'A', title: 'A-2' },
+      { time: '14:35', duration: '40 min', track: 'B', title: 'B-1' },
+    ]);
+    expect(blocks.map((b) => b.time)).toEqual(['14:35', '15:10', '15:20']);
+  });
 });

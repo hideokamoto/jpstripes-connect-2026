@@ -33,4 +33,20 @@ describe('buildBlocks', () => {
     expect(blocks[1].a?.title).toBe('キーノート');
     expect(blocks[1].b).toBeUndefined();
   });
+
+  it('同時刻に長さの違うセッションがある場合、ブロックの尺は長い方を採る', () => {
+    const blocks = buildBlocks([
+      { time: '15:10', duration: '30 min', track: 'B', title: 'B-2' },
+      { time: '15:10', duration: '40 min', track: 'A', title: 'A-2' },
+    ]);
+    expect(blocks[0].duration).toBe('40 min');
+  });
+
+  it('JSON の並び順に関わらずブロックの尺は変わらない', () => {
+    const blocks = buildBlocks([
+      { time: '15:10', duration: '40 min', track: 'A', title: 'A-2' },
+      { time: '15:10', duration: '30 min', track: 'B', title: 'B-2' },
+    ]);
+    expect(blocks[0].duration).toBe('40 min');
+  });
 });

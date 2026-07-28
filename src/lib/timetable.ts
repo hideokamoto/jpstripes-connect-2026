@@ -22,6 +22,12 @@ export type TimeBlock = {
   b?: TimetableSession;
 };
 
+// "40 min" → 40。数値として読めない場合は 0 扱い。
+function toMinutes(duration: string): number {
+  const n = Number.parseInt(duration, 10);
+  return Number.isNaN(n) ? 0 : n;
+}
+
 export function buildBlocks(list: TimetableSession[]): TimeBlock[] {
   const map = new Map<string, TimeBlock>();
   for (const s of list) {
@@ -29,6 +35,12 @@ export function buildBlocks(list: TimetableSession[]): TimeBlock[] {
       map.set(s.time, { time: s.time, duration: s.duration });
     }
     const block = map.get(s.time)!;
+    // ブロックの尺は A / B のうち長い方。JSON の並び順で決めると、
+    // 同時刻に長さの違うセッションがある場合に先頭の尺が採用され、
+    // 各カラムのカード表示と食い違う。
+    if (toMinutes(s.duration) > toMinutes(block.duration)) {
+      block.duration = s.duration;
+    }
     if (s.track === '—') block.common = s;
     else if (s.track === 'A') block.a = s;
     else if (s.track === 'B') block.b = s;

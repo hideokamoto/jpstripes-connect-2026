@@ -81,7 +81,7 @@
     "slug": "track-a-1430"
   },
   {
-    "time": "15:10",
+    "time": "15:20",
     "duration": "30 min",
     "track": "B",
     "title": "決済・請求管理のハマりどころ（調整中）",
@@ -111,7 +111,7 @@
     "slug": "track-b-1510"
   },
   {
-    "time": "15:50",
+    "time": "15:55",
     "duration": "10 min",
     "track": "A",
     "title": "スポンサー LT",
@@ -121,7 +121,7 @@
     "slug": "track-a-1550"
   },
   {
-    "time": "15:50",
+    "time": "15:55",
     "duration": "10 min",
     "track": "B",
     "title": "スポンサー LT",
@@ -131,8 +131,8 @@
     "slug": "track-b-1550"
   },
   {
-    "time": "16:00",
-    "duration": "10 min",
+    "time": "16:05",
+    "duration": "5 min",
     "track": "—",
     "isBreak": true,
     "title": "休憩"

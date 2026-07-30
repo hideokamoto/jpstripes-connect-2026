@@ -7,7 +7,10 @@ track: B
 tags:
   - Billing
   - Use Case
-speaker: Stripe TAM メンバー
+speaker: フジワラ レン（Stripe）／モン シャンティン（Stripe）
+speakerIds:
+  - fujiwara-ren
+  - mong-xiang-theng
 status: confirmed
 ---
 

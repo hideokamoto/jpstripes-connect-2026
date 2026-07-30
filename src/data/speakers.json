@@ -133,5 +133,24 @@
     "image": "/speakers/muranushi_shogo.jpg",
     "bio": "前職でAWSのクラウドインテグレーターとして大規模案件を多数コンサル、構築、運用する。2017年にABEJA Platformを開発するためにABEJAに参画。AWSパートナーとしてAWS Well-Architectedに準拠したMachine Learningコンピテンシーの取得を推進。現在はCTO室室長とABEJA Platformの責任者として従事。",
     "links": [{ "label": "X", "url": "https://x.com/rwle1212" }]
+  },
+  {
+    "id": "fujiwara-ren",
+    "name": "フジワラ レン",
+    "nameReading": "ふじわられん",
+    "org": "ストライプジャパン株式会社",
+    "image": "/speakers/fujiwara_ren.jpg",
+    "bio": "クラウドサービスやゲーム領域での経験を経て、現在は Stripe の Technical Account Manager として活動。導入企業の運用フェーズを技術面から支え、決済パフォーマンスの分析・改善に携わる。",
+    "links": [{ "label": "LinkedIn", "url": "https://jp.linkedin.com/in/ren-fujiwara" }]
+  },
+  {
+    "id": "mong-xiang-theng",
+    "name": "モン シャンティン",
+    "nameReading": "もん しゃんてぃん",
+    "org": "ストライプジャパン株式会社",
+    "title": "Stripe テクニカルアカウントマネージャー（TAM）",
+    "image": "/speakers/mong_xiang_theng.png",
+    "bio": "APAC・EMEA・米国など世界各地域のマーチャントを担当し、決済インテグレーション支援・オーソリ率改善・不正防止策をデータ分析で推進。パートナー企業のビジネス成長と決済体験の最適化にコミットしています。",
+    "links": [{ "label": "LinkedIn", "url": "https://www.linkedin.com/in/xiang-theng-mong-25746713a/" }]
   }
 ]

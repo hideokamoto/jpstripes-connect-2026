@@ -21,12 +21,25 @@ npm install
 npm run dev        # コンテンツ生成 + wrangler dev (http://localhost:8787)
 npm test           # コンテンツ生成 + vitest（ユニット + ルート統合テスト）
 npm run typecheck  # tsc --noEmit
-npm run build      # wrangler deploy --dry-run（バンドル検証）
+npm run build      # cf-build + wrangler deploy --dry-run（バンドル検証）
 npm run deploy     # Cloudflare Workers へデプロイ
 ```
 
 Markdown（`content/`）を編集した場合、`npm run build:content` で `src/generated/content.ts`
 が再生成されます（dev / test / build の前には自動で実行されます）。
+
+### Cloudflare Workers Builds
+
+`src/generated/content.ts` は git 管理外（`.gitignore`）のため、CI では必ず生成が必要です。
+Workers Builds は `wrangler.jsonc` の `[build]` を**無視**するため、ダッシュボードの設定で次を指定してください。
+
+| 設定 | 推奨コマンド |
+|------|-------------|
+| Build command | `npm run build` または `npm run cf-build` |
+| Deploy command（本番） | `npm run deploy` |
+| Non-production deploy command（PR プレビュー） | `npm run versions:upload` |
+
+`npx wrangler deploy` / `npx wrangler versions upload` だけだと `content.ts` がなくビルドが失敗します。
 
 ## 設定
 

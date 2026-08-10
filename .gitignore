@@ -1,7 +1,8 @@
 node_modules/
 dist/
 .wrangler/
-src/generated/
+src/generated/*
+!src/generated/content.ts
 *.log
 .DS_Store
 .env*

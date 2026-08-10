@@ -13,7 +13,6 @@ export function Footer() {
           </div>
           <div>
             <h4>Event</h4>
-            <a href="/tickets/">参加申し込み</a>
             <a href="/#theme">Theme</a>
             <a href="/#timetable">Timetable</a>
             <a href="/speakers/">Speakers</a>

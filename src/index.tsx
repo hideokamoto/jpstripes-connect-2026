@@ -63,10 +63,10 @@ app.get('/speakers/', (c) =>
 );
 
 app.get('/tickets/', (c) =>
-  renderPage(c, <TicketsPage statsEndpoint={c.env?.STATS_API_URL} />, {
-    title: '参加申し込み — JP_Stripes Connect 2026',
+  renderPage(c, <TicketsPage />, {
+    title: '受付終了 — JP_Stripes Connect 2026',
     description:
-      'JP_Stripes Connect 2026 の参加チケット申し込みページ。本編参加（無料）または懇親会込み参加（2,000円・税込）をお選びください。2026年8月1日（土）横浜。',
+      'JP_Stripes Connect 2026（2026年8月1日・横浜）は終了しました。参加申し込みの受付は締め切っています。当日の様子は写真ページをご覧ください。',
   })
 );
 

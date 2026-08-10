@@ -20,7 +20,6 @@ export function Home() {
       <Sponsors />
       <Past />
       <Footer />
-      <script src="/js/countdown.js" defer></script>
       <script src="/js/chapter-nav.js" defer></script>
       <script src="/js/venue-map.js" defer></script>
       <script

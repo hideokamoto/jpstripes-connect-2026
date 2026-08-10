@@ -11,7 +11,10 @@ import { TicketsPage } from './pages/TicketsPage';
 import { BlogIndexPage } from './pages/BlogIndexPage';
 import { BlogPostPage } from './pages/BlogPostPage';
 import { SessionPage } from './pages/SessionPage';
+import { PresentationsIndexPage } from './pages/PresentationsIndexPage';
+import { PresentationPage } from './pages/PresentationPage';
 import { NotFoundPage } from './pages/NotFoundPage';
+import { getAllPresentations, getPresentationBySlug } from './lib/presentations';
 import { TokushohoPage } from './pages/legal/TokushohoPage';
 import { PrivacyPage } from './pages/legal/PrivacyPage';
 import { TermsPage } from './pages/legal/TermsPage';
@@ -91,6 +94,23 @@ app.get('/sessions/:slug/', (c) => {
     title: `${session.title} — JP_Stripes Connect 2026`,
     description: excerptFromHtml(session.contentHtml),
     ogImage: `${appUrl(c)}${ogPath}`,
+  });
+});
+
+app.get('/presentations/', (c) =>
+  renderPage(c, <PresentationsIndexPage presentations={getAllPresentations()} />, {
+    title: 'Presentations — JP_Stripes Connect 2026',
+    description:
+      'JP_Stripes Connect 2026 の登壇・イベント資料。セッションの発表スライド（PDF）をブラウザで閲覧できます。',
+  })
+);
+
+app.get('/presentations/:slug/', (c) => {
+  const presentation = getPresentationBySlug(c.req.param('slug'));
+  if (!presentation) return c.notFound();
+  return renderPage(c, <PresentationPage presentation={presentation} />, {
+    title: `${presentation.title} — JP_Stripes Connect 2026`,
+    description: `${presentation.title} の発表資料（PDF）。`,
   });
 });
 

@@ -2,6 +2,7 @@ import speakers from '../data/speakers.json';
 import { Nav } from '../components/Nav';
 import { Footer } from '../components/Footer';
 import { SpeakerDetail } from '../components/SpeakerDetail';
+import { getPresentationBySessionSlug } from '../lib/presentations';
 import { splitTitle } from '../lib/sessions';
 import type { SessionData } from '../lib/sessions';
 import type { Speaker } from '../types/speaker';
@@ -21,6 +22,7 @@ export function SessionPage({ session }: { session: SessionData }) {
   const isTbd = session.status === 'tbd' || session.title === '調整中';
   const isProvisional = session.status === 'provisional';
   const [head, tail] = splitTitle(session.title);
+  const presentation = getPresentationBySessionSlug(session.slug);
 
   return (
     <>
@@ -66,6 +68,12 @@ export function SessionPage({ session }: { session: SessionData }) {
                 </div>
               )}
             </div>
+
+            {presentation ? (
+              <p className="session-materials">
+                <a href={`/presentations/${presentation.slug}/`}>発表資料を見る →</a>
+              </p>
+            ) : null}
 
             {isTbd ? (
               <div className="session-tbd">

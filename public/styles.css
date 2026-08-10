@@ -918,6 +918,25 @@ footer.bot { padding: 100px 0 40px; }
 }
 .session-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 
+.session-materials {
+  margin: 0;
+}
+.session-materials a {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent);
+  border: 1px solid color-mix(in oklch, var(--accent) 35%, transparent);
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: color .15s, border-color .15s, background .15s;
+}
+.session-materials a:hover {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+}
+
 .session-tbd {
   padding: 24px;
   border: 1.5px dashed var(--border, #ccc);

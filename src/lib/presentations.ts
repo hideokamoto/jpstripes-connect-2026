@@ -17,6 +17,10 @@ export function getPresentationBySlug(slug: string): Presentation | null {
   return presentations.find((p) => p.slug === slug) ?? null;
 }
 
+export function getPresentationBySessionSlug(sessionSlug: string): Presentation | null {
+  return presentations.find((p) => p.sessionSlug === sessionSlug) ?? null;
+}
+
 export function presentationPdfPath(slug: string): string {
   return `/presentations/${slug}.pdf`;
 }

@@ -149,6 +149,13 @@ describe('セッション詳細 /sessions/:slug/', () => {
     const res = await get('/sessions/no-such-session/');
     expect(res.status).toBe(404);
   });
+
+  it('発表資料があるセッションは資料ページへのリンクを表示する', async () => {
+    const html = await (await get('/sessions/track-b-1430/')).text();
+    expect(html).toContain('class="session-materials"');
+    expect(html).toContain('href="/presentations/track-b-1430/"');
+    expect(html).toContain('発表資料を見る');
+  });
 });
 
 describe('発表資料 /presentations/', () => {

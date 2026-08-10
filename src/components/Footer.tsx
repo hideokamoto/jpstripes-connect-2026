@@ -18,6 +18,7 @@ export function Footer() {
             <a href="/#timetable">Timetable</a>
             <a href="/speakers/">Speakers</a>
             <a href="/blog/">Blog</a>
+            <a href="/photos/">Photos</a>
             <a href="/#venue">Venue</a>
           </div>
           <div>

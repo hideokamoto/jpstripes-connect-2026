@@ -964,3 +964,143 @@ footer.bot { padding: 100px 0 40px; }
   width: 100%; height: 100%;
   object-fit: cover;
 }
+
+/* ── Photos ────────────────────────────────────── */
+.photos-page { padding: 64px 0 96px; }
+.photos-lead {
+  font-family: var(--jp);
+  font-size: 16px;
+  color: var(--fg-2);
+  line-height: var(--line-jp);
+  max-width: 560px;
+  margin: 22px 0 0;
+  text-wrap: pretty;
+}
+.photo-grid {
+  columns: 3;
+  column-gap: 12px;
+}
+.photo-item {
+  display: block;
+  width: 100%;
+  margin: 0 0 12px;
+  padding: 0;
+  border: 0;
+  background: var(--bg-1);
+  break-inside: avoid;
+  cursor: zoom-in;
+  overflow: hidden;
+  transition: opacity .2s ease, transform .25s ease;
+}
+.photo-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  transition: transform .45s ease;
+}
+.photo-item:hover img { transform: scale(1.03); }
+.photo-item:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.photo-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 72px 64px 40px;
+  background: rgba(14, 18, 25, .88);
+  backdrop-filter: blur(8px);
+  animation: photo-fade-in .2s ease;
+}
+/* class の display:grid が UA の [hidden]{display:none} を潰すので明示する */
+.photo-lightbox[hidden] {
+  display: none !important;
+}
+@keyframes photo-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.photo-lightbox-chrome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+.photo-lightbox-count {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, .7);
+}
+.photo-lightbox-close {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, .28);
+  transition: border-color .15s, background .15s;
+}
+.photo-lightbox-close:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, .08);
+}
+.photo-lightbox-img {
+  max-width: min(1100px, 100%);
+  max-height: calc(100vh - 120px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 24px 64px -24px rgba(0, 0, 0, .55);
+  animation: photo-pop .28s ease;
+}
+@keyframes photo-pop {
+  from { opacity: 0; transform: translateY(8px) scale(.985); }
+  to { opacity: 1; transform: none; }
+}
+.photo-lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  font-family: var(--mono);
+  font-size: 18px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .28);
+  background: rgba(0, 0, 0, .2);
+  transition: border-color .15s, background .15s;
+}
+.photo-lightbox-nav:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, .1);
+}
+.photo-lightbox-nav.prev { left: 16px; }
+.photo-lightbox-nav.next { right: 16px; }
+
+@media (max-width: 920px) {
+  .photos-page { padding: 40px 0 64px; }
+  .photo-grid { columns: 2; column-gap: 8px; }
+  .photo-item { margin-bottom: 8px; }
+  .photo-lightbox { padding: 64px 16px 24px; }
+  .photo-lightbox-nav { width: 40px; height: 40px; font-size: 16px; }
+  .photo-lightbox-nav.prev { left: 8px; }
+  .photo-lightbox-nav.next { right: 8px; }
+}
+@media (max-width: 520px) {
+  .photo-grid { columns: 1; }
+}
+

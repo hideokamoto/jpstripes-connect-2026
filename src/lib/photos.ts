@@ -1,7 +1,4 @@
-import fs from 'fs';
-import path from 'path';
-
-const photosDir = path.join(process.cwd(), 'public/events/photos');
+import { eventPhotos } from '../generated/content';
 
 export type EventPhoto = {
   id: string;
@@ -9,19 +6,8 @@ export type EventPhoto = {
   thumb: string;
 };
 
-export function getEventPhotos(): EventPhoto[] {
-  if (!fs.existsSync(photosDir)) return [];
+const defaultPhotos = eventPhotos as EventPhoto[];
 
-  return fs
-    .readdirSync(photosDir)
-    .filter((f) => /\.jpe?g$/i.test(f))
-    .sort((a, b) => a.localeCompare(b, 'en'))
-    .map((file) => {
-      const id = file.replace(/\.jpe?g$/i, '');
-      return {
-        id,
-        src: `/events/photos/${file}`,
-        thumb: `/events/photos/thumbs/${file}`,
-      };
-    });
+export function getEventPhotos(photos: EventPhoto[] = defaultPhotos): EventPhoto[] {
+  return photos;
 }

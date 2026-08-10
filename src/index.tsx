@@ -10,6 +10,8 @@ import { SpeakersPage } from './pages/SpeakersPage';
 import { TicketsPage } from './pages/TicketsPage';
 import { BlogIndexPage } from './pages/BlogIndexPage';
 import { BlogPostPage } from './pages/BlogPostPage';
+import { PhotosPage } from './pages/PhotosPage';
+import { getEventPhotos } from './lib/photos';
 import { SessionPage } from './pages/SessionPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { TokushohoPage } from './pages/legal/TokushohoPage';
@@ -70,6 +72,14 @@ app.get('/blog/', (c) =>
     title: 'Blog — JP_Stripes Connect 2026',
     description:
       'JP_Stripes Connect 2026 の公式ブログ。イベントの最新情報や運営の裏側、Stripe 活用の知見をお届けします。',
+  })
+);
+
+app.get('/photos/', (c) =>
+  renderPage(c, <PhotosPage photos={getEventPhotos()} />, {
+    title: 'Photos — JP_Stripes Connect 2026',
+    description:
+      'JP_Stripes Connect 2026（2026年8月1日・横浜）当日のフォトレポート。会場・セッション・交流の様子を写真で振り返ります。',
   })
 );
 

@@ -149,6 +149,41 @@ describe('セッション詳細 /sessions/:slug/', () => {
     const res = await get('/sessions/no-such-session/');
     expect(res.status).toBe(404);
   });
+
+  it('発表資料があるセッションは資料ページへのリンクを表示する', async () => {
+    const html = await (await get('/sessions/track-b-1430/')).text();
+    expect(html).toContain('class="session-materials"');
+    expect(html).toContain('href="/presentations/track-b-1430/"');
+    expect(html).toContain('発表資料を見る');
+  });
+});
+
+describe('発表資料 /presentations/', () => {
+  it('資料一覧を表示する', async () => {
+    const res = await get('/presentations/');
+    expect(res.status).toBe(200);
+    const html = await res.text();
+    expect(html).toContain('<title>Presentations — JP_Stripes Connect 2026</title>');
+    expect(html).toContain('/presentations/track-b-1430/');
+    expect(html).toContain('/presentations/closing-remark/');
+  });
+
+  it('資料ビューアで PDF.js スライドビューアを初期化する', async () => {
+    const res = await get('/presentations/track-b-1430/');
+    expect(res.status).toBe(200);
+    const html = await res.text();
+    expect(html).toContain('data-presentation-viewer');
+    expect(html).toContain('data-pdf="/presentations/track-b-1430.pdf"');
+    expect(html).toContain('/js/presentation-viewer.js');
+    expect(html).toContain('presentation-deck');
+    expect(html).toContain('href="/sessions/track-b-1430/"');
+    expect(html).toContain('AI 時代でも押さえたい');
+  });
+
+  it('存在しない資料は 404', async () => {
+    const res = await get('/presentations/no-such-deck/');
+    expect(res.status).toBe(404);
+  });
 });
 
 describe('法務ページ /legal/*', () => {

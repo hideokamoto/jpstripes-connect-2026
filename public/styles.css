@@ -1016,6 +1016,10 @@ footer.bot { padding: 100px 0 40px; }
   backdrop-filter: blur(8px);
   animation: photo-fade-in .2s ease;
 }
+/* class の display:grid が UA の [hidden]{display:none} を潰すので明示する */
+.photo-lightbox[hidden] {
+  display: none !important;
+}
 @keyframes photo-fade-in {
   from { opacity: 0; }
   to { opacity: 1; }

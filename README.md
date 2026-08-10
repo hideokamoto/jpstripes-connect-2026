@@ -17,15 +17,15 @@ JP_Stripes Connect 2026 公式サイト。**Hono + hono/jsx による SSR** で�
 ## 開発
 
 ```bash
-npm install
-npm run dev        # コンテンツ生成 + wrangler dev (http://localhost:8787)
-npm test           # コンテンツ生成 + vitest（ユニット + ルート統合テスト）
-npm run typecheck  # tsc --noEmit
-npm run build      # wrangler deploy --dry-run（バンドル検証）
-npm run deploy     # Cloudflare Workers へデプロイ
+pnpm install
+pnpm dev            # コンテンツ生成 + wrangler dev (http://localhost:8787)
+pnpm test           # コンテンツ生成 + vitest（ユニット + ルート統合テスト）
+pnpm typecheck      # tsc --noEmit
+pnpm build          # wrangler deploy --dry-run（バンドル検証）
+pnpm deploy         # Cloudflare Workers へデプロイ
 ```
 
-Markdown（`content/`）を編集した場合、`npm run build:content` で `src/generated/content.ts`
+Markdown（`content/`）を編集した場合、`pnpm build:content` で `src/generated/content.ts`
 が再生成されます（dev / test / build の前には自動で実行されます）。
 
 ## 設定

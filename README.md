@@ -17,29 +17,29 @@ JP_Stripes Connect 2026 公式サイト。**Hono + hono/jsx による SSR** で�
 ## 開発
 
 ```bash
-npm install
-npm run dev        # コンテンツ生成 + wrangler dev (http://localhost:8787)
-npm test           # コンテンツ生成 + vitest（ユニット + ルート統合テスト）
-npm run typecheck  # tsc --noEmit
-npm run build      # cf-build + wrangler deploy --dry-run（バンドル検証）
-npm run deploy     # Cloudflare Workers へデプロイ
+pnpm install
+pnpm dev            # コンテンツ生成 + wrangler dev (http://localhost:8787)
+pnpm test           # コンテンツ生成 + vitest（ユニット + ルート統合テスト）
+pnpm typecheck      # tsc --noEmit
+pnpm build          # cf-build + wrangler deploy --dry-run（バンドル検証）
+pnpm deploy         # Cloudflare Workers へデプロイ
 ```
 
-Markdown（`content/`）を編集した場合、`npm run build:content` で `src/generated/content.ts`
+Markdown（`content/`）を編集した場合、`pnpm build:content` で `src/generated/content.ts`
 が再生成されます（dev / test / build の前には自動で実行されます）。生成物はリポジトリにコミットし、
 Workers Builds の PR プレビュー（`npx wrangler versions upload`）でもバンドルできるようにしています。
 
 ### Cloudflare Workers Builds
 
-PR プレビューはデフォルトで `npx wrangler versions upload` が走るため、`npm run cf-build` 相当の
+PR プレビューはデフォルトで `npx wrangler versions upload` が走るため、`pnpm cf-build` 相当の
 コンテンツ生成が別途必要です。`prepare` スクリプトとコミット済みの `src/generated/content.ts` で
-カバーしています。ダッシュボードで次を設定している場合は `npm run versions:upload` も利用できます。
+カバーしています。ダッシュボードで次を設定している場合は `pnpm versions:upload` も利用できます。
 
 | 設定 | 推奨コマンド |
 |------|-------------|
-| Build command | `npm run cf-build`（任意） |
-| Deploy command（本番） | `npm run deploy` |
-| Non-production deploy command（PR プレビュー） | `npm run versions:upload` |
+| Build command | `pnpm cf-build`（任意） |
+| Deploy command（本番） | `pnpm deploy` |
+| Non-production deploy command（PR プレビュー） | `pnpm versions:upload` |
 
 ## 設定
 

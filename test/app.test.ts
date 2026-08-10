@@ -50,12 +50,6 @@ describe('トップページ /', () => {
     expect(html).toContain('開場・受付');
   });
 
-  it('カウントダウンの器とクライアント JS を含む', async () => {
-    const html = await (await get('/')).text();
-    expect(html).toContain('data-countdown="2026-08-01T10:00:00+09:00"');
-    expect(html).toContain('/js/countdown.js');
-  });
-
   it('スポンサーを tier ごとに表示する', async () => {
     const html = await (await get('/')).text();
     expect(html).toContain('data-tier="platinum"');
@@ -81,25 +75,11 @@ describe('スピーカー一覧 /speakers/', () => {
 });
 
 describe('チケット /tickets/', () => {
-  it('2 種類の Stripe buy button を含む', async () => {
+  it('受付終了の案内と写真ページへのリンクを含む', async () => {
     const html = await (await get('/tickets/')).text();
-    const matches = html.match(/<stripe-buy-button/g) ?? [];
-    expect(matches.length).toBe(2);
-    expect(html).toContain('buy_btn_1TeDepGbTZifRHVZnvlIMeLS');
-    expect(html).toContain('buy_btn_1TeDSUGbTZifRHVZsvFTdN8Y');
-    expect(html).toContain('js.stripe.com/v3/buy-button.js');
-  });
-
-  it('販売数の器に STATS_API_URL を埋め込む', async () => {
-    const html = await (await get('/tickets/')).text();
-    expect(html).toContain('data-endpoint="https://example.com/stats"');
-    expect(html).toContain('/js/sales-count.js');
-  });
-
-  it('STATS_API_URL 未設定なら販売数の器を出さない', async () => {
-    const res = await app.request('/tickets/', {}, { APP_URL: env.APP_URL });
-    const html = await res.text();
-    expect(html).not.toContain('data-endpoint=');
+    expect(html).toContain('受付終了');
+    expect(html).toContain('href="/photos/"');
+    expect(html).not.toContain('<stripe-buy-button');
   });
 });
 
@@ -223,7 +203,7 @@ describe('共通レイアウト', () => {
     for (const path of ['/', '/speakers/', '/tickets/', '/blog/', '/legal/terms/']) {
       const html = await (await get(path)).text();
       expect(html, path).toContain('class="top"');
-      expect(html, path).toContain('参加申し込み');
+      expect(html, path).toContain('イベント写真を見る');
       expect(html, path).toContain('© 2026 JP_Stripes');
     }
   });

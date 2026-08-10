@@ -1,5 +1,3 @@
-import { Countdown } from './Countdown';
-
 export function Hero() {
   return (
     <section className="hero" id="top">
@@ -8,7 +6,7 @@ export function Hero() {
           <span>Issue 2026 · vol.03</span>
           <span>Yokohama, Japan</span>
           <span className="ln"></span>
-          <span className="e">2026.08.01 Sat</span>
+          <span className="e">Ended · 2026.08.01 Sat</span>
         </div>
 
         <div className="date-stamp">
@@ -27,8 +25,8 @@ export function Hero() {
               AIで何を売り、いくらに値づけし、どう課金するか。正解がまだ出そろっていないこの問いを、全国の現場と一緒に探す、年に一度の場です。2026年、AIの原価が料金の前提を変え、エージェントが買い手にも売り手にもなりはじめました。社内に経験者がいない領域だからこそ、ひとりで決めずに、現場の判断を持ち寄って探しましょう。
             </p>
             <div className="hero-cta">
-              <a className="btn btn-primary" href="/tickets/">
-                参加チケットを申し込む →
+              <a className="btn btn-primary" href="/photos/">
+                イベント写真を見る →
               </a>
               <a className="btn btn-ghost" href="#theme">Read the Theme →</a>
             </div>
@@ -50,8 +48,6 @@ export function Hero() {
             </dl>
           </div>
         </div>
-
-        <Countdown />
       </div>
     </section>
   );

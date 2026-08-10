@@ -17,8 +17,8 @@ export function Nav() {
           <a href="/#past">2025</a>
         </div>
         <div className="nav-right">
-          <a className="nav-cta" href="/tickets/">
-            参加申し込み
+          <a className="nav-cta" href="/photos/">
+            イベント写真を見る
           </a>
         </div>
       </div>
